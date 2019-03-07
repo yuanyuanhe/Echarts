@@ -1,0 +1,524 @@
+$(function () {
+    //七日热点舆情进度条动画
+    $('.progress-bar').each(function(k,v){
+        $(v).css('width',$(v).attr('aria-valuemax')+'%')
+        //$(v).width($(v).attr('aria-valuemax')+'%')
+        //console.log($(v).attr('aria-valuemax')+'%')
+    });
+    //七日热点舆情轮播图初始化
+    var mySwiper = new Swiper ('.sevenDaynew', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay:2500,
+        autoplayDisableOnInteraction:true,
+        // 如果需要分页器
+        pagination: '.sevenDaynewpoint',
+        paginationClickable :true
+    });
+    var mySwiper1 = new Swiper ('.todayNew', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay:5000,
+        autoplayDisableOnInteraction:true,
+        // 如果需要分页器
+        pagination: '.todayNewpoint',
+        paginationClickable :true
+    });
+    //var Wheight = $(window).height();
+    //
+    //function resizeHeight() {
+    //    var Wheight = $(window).height();
+    //    $('body').height(Wheight);
+    //}
+    //
+    //resizeHeight()
+    //$(window).resize(function () {
+    //    resizeHeight()
+    //});
+    //$('.todayBox').height((Wheight - 90) * 0.55);
+    //$('.mapCharts').height((Wheight - 90) * 0.55);
+    //$('.lineBox').height(Wheight - $('.toprow').height() - 90);
+    //$('.sevevDayBox').height(Wheight - $('.toprow').height() - 90);
+    //$('.linecharts').height($('.lineBox').height() - 90-30);
+    //$('.rightContent').height((Wheight - 90) * 0.55);
+    //$('#chartsdoughnut').height($(".rightContent").height()-$('.numItem').height()-45);
+    //$('.source').height(Wheight - $('.toprow').height() - 90);
+    //$('#chartsLine').height($('.source').height() - 90);
+    console.log($('.sevenDaynew').height())
+    $('#linecharts').height($('.sevenDaynew').height()-10)
+    $('#chartsLine').height($('.sevenDaynew').height()-10)
+    $('.enter_fullscreen').on('click',function(){
+        if($('body').height()<=$(window).height()){
+            var headHeight = $('header').height()
+            $('.linecharts').height($('.linecharts').height()+headHeight);
+            mycharts2.resize();
+            $('#chartsLine').height($('#chartsLine').height()+headHeight);
+            mycharts4.resize();
+        }
+
+    });
+    var mycharts1 = chartsMap();
+    var mycharts2 = chartsLine();
+    var mycharts3 = chartsPie();
+    var mycharts4 = chartsBar();
+    //echarts响应式
+    $(window).resize(function(){
+        mycharts1.resize();
+        mycharts2.resize();
+        mycharts3.resize();
+        mycharts4.resize();
+    });
+    //初始化echarts
+    function chartsMap() {
+        var mydata = [
+            {name: '梁山县', value: 1},
+            {name: '汶上县', value: 2},
+            {name: '兖州区', value: 2},
+            {name: '曲阜市', value: 3},
+            {name: '泗水县', value: 3},
+            {name: '嘉祥县', value: 3},
+            {name: '任城区', value: 1},
+            {name: '邹城市', value: 3},
+            {name: '金乡县', value: 2},
+            {name: '鱼台县', value: 3},
+            {name: '微山县', value: 1}
+
+        ];
+        var pointData = [{name:'任城区',value:[116.595864,35.410698]},
+            {name:'曲阜市',value:[116.995141,35.565765]},
+            {name:'梁山县',value:[116.10147,35.793076]},
+            {name:'微山县',value:[116.830477,35.054605]},
+            {name:'微山县',value:[117.240967,34.616581]}
+        ];
+        var option = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}'
+            },
+            roam: true,
+                visualMap: {
+                    type: 'piecewise',
+                    splitNumber: 3,
+                    pieces: [
+                        {
+                            min: 2,
+                            max:3,
+                            label: '负面',
+                            color: '#079AEC'
+                        }, {
+                            max: 2,
+                            min: 1,
+                            label: '中性',
+                            color: '#0e6aed'
+                        }, {
+                            min: 0,
+                            max:1,
+                            label: '正面',
+                            color: '#1c37be'
+                        },
+                    ],
+                    textStyle: {
+                        color: '#fff'
+                    },
+                    min: 0,
+                    max: 3,
+                    left: '100',
+                    bottom: '0',
+                    calculable: true,
+                    show: true,
+                    seriesIndex: 0,
+                    backgroundColor:'rgba(0,0,0,0.5)',
+                    padding:15
+
+            },
+            geo: {
+                map: 'jining',
+                //zoom:1.2,
+                layoutCenter : ['50%','50%'],
+                layoutSize : '100%',
+                roam: false
+
+            },
+            series: [{
+                name: '市县',
+                type: 'map',
+                //map: 'jining',
+                mapType: 'jining',
+                showLegendSymbol: false,
+                roam: false,
+                //zoom: 1.2,
+                layoutCenter : ['50%','50%'],
+                layoutSize : '100%',
+                areaColor: '#fff',
+                label:{
+                    normal:{
+                        color:'#fff'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true
+                        },
+                        show:true,
+                        borderColor: '#1382d7',
+                        color:'#fff'
+                    },
+                    emphasis: {
+                        label: {
+                            show: false
+                        }
+                    }
+                },
+                data: mydata
+            },
+                {
+                    name: '点',
+                    type: 'effectScatter',
+                    coordinateSystem: 'geo',
+                    itemStyle: {
+                        normal: {
+                            shadowBlur: 20,
+                            shadowColor: '#FFF68F'
+                        }
+                    },
+                    rippleEffect:{
+                        period:2,
+                        scale:2.5,
+                        brushType:'stroke'
+                    },
+                    data: pointData,
+                    symbolSize: 15,
+                    /* symbolSize: function (val) {
+                     return val[2] / 2;
+                     },*/
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: false
+                        }
+                    }
+                }]
+        };
+        var myChart = echarts.init(document.getElementById('mapCharts'));
+        myChart.setOption(option);
+        return myChart
+    }
+
+    function chartsLine() {
+        var Xdata = ['06-06', '06-07', '06-08', '06-09', '09-10', '06-11', '06-12'];
+        var ydata = {
+            negative: [150, 200, 145, 200, 150, 245, 152],
+            neutral: [55, 125, 53, 120, 56, 100, 53],
+            front: [46, 58, 45, 60, 42, 59, 40]
+        };
+        var option = {
+            backgroundColor: 'rgba(1,1,1,0.4)',
+            title: {
+                text: '单位（天）',
+                textStyle:{
+                    fontWeight:'normal',
+                    color:'#fff',
+                    fontSize:16
+                },
+                top:20,
+                left:8
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['负面', '中性', '正面'],
+                right: 10,
+                textStyle: {
+                    color: '#fff'
+                },
+                icon: 'circle',
+                top:20
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: Xdata,
+                splitLine: { //设置X轴的网格
+                    show: false,
+                    interval: 'auto'
+                },
+                axisLine: { //设置X轴的颜色
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                }
+            },
+            yAxis: {
+                type: 'value',
+                axisLine: { //设置y轴的颜色
+                    lineStyle: {
+                        color: '#fff'
+                    }
+                },
+                min:0,
+                max:250
+            },
+            series: [{
+                name: '负面',
+                type: 'line',
+
+                smooth: true, //点与点之间的幅度,false为直线
+                symbol: 'circle',
+                symbolSize: 10,
+                showSymbol: true,
+                itemStyle: {
+                    normal: {
+                        color: '#d44249'
+                    }
+                },
+                data: ydata.negative
+            }, {
+                name: '中性',
+                type: 'line',
+
+                smooth: true, //点与点之间的幅度,false为直线
+                symbol: 'circle',
+                symbolSize: 10,
+                showSymbol: true,   //是否显示点数据的圆点
+                //itemStyle: {    //设置折线的border颜色
+                //    normal: {
+                //        color: 'rgb(0,136,212)',
+                //        borderColor: 'rgba(0,136,212,0.2)',
+                //        borderWidth: 10
+                //    }
+                //},
+                itemStyle: {
+                    normal: {
+                        color: '#45c6fa'
+                    }
+                },
+                data: ydata.neutral
+            }, {
+                name: '正面',
+                type: 'line',
+
+                smooth: true, //点与点之间的幅度,false为直线
+                symbol: 'circle',
+                symbolSize: 10,
+                showSymbol: true,   //是否显示点数据的圆点
+                // symbol: 'circle',
+                // symbolSize: 5,
+                // showSymbol: true,   //是否显示点数据的圆点
+                // itemStyle: {    //设置折线的border颜色
+                //     normal: {
+                //         color: 'rgb(0,136,212)',
+                //         borderColor: 'rgba(0,136,212,0.2)',
+                //         borderWidth: 10
+                //     }
+                // },
+                itemStyle: {
+                    normal: {
+                        color: '#1a68fd'
+                    }
+                },
+                data: ydata.front
+            }]
+
+        };
+        var myChart = echarts.init(document.getElementById('linecharts'));
+        myChart.setOption(option);
+        return myChart
+    }
+    function chartsPie(){
+        var itemData = [
+            {value:335, name:'负面',itemStyle:{normal:{color:'#d44249'}}},
+            {value:310, name:'中性',itemStyle:{normal:{color:'#45c6fa'}}},
+            {value:234, name:'正面',itemStyle:{normal:{color:'#1a68fd'}}}
+        ];
+        var option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+            },
+            legend: {
+                orient: 'horizontal',
+                bottom:2,
+                data:['负面','中性','正面'],
+                textStyle:{
+                    color:'#fff'
+                },
+                icon: 'circle'
+            },
+            series: [
+                {
+                    name:'舆情',
+                    type:'pie',
+                    radius: ['50%', '70%'],
+                    center:['50%','40%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'outside',
+                            formatter: "{b}({d}%)"
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            },
+                            formatter: '{b}'
+                        }
+                    },
+                    data:itemData
+                }
+            ]
+        };
+        var myChart = echarts.init(document.getElementById('chartsdoughnut'));
+        myChart.setOption(option);
+        return myChart
+    }
+    function chartsBar(){
+        var Xdata = ['红盾网', '信用济宁', '新浪新闻','政务中心','网易新闻']
+        var Ydata = [65, 130, 100,110,140]
+        var option = {
+            backgroundColor: 'transparent',
+            title: {
+                text: "万元",
+                textStyle: {
+                    color: '#ffffff',
+                    fontSize: 12
+                },
+                left:10
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '0',
+                top:'3%',
+                containLabel: true
+            },
+
+            tooltip: {
+                show: "true",
+                trigger: 'axis',
+                axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                    type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            yAxis: {
+                type: 'value',
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: false,
+                    lineStyle: {
+                        color: '#fff',
+                    }
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#aaa',
+                    }
+                },
+            },
+            xAxis: [{
+                type: 'category',
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#fff',
+                    }
+                },
+                data: Xdata
+            }, {
+                type: 'category',
+                axisLine: {
+                    show: false
+                },
+                axisTick: {
+                    show: false
+                },
+                axisLabel: {
+                    show: false
+                },
+                splitArea: {
+                    show: false
+                },
+                splitLine: {
+                    show: false
+                },
+                data: Xdata
+            }
+
+            ],
+            series: [{
+                name: '来源',
+                type: 'bar',
+                xAxisIndex: 1,
+                label: {
+                    normal: {
+                        show: true,
+                        position: 'top',
+                        formatter: '{c}',
+                        textStyle:{
+                            color:'#ff8f95'
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        show: true,
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#ff8f95'
+                        }, {
+                            offset: 1,
+                            color: '#d5444b'
+                        }]),
+                        barBorderRadius: 50,
+                        borderWidth: 0,
+                        borderColor: '#333',
+                    }
+                },
+                barWidth: '20%',
+                data: Ydata
+            }
+
+            ]
+        };
+        var myChart = echarts.init(document.getElementById('chartsLine'));
+        myChart.setOption(option);
+        return myChart
+    }
+    $('.enter_fullscreen').click(function(){
+        if($('.quit_fullscreen')){
+            var html = '<div class="quit_fullscreen" style="display: block;position: fixed;top: 0;right: 0;cursor: pointer">'+
+                '<img src="http://localhost:8080/STATIC/common/img/out.png">'+
+                '</div>'
+            $('.right-title').append($(html))
+        }
+        $('.quit_fullscreen').click(function(){
+            var headHeight = $('header').height()
+            $('.linecharts').height($('.linecharts').height()-headHeight);
+            mycharts2.resize();
+            $('#chartsLine').height($('#chartsLine').height()-headHeight);
+            mycharts4.resize();
+            $('header').show()
+            $('.quit_fullscreen').hide()
+            $('.enter_fullscreen').show()
+        })
+    })
+});

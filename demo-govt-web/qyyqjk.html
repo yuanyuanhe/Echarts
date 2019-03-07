@@ -1,0 +1,1633 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)file:///E:/rongtuo/demo-govt-web/views/%E5%8C%BA%E5%9F%9F%E8%88%86%E6%83%85%E7%9B%91%E6%8E%A7.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>区域金融舆情监控</title>
+    
+
+
+
+
+
+
+<script>
+	var basePath = 'http://rfiis.rtkj.com.cn:80/rfiis-govt/';
+	// 判断皮肤
+	var bootstarpTablePath = '';
+	var commPath = '';
+	if(localStorage.skin == 'blue' || typeof(localStorage.skin) == 'undefined'){
+		
+		bootstarpTablePath = basePath+"STATIC/template/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/template/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}else if(localStorage.skin =='black'){
+		
+		bootstarpTablePath = basePath+"STATIC/common/plugins/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/common/css/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}
+	
+	function insertAfter( newElement, targetElement ){ // newElement是要追加的元素 targetElement 是指定元素的位置 
+		var parent = targetElement.parentNode; // 找到指定元素的父节点 
+		if( parent.lastChild == targetElement ){ // 判断指定元素的是否是节点中的最后一个位置 如果是的话就直接使用appendChild方法 
+			parent.appendChild( newElement, targetElement ); 
+		}else{ 
+			parent.insertBefore( newElement, targetElement.nextSibling ); 
+		}; 
+	}; 
+	
+</script>
+<!-- bootstrap.css -->
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/bootstrap-theme.min.css">
+<!-- 字体样式font-awesome.css -->
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/font-awesome.css">
+<!-- 开关switch.css -->
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/lc_switch.css">
+<!-- bootstrap-dialog.css -->
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/bootstrap-dialog.css">
+<!-- 日期插件 foundation-datepicker.css -->
+<link rel="stylesheet" type="text/css" href="./qyyqjk_files/foundation-datepicker.css">
+    <link rel="stylesheet" href="./qyyqjk_files/monitor.css">
+    <link rel="stylesheet" href="./qyyqjk_files/swiper-3.4.2.min.css">
+<link rel="stylesheet" href="./qyyqjk_files/layer.css" id="layuicss-skinlayercss"><link rel="stylesheet" type="text/css" id="comm_template" href="./qyyqjk_files/comm.css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./qyyqjk_files/bootstrap-table.css"></head><link rel="stylesheet" type="text/css" id="comm_template" href="./qyyqjk_files/comm(1).css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./qyyqjk_files/bootstrap-table(1).css">
+<body class="bg">
+
+	
+
+
+
+<!-- 头部 -->
+<header class="head bg">
+	<!-- logo -->
+	<div class="pull-left logo-bg">
+		<font>区域金融云平台</font>
+	</div>
+	<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor#" class="sidebar" role="button"></a>
+	<div class="pull-left">
+		<ul class="navbar-menu">
+			
+				<li data-id="LDJSC" data-title="4">
+					<a>
+						<i class="i-icon"></i>
+						<font>领导驾驶舱</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+										<i class="i-icon"></i>
+										<font>企业综合信息展示</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_GZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/">贵州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_SH">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_XZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_FJ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="ZLFX" class="menu-mark">
+									<a href="http://101.37.37.100/qyjrzl.html">
+										<i class="i-icon"></i>
+										<font>区域金融总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="SCFX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+										<i class="i-icon"></i>
+										<font>金融服务统计</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DFZZL" class="menu-mark">
+									<a>
+										<i class="i-icon"></i>
+										<font>地方债总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_XEDK" class="menu-mark">
+									<a href="http://101.37.37.100/rongtuo/myDemo/Microfinance.html?other=service/smallLoan/toSmallLoan">
+										<i class="i-icon"></i>
+										<font>小额贷款机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+										<i class="i-icon"></i>
+										<font>民间融资机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+										<i class="i-icon"></i>
+										<font>融资担保机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易市场</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXYJ" data-title="50" class="active">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险预警</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXYJ_FXJC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+										<i class="i-icon"></i>
+										<font>区域风险监测</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+										<i class="i-icon"></i>
+										<font>非集热点追踪</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_YQJK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+										<i class="i-icon"></i>
+										<font>区域舆情监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_SWJR" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+										<i class="i-icon"></i>
+										<font>涉外金融监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_XNHB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+										<i class="i-icon"></i>
+										<font>虚拟货币监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="JYFX" data-title="5">
+					<a>
+						<i class="i-icon"></i>
+						<font>经营分析</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="JYFX_XEDK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+										<i class="i-icon"></i>
+										<font>小额贷款分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+										<i class="i-icon"></i>
+										<font>民间融资分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+										<i class="i-icon"></i>
+										<font>融资担保分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SRZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXGL" data-title="70">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXGL_YQGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+										<i class="i-icon"></i>
+										<font>区域舆情管理</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_SJGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_TJFX">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_JKSZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_BGGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXGL_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>区域非法集资</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="MJLLZS" data-title="6">
+					<a>
+						<i class="i-icon"></i>
+						<font>利率指数</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LLZS" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/interestIndex/toInterestIndex">
+										<i class="i-icon"></i>
+										<font>产业基金</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="QYXX" data-title="13">
+					<a>
+						<i class="i-icon"></i>
+						<font>企业信用管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="QYCX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+										<i class="i-icon"></i>
+										<font>企业信息查询</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SYQY" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>企业运营分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYCX_XYDJ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>企业信用等级</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYXY_CTHC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+										<i class="i-icon"></i>
+										<font>企业穿透核查</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="XTSZ" data-title="14">
+					<a>
+						<i class="i-icon"></i>
+						<font>系统设置</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="ZHSZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+										<i class="i-icon"></i>
+										<font>账号权限管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="YHGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+										<i class="i-icon"></i>
+										<font>金融机构管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+		</ul>
+		<input type="hidden" id="h_index" value="50">
+	</div>
+
+	<!-- 用户信息 -->
+	<div class="pull-right user-box">
+		
+
+		<div class="user-info">
+			<a id="user-info-click">
+				<i class="glyphicon glyphicon-user"></i>
+				<font>admin</font>
+				<i class="glyphicon glyphicon-triangle-bottom"></i>
+			</a>
+			<div class="user-info-details" id="user-info-details-display">
+				<div class="user-details-left">
+					<div class="user-details-img">
+						<img class="img-circle" src="./qyyqjk_files/yea.jpg">
+					</div>
+					<div class="modify-pwd">
+						<a id="editPassword">修改密码</a>
+					</div>
+				</div>
+				<div class="user-details-right">
+					<table class="table-info table-boundless font-color">
+						<tbody>
+							<tr>
+								<td>账号：admin</td>
+							</tr>
+							<tr>
+								<td>管理权限：admin</td>
+							</tr>
+							<tr>
+								<td colspan="2">姓名：
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">机构：</td>
+							</tr>
+							<tr>
+								<td colspan="2">最后登录：2018-07-22 09:24:09</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+			</div>
+		</div>
+		<div class="login-out">
+			<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+				<font>退出</font>
+			</a>
+		</div><!--./login-out-->
+		<div class="enter_fullscreen" style="display: inline-block;">
+			<img src="./qyyqjk_files/full.png">
+		</div>
+	</div><!--./user-box-->
+</header><!--./head-->
+
+
+<!-- 编辑 -->
+<div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">| 修改密码</h4>
+            </div>
+            <form id="editPwds" novalidate="novalidate">
+                <div class="modal-body">
+                    <div class="form-list">
+                        <ul>
+                        	<li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>原密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>新的密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>再次输入密码：</font></div>
+                                    <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                        </ul>
+                         <input type="hidden" value="" id="userId">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-orange"> 确 认</button>
+                    <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 皮肤切换 -->
+<div class="skin-admin-right" id="skin_admin_right">
+	<div class="skin-black" id="skin_black"></div>
+	<div class="skin-blue" id="skin_blue"></div>
+</div>
+
+
+
+<section class="right-title">
+    <div class="right_name">区域金融舆情监控</div>
+</section>
+<div class="content">
+    <div class="row toprow">
+        <div class="col-sm-3 todayBox">
+            <div class="ibox today leftBox">
+                <div class="title">
+                    <span>今日敏感舆情</span>
+                </div>
+                <div class="swiper-pagination todayNewpoint swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+                    <div class="swiper-container todayNew swiper-container-horizontal">
+                        <div class="swiper-wrapper" style="transform: translate3d(-861px, 0px, 0px); transition-duration: 0ms;"><ul class="swiper-slide swiper-no-swiping swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="2" style="width: 287px;">
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;兖州区</p>
+
+                                    <p class="c-content">
+                                        今后兖州区将大力发展贸易金融、物流金融；曲阜市、邹城市、泗水县充分发挥文化资源丰富的优势，积极推进文化金融、旅游金融建设；鱼台县、金乡县、微山县将建设农村金融示范基地；嘉祥县、梁山县、汶上县将促进现代产业转型升级，积极开拓绿色金融、科技金融等领域。</p>
+
+                                    <p class="c-footer">——兖州区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        济宁市首届“肩并肩 共奋进”金融青年风采大赛圆满落幕，共有来自银行、保险、证券等金融机构的15名选手参加了决赛比赛。经过激烈角逐，6名选手荣获一等奖，将被授予“济宁市青年岗位能手”称号。
+                                        </p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        近日，我市印发《关于加强全市金融人才队伍建设的实施办法》（济办发﹝2017﹞38号），文件的出台将进一步加快推进我市金融改革发展，增强金融创新能力、竞争能力和服务实体经济能力。</p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide swiper-no-swiping swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 287px;">
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;任城区</p>
+
+                                    <p class="c-content">
+                                        市金融办在市经纬大厦举办了全市新型农村合作金融试点专题培训班。市金融办副主任刘立出席并讲话，各县（市、区）金融办分管负责人、监管人员，各县（市、区）农行、农商行分管负责人，各试点合作社主要负责人等60余人参加了培训。</p>
+
+                                    <p class="c-footer">——任城区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;兖州区</p>
+
+                                    <p class="c-content">
+                                        市金融办在全市范围内开展为期3个月的“打击逃废金融债务优化金融生态环境”专项行动。通过查处恶意逃废银行债务、诈骗银行贷款、破坏金融秩序的企业和个人，维护全市金融债权安全。</p>
+
+                                    <p class="c-footer">——兖州区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        济宁市第二届金融微笑天使活动是由济宁市总工会、共青团济宁市委、济宁市妇女联合会、济宁市金融工作办公室、中国人民银行济宁市中心支行、济宁日报社、济宁晚报和东方圣城网等联合主办的，自9月份开始以来，历时3个月，覆盖了全市60多家金融机构，万余名从业人员。</p>
+
+                                    <p class="c-footer">——鲁网济宁</p>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide swiper-no-swiping swiper-slide-prev" data-swiper-slide-index="1" style="width: 287px;">
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        银行、保险、证券等金融牌照已然成为企业眼中的香饽饽，涉足金融行业成大型产业集团标配。目前约有13家国有产业集团和25家民营产业集团涉足银行、证券、保险等核心金融领域，涉足融资租赁、P2P、小额贷款、第三方支付等领域的公司更是数不胜数。</p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        日前，市政府正式印发《济宁市“十三五”金融业发展规划》，明确到2020年全市力争实现金融业增加值240亿元，占GDP的比重达到4.3%；力争实现存款余额6000亿元，贷款余额4000亿元。。</p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        当前，我市本土金融机构数量较少、规模较小、实力较弱，能够为金融业提供服务的本地会计、审计、法律服务等中介机构不多，对本地经济的服务能力不足，致使在全省的话语权和影响力不高。</p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                            </ul>
+                            <ul class="swiper-slide swiper-no-swiping swiper-slide-active" data-swiper-slide-index="2" style="width: 287px;">
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;兖州区</p>
+
+                                    <p class="c-content">
+                                        今后兖州区将大力发展贸易金融、物流金融；曲阜市、邹城市、泗水县充分发挥文化资源丰富的优势，积极推进文化金融、旅游金融建设；鱼台县、金乡县、微山县将建设农村金融示范基地；嘉祥县、梁山县、汶上县将促进现代产业转型升级，积极开拓绿色金融、科技金融等领域。</p>
+
+                                    <p class="c-footer">——兖州区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        济宁市首届“肩并肩 共奋进”金融青年风采大赛圆满落幕，共有来自银行、保险、证券等金融机构的15名选手参加了决赛比赛。经过激烈角逐，6名选手荣获一等奖，将被授予“济宁市青年岗位能手”称号。
+                                        </p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        近日，我市印发《关于加强全市金融人才队伍建设的实施办法》（济办发﹝2017﹞38号），文件的出台将进一步加快推进我市金融改革发展，增强金融创新能力、竞争能力和服务实体经济能力。</p>
+
+                                    <p class="c-footer">——济宁市金融办</p>
+                                </li>
+                            </ul>
+                        <ul class="swiper-slide swiper-no-swiping swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0" style="width: 287px;">
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;任城区</p>
+
+                                    <p class="c-content">
+                                        市金融办在市经纬大厦举办了全市新型农村合作金融试点专题培训班。市金融办副主任刘立出席并讲话，各县（市、区）金融办分管负责人、监管人员，各县（市、区）农行、农商行分管负责人，各试点合作社主要负责人等60余人参加了培训。</p>
+
+                                    <p class="c-footer">——任城区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;兖州区</p>
+
+                                    <p class="c-content">
+                                        市金融办在全市范围内开展为期3个月的“打击逃废金融债务优化金融生态环境”专项行动。通过查处恶意逃废银行债务、诈骗银行贷款、破坏金融秩序的企业和个人，维护全市金融债权安全。</p>
+
+                                    <p class="c-footer">——兖州区金融办</p>
+                                </li>
+                                <li>
+                                    <p class="c-news-title"><i class="fa fa-map-marker"></i>&nbsp;济宁市</p>
+
+                                    <p class="c-content">
+                                        济宁市第二届金融微笑天使活动是由济宁市总工会、共青团济宁市委、济宁市妇女联合会、济宁市金融工作办公室、中国人民银行济宁市中心支行、济宁日报社、济宁晚报和东方圣城网等联合主办的，自9月份开始以来，历时3个月，覆盖了全市60多家金融机构，万余名从业人员。</p>
+
+                                    <p class="c-footer">——鲁网济宁</p>
+                                </li>
+                            </ul></div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-sm-6 mapCharts" id="mapCharts" _echarts_instance_="ec_1546755548997" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 524px; height: 462px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="524" height="462" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 524px; height: 462px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+        <div class="col-sm-3 rightContent">
+            <div class="numItem">
+                <ul class="content">
+                    <li>
+                        <div class="col-sm-6">网址数量监控</div>
+                        <div class="col-sm-6">254</div>
+                    </li>
+                    <li>
+                        <div class="col-sm-6">今日舆情总数</div>
+                        <div class="col-sm-6">158</div>
+                    </li>
+                    <li>
+                        <div class="col-sm-6">敏感舆情数量</div>
+                        <div class="col-sm-6">24</div>
+                    </li>
+                    <li>
+                        <div class="col-sm-6">境外舆情数量</div>
+                        <div class="col-sm-6">0</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="todaydoughnut">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <span>今日舆情属性</span>
+                    </div>
+                    <div id="chartsdoughnut" _echarts_instance_="ec_1546755548999" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 316px; height: 220px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="316" height="220" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 316px; height: 220px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 sevevDayBox">
+            <div class="ibox leftBox">
+                <div class="ibox-title">
+                    <span>七日热点舆情</span>
+                </div>
+                <div class="swiper-pagination sevenDaynewpoint swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+                <div class="swiper-container sevenDaynew swiper-container-horizontal">
+                    <div class="swiper-wrapper" style="transform: translate3d(-1585px, 0px, 0px); transition-duration: 0ms;"><div class="swiper-slide swiper-no-swiping swiper-slide-duplicate swiper-slide-next swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">冬天了，大家的平台都还安稳么？</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                P2P理财和银行理财哪个好？
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%;text-align: right">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">"白送"路由器卖P2P理财？斐讯究竟在玩什么把戏？
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">百家平台瓜分5成交易额 网贷“二八分化”格局已定</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="50" style="width: 50%;text-align: right">
+                                                    <span>5</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">大标清算提速 信披“困扰”仍存</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="30" style="width: 30%;text-align: right">
+                                                    <span>3</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">济宁市人社局向拖欠工资宣战</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align: right;">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                山东烟台莱山法院“白加黑”围剿“老赖”
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="70" style="width: 70%; text-align: right;">
+                                                    <span>7</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">失信企业协同监管和联合惩戒合作备忘录</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="90" style="width: 90%; text-align: right;">
+                                                    <span>9</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">银监罚单超700份 信贷违规仍是重灾区</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="50" style="width: 50%; text-align: right;">
+                                                    <span>5</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">全市新型农村合作金融试点专题培训班举办</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%; text-align: right;">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping" data-swiper-slide-index="1" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">结构生变 2018年信贷增幅大概率下降</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="80" style="width: 80%;text-align: right">
+                                                    <span>8</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                金融AI：“新风口”还是“皇帝的新衣”？
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>10</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">人民日报评支付宝默认勾选：用户知情与否有霄壤之别</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="90" style="width: 90%;text-align: right">
+                                                    <span>9</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">网贷行业报告：行业继续微幅转好</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="40" style="width: 40%;text-align: right">
+                                                    <span>4</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">2018年网贷业将现“大分流”</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="30" style="width: 30%;text-align: right">
+                                                    <span>3</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping" data-swiper-slide-index="2" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                揭钱宝网骗局：600万本金7年滚到1.4亿 虚构商业帝国</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%;text-align: right">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                滴滴美团之后，今日头条收购支付牌照合众易宝
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="70" style="width: 70%;text-align: right">
+                                                    <span>7</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">年底P2P平台活动能参加吗 履约险保你本息安全</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="80" style="width: 80%;text-align: right">
+                                                    <span>8</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">从野蛮生长到合规发展，明天砥砺前行</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">查询和冻结扣划银行存款要履行哪些程序？</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%;text-align: right">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide swiper-no-swiping swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="3" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">冬天了，大家的平台都还安稳么？</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                P2P理财和银行理财哪个好？
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%;text-align: right">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">"白送"路由器卖P2P理财？斐讯究竟在玩什么把戏？
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;text-align: right">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">百家平台瓜分5成交易额 网贷“二八分化”格局已定</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="50" style="width: 50%;text-align: right">
+                                                    <span>5</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">大标清算提速 信披“困扰”仍存</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="30" style="width: 30%;text-align: right">
+                                                    <span>3</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="swiper-slide swiper-no-swiping swiper-slide-duplicate swiper-slide-active" data-swiper-slide-index="0" style="width: 317px;">
+                            <ul class="contentUl">
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        1
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">济宁市人社局向拖欠工资宣战</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%; text-align: right;">
+                                                    <span>11</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        2
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">
+                                                山东烟台莱山法院“白加黑”围剿“老赖”
+                                            </li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="70" style="width: 70%; text-align: right;">
+                                                    <span>7</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        3
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">失信企业协同监管和联合惩戒合作备忘录</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="90" style="width: 90%; text-align: right;">
+                                                    <span>9</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        4
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">银监罚单超700份 信贷违规仍是重灾区</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="50" style="width: 50%; text-align: right;">
+                                                    <span>5</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="pull-left s-num">
+                                        5
+                                    </div>
+                                    <div class="item-content pull-left">
+                                        <ul class="clearfix">
+                                            <li class="s-news-title">全市新型农村合作金融试点专题培训班举办</li>
+                                            <li class="">
+                                                <div class="progress"><p class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="60" style="width: 60%; text-align: right;">
+                                                    <span>6</span></p></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 lineBox">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <span>七日趋势分析</span>
+                </div>
+                <div class="linecharts" id="linecharts" _echarts_instance_="ec_1546755548998" style="height: 320px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: rgba(1, 1, 1, 0.4);"><div style="position: relative; overflow: hidden; width: 524px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="524" height="320" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 524px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+            </div>
+        </div>
+        <div class="col-sm-3 source">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <span>今日数据来源</span>
+                </div>
+                <div id="chartsLine" _echarts_instance_="ec_1546755549000" style="height: 320px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 317px; height: 320px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="317" height="320" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 317px; height: 320px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jquery-2.1.1.min.js -->
+<script src="./qyyqjk_files/jquery-2.1.1.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./qyyqjk_files/jquery.ba-resize.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<!-- bootstrap.min.js -->
+<script src="./qyyqjk_files/bootstrap.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table.js -->
+<script src="./qyyqjk_files/bootstrap-table.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table-zh-CN.js -->
+<script src="./qyyqjk_files/bootstrap-table-zh-CN.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./qyyqjk_files/comm.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./qyyqjk_files/lc_switch.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js extend.js -->
+<script src="./qyyqjk_files/extendUtil.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js region.js -->
+<script src="./qyyqjk_files/region.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js busic.js -->
+<script src="./qyyqjk_files/busic.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./qyyqjk_files/extendUtil.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-dialog.js -->
+<script src="./qyyqjk_files/bootstrap-dialog.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- layer.js -->
+<script src="./qyyqjk_files/layer.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 日期格式化js -->
+<script src="./qyyqjk_files/date.js.下载"></script>
+<!-- 日期插件 foundation-datepicker.js -->
+<script src="./qyyqjk_files/foundation-datepicker.js.下载"></script>
+
+<!-- 输入验证js-->
+<script src="./qyyqjk_files/jquery.validate.min.js.下载"></script>
+<!-- 输入验证js-->
+<script src="./qyyqjk_files/messages_zh.min.js.下载"></script>
+<!-- echarts js-->
+<script src="./qyyqjk_files/echarts.min.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script src="./qyyqjk_files/head.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script src="./qyyqjk_files/numeral.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<!-- 自定义公共js extend.js -->
+<script src="./qyyqjk_files/swiper-3.4.2.jquery.min.js.下载"></script>
+<script src="./qyyqjk_files/echarts-3.0.js.下载"></script>
+<script src="./qyyqjk_files/jining.js.下载"></script>
+<script src="./qyyqjk_files/monitor.js.下载"></script>
+
+</body></html>

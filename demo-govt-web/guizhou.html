@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex -->
+<html class="bg">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>企业信息总览--贵州</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        .data_rap3 {
+            width: 80%;
+            margin-left: 30%;
+            /* border: 1px solid #0173bb; */
+            background: rgba(2, 14, 58, 0.6);
+            -moz-box-shadow: 0px 0px 17px rgba(17, 115, 167, 1) inset;
+            -webkit-box-shadow: 0px 0px 17px rgba(17, 115, 167, 1) inset;
+            box-shadow: 0px 0px 17px rgba(17, 115, 167, 1) inset;
+            padding: 15px;
+        }
+        
+        .tableBox {
+            position: relative;
+            top: 54px;
+            /* left: 267px; */
+        }
+        
+        .table_map {
+            width: 30%;
+            height: 35px;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 0 auto;
+            left: 2%;
+            position: relative;
+            /* background: red; */
+        }
+        
+        .table_map tr {
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .table_map tr td:nth-child(1) {
+            color: #fff;
+            font-size: 12px;
+        }
+        
+        .table_map tr td:nth-child(2) {
+            /* margin-right: 3px; */
+        }
+        
+        .table_map tr td a {
+            font-size: 12px;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 3px;
+            text-decoration: none;
+        }
+        .test_table_body::-webkit-scrollbar {/*滚动条整体样式*/
+            width:3px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+        .test_table_body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 10px;
+             -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #535353;
+        }
+        .test_table_body::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            /*background: #EDEDED;*/
+            background: #095579;
+        }
+    </style>
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap-theme.min.css">
+    <!-- 字体样式font-awesome.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/font-awesome.css">
+    <!-- 开关switch.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/switch/lc_switch.css">
+    <!-- bootstrap-dialog.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/bootstrapDialog/bootstrap-dialog.css">
+    <!-- 日期插件 foundation-datepicker.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/datepicker/foundation-datepicker.css">
+    <link rel="stylesheet" type="text/css" href="./guizhou/analysis.css">
+    <link rel="stylesheet" href="./common/plugins/layer/mobile/need/layer.css" id="layuicss-skinlayercss">
+</head>
+<link rel="stylesheet" type="text/css" id="comm_template" href="./qiyexinxixuzhouzonglanfiles/comm.css">
+<link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./qiyexinxixuzhouzonglanfiles/bootstrap-table.css">
+
+<body class="bg">
+    <!-- 头部 -->
+    <header class="head bg">
+        <!-- logo -->
+        <div class="pull-left logo-bg">
+            <font>区域金融云平台</font>
+        </div>
+        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex#" class="sidebar" role="button"></a>
+        <div class="pull-left">
+            <ul class="navbar-menu">
+            
+                <li data-id="LDJSC" data-title="4">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>领导驾驶舱</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>企业综合信息展示</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                            <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                        <ul class="slide-mark">
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_GZ">
+                                            <a href="./guizhou.html">贵州</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_SH">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_XZ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_FJ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+                                        </li>
+                                        </ul>
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="ZLFX" class="menu-mark">
+                                    <a href="./page1.html">
+                                        <i class="i-icon"></i>
+                                        <font>区域金融总览</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="SCFX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>金融服务统计</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DFZZL" class="menu-mark">
+                                    <a href="guizhouzhai(1).html">
+                                        <i class="i-icon"></i>
+                                        <font>地方债总览</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_XEDK" class="menu-mark">
+                                    <a href="./xiaoedaikuan.html">
+                                        <i class="i-icon"></i>
+                                        <font>小额贷款机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_MJRZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+                                        <i class="i-icon"></i>
+                                        <font>民间融资机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_RZDB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>融资担保机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_RZZL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>融资租赁机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>典当行业机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>股权交易市场</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>商业保理机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="FXYJ" data-title="50">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险预警</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="FXYJ_FXJC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+                                        <i class="i-icon"></i>
+                                        <font>区域风险监测</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_FFJZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+                                        <i class="i-icon"></i>
+                                        <font>非集热点追踪</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_YQJK" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+                                        <i class="i-icon"></i>
+                                        <font>区域舆情监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_SWJR" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+                                        <i class="i-icon"></i>
+                                        <font>涉外金融监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_XNHB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+                                        <i class="i-icon"></i>
+                                        <font>虚拟货币监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="JYFX" data-title="5">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>经营分析</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="JYFX_XEDK" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+                                        <i class="i-icon"></i>
+                                        <font>小额贷款分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_MJRZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+                                        <i class="i-icon"></i>
+                                        <font>民间融资分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_RZDB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+                                        <i class="i-icon"></i>
+                                        <font>融资担保分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_SRZZL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>融资租赁分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>典当行业分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>股权交易分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>商业保理分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="FXGL" data-title="70">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险管理</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="FXGL_YQGL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+                                        <i class="i-icon"></i>
+                                        <font>区域舆情管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                            <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                        <ul class="slide-mark">
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_SJGL">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_TJFX">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_JKSZ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_BGGL">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+                                        </li>
+                                        </ul>
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXGL_FFJZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+                                        <i class="i-icon"></i>
+                                        <font>区域非法集资</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="MJLLZS" data-title="6">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>产业基金</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="LLZS" class="menu-mark">
+                                    <a href="./chanyejijin.html">
+                                        <i class="i-icon"></i>
+                                        <font>产业基金</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="QYXX" data-title="13">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>企业信用管理</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="QYCX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+                                        <i class="i-icon"></i>
+                                        <font>企业信息查询</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_SYQY" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+                                        <i class="i-icon"></i>
+                                        <font>企业运营分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="QYCX_XYDJ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>企业信用等级</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="QYXY_CTHC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+                                        <i class="i-icon"></i>
+                                        <font>企业穿透核查</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="XTSZ" data-title="14">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>系统设置</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="ZHSZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+                                        <i class="i-icon"></i>
+                                        <font>账号权限管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="YHGL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+                                        <i class="i-icon"></i>
+                                        <font>金融机构管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+        </ul>
+            <input type="hidden" id="h_index" value="4">
+        </div>
+
+        <!-- 用户信息 -->
+        <div class="pull-right user-box">
+
+
+            <div class="user-info">
+                <a id="user-info-click">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <font>admin</font>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                </a>
+                <div class="user-info-details" id="user-info-details-display">
+                    <div class="user-details-left">
+                        <div class="user-details-img">
+                            <img class="img-circle" src="./qiyexinxixuzhouzonglanfiles/yea.jpg">
+                        </div>
+                        <div class="modify-pwd">
+                            <a id="editPassword">修改密码</a>
+                        </div>
+                    </div>
+                    <div class="user-details-right">
+                        <table class="table-info table-boundless font-color">
+                            <tbody>
+                                <tr>
+                                    <td>账号：admin</td>
+                                </tr>
+                                <tr>
+                                    <td>管理权限：admin</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">姓名：
+
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">机构：</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">最后登录：2018-07-19 12:59:24</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="login-out">
+                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+                    <font>退出</font>
+                </a>
+            </div>
+            <!--./login-out-->
+            <div class="enter_fullscreen" style="display: inline-block;">
+                <img src="./qiyexinxixuzhouzonglanfiles/full.png">
+            </div>
+        </div>
+        <!--./user-box-->
+    </header>
+    <!--./head-->
+
+
+    <!-- 编辑 -->
+    <div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">| 修改密码</h4>
+                </div>
+                <form id="editPwds" novalidate="novalidate">
+                    <div class="modal-body">
+                        <div class="form-list">
+                            <ul>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>原密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>新的密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>再次输入密码：</font>
+                                        </div>
+                                        <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                            </ul>
+                            <input type="hidden" value="" id="userId">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-orange"> 确 认</button>
+                        <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 皮肤切换 -->
+    <div class="skin-admin-right" id="skin_admin_right">
+        <div class="skin-black" id="skin_black"></div>
+        <div class="skin-blue" id="skin_blue"></div>
+    </div>
+
+
+
+    <!-- 右边 -->
+    <div class="right">
+        <!-- 右边框架 -->
+        <div class="right-wrapper bg">
+            <section class="right-title">
+                <div class="right_name" style="width: 280px;">企业信息总览 — 贵州</div>
+                <div class="quit_fullscreen">
+                    <img src="./qiyexinxixuzhouzonglanfiles/out.png">
+                </div>
+            </section>
+            <section class="right-body">
+                <div class="data_container">
+                    <div class="data_wrap1" style="padding-left: 38px;">
+                        <div class="info_list">
+                            <div class="ibox-title">
+                                <span>企业数量</span>
+                            </div>
+                            <div class="company_num" style="text-align: left;"><em id="companyNum" style="color:#25FBFF">399477</em>家</div>
+                        </div>
+                        <div class="info_list">
+                            <div class="ibox-title pull-left">
+                                <span>涉及行业</span>
+                            </div>
+                            <div class="industry_num"></div>
+                        </div>
+                        <div class="info_list" style="min-height: 300px;">
+                            <div class="bootstrap-table">
+                                <div class="fixed-table-toolbar"></div>
+                                <div class="fixed-table-container table-no-bordered" style="padding-bottom: 0px;">
+                                    <div class="fixed-table-header" style="display: none;">
+                                        <table></table>
+                                    </div>
+                                    <div class="fixed-table-body test_table_body" style="overflow-y:auto;width: 50%;">
+                                        <div class="fixed-table-loading" style="top: 0px;">正在努力地加载数据中，请稍候……</div>
+                                        <table class="industry_list table-no-bordered" id="industry_list" data-show-header="false">
+                                            <thead style="display: none;">
+                                                <tr>
+                                                    <th style="" data-field="id">
+                                                        <div class="th-inner ">内容</div>
+                                                        <div class="fht-cell"></div>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr data-index="16">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>批发和零售业<em>(95982)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="17">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>住宿和餐饮业<em>(61323)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>租赁和商务服务业<em>(56840)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>居民服务、修理和其他服务业<em>(40749)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>制造业<em>(29579)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>建筑业<em>(23135)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>农、林、牧、渔业<em>(20238)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>信息传输、软件和信息技术服务业<em>(17494)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>科学研究和技术服务业<em>(13694)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>房地产业<em>(9649)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>交通运输、仓储和邮政业<em>(7747)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>文化、体育和娱乐业<em>(5230)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>金融业<em>(3246)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>卫生和社会工作业<em>(2293)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>水利、环境和公共设施管理业<em>(1967)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>采矿业<em>(1819)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>公共管理、社会保障和组织<em>(1516)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>教育<em>(1053)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>电力、热力、燃气及水的生产和供应业<em>(739)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>国际组织<em>(5)</em></div>
+                                                    </td>
+                                                </tr>
+                                                <tr data-index="18">
+                                                    <td style="">
+                                                        <div class="td_industry"><i class="t_icon"></i>其他<em>(5179)</em></div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-footer" style="display: none;">
+                                        <table>
+                                            <tbody>
+                                                <tr></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fixed-table-pagination">
+                                        <div class="pull-left pagination-detail"><span class="page-list"><span class="show-page">显示 </span><span class="btn-group dropup"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="page-size">8</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="info_list" class="qiye_info" style="margin-top:10px;">
+                            <div class="pie_info">
+                                <div class="ibox-title">
+                                    <span>企业规模</span>
+                                </div>
+                                <div id="pie_chart" style="height: 200px; margin-top: 80px;-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883795">
+                                    <div style="position: relative; overflow: hidden; width: 212px; height: 200px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="212" height="200" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 212px; height: 200px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <!-- <div class="pie_info">
+								<div class="ibox-title">
+									<span>政府债务情况</span>
+								</div>
+								<div id="echart_13" style="height: 200px; margin-top: 20px;-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883795"><div style="position: relative; overflow: hidden; width: 212px; height: 200px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="212" height="200" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 212px; height: 200px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+							</div> -->
+                        </div>
+                    </div>
+                    <div class="data_wrap2" style="left: 370px;">
+                        <!-- <div id="map" style="height: 179px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883796"><div style="position: relative; overflow: hidden; width: 429px; height: 179px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="429" height="179" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 429px; height: 179px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div> -->
+                        <div class="rap2" style="height:350px">
+                            <div id="map" style="height: 350px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;top:65px;left:2%;font-size:10px;" _echarts_instance_="ec_1546507883796">
+                                <div style="position: relative; overflow: hidden; width: 429px; height: 250px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="429" height="179" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 429px; height: 179px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                            </div>
+                            <div class="tableBox">
+                                <table class="table_map">
+                                    <tbody>
+                                        <tr>
+                                            <td>地区</td>
+                                            <td><a style="color: #fff;" href="./xinxidushanguiyang.html" target="_blank">贵阳市</a></td>
+                                            <td><a style="color: #fff;" href="./xinxidushan.html" target="_blank">独山县</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="pie_info" style="width:100%; margin-top:202px;">
+                            <div class="ibox-title">
+                                <span>政府债务情况</span>
+                            </div>
+                            <div id="echart_13" style="width:80%;height:280px; margin-top: 20px;-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883795">
+                                <div style="position: relative; overflow: hidden; width: 212px; height: 200px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="212" height="200" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 212px; height: 200px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                                <div></div>
+                            </div>
+
+
+                            <div class="beizhu" style="line-height:20px;font-size:12px;color:#C1E4FF"><span style="color:#FFD800">[备注]</span>财政债务率=（地方政府融资平台总负债+地方政府对外有息负债）/地方公共财政预算收入</div>
+                        </div>
+                    </div>
+                    <div class="data_wrap3" class="ibox">
+                        <div class="data_rap3">
+                            <div class="info_list">
+                                <div class="ibox-title">
+                                    <span>类金融</span>
+                                </div>
+                                <div class="organization_num" style="text-align: left;"><em id="industryNum" style="color:#25FBFF;">5179</em>家</div>
+                            </div>
+                            <div class="info_list">
+                                <div class="table_list" style="width:80%;">
+                                    <table class="table_industry" style="width:90%;margin:5%;">
+                                        <thead>
+                                            <tr>
+                                                <th>机构类型</th>
+                                                <th class="text-center">数量(家)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>租赁</td>
+                                                <td>4648</td>
+                                            </tr>
+                                            <tr>
+                                                <td>融资担保</td>
+                                                <td>395</td>
+                                            </tr>
+                                            <tr>
+                                                <td>小贷</td>
+                                                <td>87</td>
+                                            </tr>
+                                            <tr>
+                                                <td>城投公司</td>
+                                                <td>71</td>
+                                            </tr>
+                                            <tr>
+                                                <td>典当</td>
+                                                <td>65</td>
+                                            </tr>
+                                            <tr>
+                                                <td>交易所</td>
+                                                <td>19</td>
+                                            </tr>
+                                            <tr>
+                                                <td>股权交易  </td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>商业保理  </td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>地方资产 </td>
+                                                <td>0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="info_list pt30" style="padding-top: 82px !important;margin-left: 76px;">
+                            <div class="ibox-title">
+                                <span>质疑风险企业</span>
+                            </div>
+                            <div class="row pt20">
+                                <div class="col-sm-6">
+                                    <div class="company_info" style="text-align:left;"><span>企业</span><em id="comBlackNums" style="color:#25FBFF;">2250</em>家</div>
+                                    <div class="chart_hint" style="border-bottom: 1px solid #365166;padding-bottom: 10px;width: 160px;text-indent: -15px;">黑名单数量排名前三的行业</div>
+                                    <div id="bar_chart1" style="height: 165px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883793">
+                                        <div style="position: relative; overflow: hidden; width: 181px; height: 165px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="181" height="165" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 181px; height: 165px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="company_info" style="text-align:left;"><span>类金融</span><em id="ljrBlackNums" style="color:#25FBFF;">95</em>家</div>
+                                    <div class="chart_hint" style="border-bottom: 1px solid #365166;padding-bottom: 10px;width: 160px;text-indent: -15px;">黑名单数量排名前三的金融</div>
+                                    <div id="bar_chart2" style="height: 165px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546507883794">
+                                        <div style="position: relative; overflow: hidden; width: 181px; height: 165px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="181" height="165" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 181px; height: 165px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                                        <div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!--./right-wrapper-->
+    </div>
+    <!--./right-->
+
+
+
+    <script src="./common/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/jquery.ba-resize.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- bootstrap.min.js -->
+    <script src="./common/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table.js -->
+    <script src="./common/plugins/bootstrapTable/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table-zh-CN.js -->
+    <script src="./common/plugins/bootstrapTable/locale/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/js/animation/comm.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/plugins/switch/lc_switch.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js extend.js -->
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js region.js -->
+    <script src="./common/js/util/region.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js busic.js -->
+    <script src="./common/js/util/busic.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-dialog.js -->
+    <script src="./common/plugins/bootstrapDialog/bootstrap-dialog.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- layer.js -->
+    <script src="./common/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 日期格式化js -->
+    <script src="./common/js/util/date.js"></script>
+    <!-- 日期插件 foundation-datepicker.js -->
+    <script src="./common/plugins/datepicker/foundation-datepicker.js"></script>
+
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/jquery.validate.min.js"></script>
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/messages_zh.min.js"></script>
+    <!-- echarts js-->
+    <script src="./common/plugins/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./include/js/logic/head.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./common/js/numeral/numeral.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./common/js/guizhou/guizhou.js"></script>
+    <script src="./guizhou/analysis.js"></script>
+</body>
+
+</html>

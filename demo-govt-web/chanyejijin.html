@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>产业基金</title>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	.box1 ,.box2,.box3,.box4{
+		width: 100%;
+		margin: auto;
+		margin-top: 5px;
+	}
+	.tabchange{
+		display: none;
+	}
+	.table{
+		width: 100%;
+		margin: auto;
+		table-layout:fixed;
+		border-bottom: 0px;
+		text-overflow: ellipsis;
+	}
+	
+	.table>thead>tr>th{
+		border-bottom:0px;
+	}
+	.table tr{
+		text-align: center;
+	}
+	.table th{
+		text-align: center;
+	}
+	.table td{
+		width:100%;
+		word-break:keep-all;/* 不换行 */
+		white-space:nowrap;/* 不换行 */
+		overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	}
+	/* .table td{
+		white-space: nowrap;
+		margin-top: 10px;
+		overflow: hidden;
+		background-color: #F7F7F7;
+	}
+	.tab-nav,.tab-content{
+		width: 95%;
+		height: 45px;
+		text-align: center;
+		line-height: 45px;
+		margin: auto;
+	} */
+	.tab-nav li{
+		width: 12.5%;
+		float: left;
+	}
+	.tab-content li{
+		margin-top: 10px;
+		background-color: #F7F7F7;
+		width: 12%;
+		float: left;
+	}
+	
+</style>
+<!-- bootstrap.css -->
+<link rel="stylesheet" type="text/css" href="./common/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./common/css/bootstrap-theme.min.css">
+<!-- 字体样式font-awesome.css -->
+<link rel="stylesheet" type="text/css" href="./common/css/font-awesome.css">
+<!-- 开关switch.css -->
+<link rel="stylesheet" type="text/css" href="./common/plugins/switch/lc_switch.css">
+<!-- bootstrap-dialog.css -->
+<link rel="stylesheet" type="text/css" href="./common/plugins/bootstrapDialog/bootstrap-dialog.css">
+<!-- 日期插件 foundation-datepicker.css -->
+<link rel="stylesheet" type="text/css" href="./common/plugins/datepicker/foundation-datepicker.css">
+<link rel="stylesheet" type="text/css" href="./产业基金_files/riskWarning.css">
+<link rel="stylesheet" href="./产业基金_files/layer.css" id="layuicss-skinlayercss"></head><link rel="stylesheet" type="text/css" id="comm_template" href="./template/comm.css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./产业基金_files/bootstrap-table.css">
+
+<body>
+<!-- 头部 -->
+<header class="head">
+	<!-- logo -->
+	<div class="pull-left logo-bg">
+		<font>区域金融云平台</font>
+	</div>
+	<!-- <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser#" class="sidebar" role="button"></a> -->
+	<div class="pull-left">
+		<ul class="navbar-menu">
+			
+				<li data-id="LDJSC" data-title="4">
+					<a>
+						<i class="i-icon"></i>
+						<font>领导驾驶舱</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+										<i class="i-icon"></i>
+										<font>企业综合信息展示</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_GZ">
+											<a href="./guizhou.html">贵州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_SH">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_XZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_FJ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="ZLFX" class="menu-mark">
+									<a href="./page1.html">
+										<i class="i-icon"></i>
+										<font>区域金融总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="SCFX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+										<i class="i-icon"></i>
+										<font>金融服务统计</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DFZZL" class="menu-mark">
+									<a href="guizhouzhai(1).html">
+										<i class="i-icon"></i>
+										<font>地方债总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_XEDK" class="menu-mark">
+									<a href="./xiaoedaikuan.html">
+										<i class="i-icon"></i>
+										<font>小额贷款机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+										<i class="i-icon"></i>
+										<font>民间融资机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+										<i class="i-icon"></i>
+										<font>融资担保机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易市场</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXYJ" data-title="50">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险预警</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXYJ_FXJC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+										<i class="i-icon"></i>
+										<font>区域风险监测</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+										<i class="i-icon"></i>
+										<font>非集热点追踪</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_YQJK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+										<i class="i-icon"></i>
+										<font>区域舆情监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_SWJR" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+										<i class="i-icon"></i>
+										<font>涉外金融监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_XNHB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+										<i class="i-icon"></i>
+										<font>虚拟货币监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="JYFX" data-title="5">
+					<a>
+						<i class="i-icon"></i>
+						<font>经营分析</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="JYFX_XEDK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+										<i class="i-icon"></i>
+										<font>小额贷款分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+										<i class="i-icon"></i>
+										<font>民间融资分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+										<i class="i-icon"></i>
+										<font>融资担保分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SRZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXGL" data-title="70">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXGL_YQGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+										<i class="i-icon"></i>
+										<font>区域舆情管理</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_SJGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_TJFX">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_JKSZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_BGGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXGL_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>区域非法集资</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="MJLLZS" data-title="6" class="active">
+					<a>
+						<i class="i-icon"></i>
+						<font>产业基金</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LLZS" class="menu-mark">
+									<a href="./chanyejijin.html">
+										<i class="i-icon"></i>
+										<font>产业基金</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="QYXX" data-title="13">
+					<a>
+						<i class="i-icon"></i>
+						<font>企业信用管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="QYCX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+										<i class="i-icon"></i>
+										<font>企业信息查询</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SYQY" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>企业运营分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYCX_XYDJ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>企业信用等级</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYXY_CTHC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+										<i class="i-icon"></i>
+										<font>企业穿透核查</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="XTSZ" data-title="14">
+					<a style="background: border-box;color:#fff;">
+						<i class="i-icon"></i>
+						<font>系统设置</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="ZHSZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+										<i class="i-icon"></i>
+										<font>账号权限管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="YHGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+										<i class="i-icon"></i>
+										<font>金融机构管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+		</ul>
+		<input type="hidden" id="h_index" value="14">
+	</div>
+
+	<!-- 用户信息 -->
+	<div class="pull-right user-box">
+		
+
+		<div class="user-info">
+			<a id="user-info-click">
+				<i class="glyphicon glyphicon-user"></i>
+				<font>admin</font>
+				<i class="glyphicon glyphicon-triangle-bottom"></i>
+			</a>
+			<div class="user-info-details" id="user-info-details-display">
+				<div class="user-details-left">
+					<div class="user-details-img">
+						<img class="img-circle" src="./产业基金_files/yea.jpg">
+					</div>
+					<div class="modify-pwd">
+						<a id="editPassword">修改密码</a>
+					</div>
+				</div>
+				<div class="user-details-right">
+					<table class="table-info table-boundless font-color">
+						<tbody>
+							<tr>
+								<td>账号：admin</td>
+							</tr>
+							<tr>
+								<td>管理权限：admin</td>
+							</tr>
+							<tr>
+								<td colspan="2">姓名：
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">机构：</td>
+							</tr>
+							<tr>
+								<td colspan="2">最后登录：2018-07-21 05:46:57</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+			</div>
+		</div>
+		<div class="login-out">
+			<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+				<font>退出</font>
+			</a>
+		</div><!--./login-out-->
+		<div class="enter_fullscreen" style="display: none;">
+			<img src="./产业基金_files/full.png">
+		</div>
+	</div><!--./user-box-->
+</header><!--./head-->
+
+<!-- 编辑 -->
+<div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">| 修改密码</h4>
+            </div>
+            <form id="editPwds" novalidate="novalidate">
+                <div class="modal-body">
+                    <div class="form-list">
+                        <ul>
+                        	<li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>原密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>新的密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>再次输入密码：</font></div>
+                                    <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                        </ul>
+                         <input type="hidden" value="" id="userId">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-orange"> 确 认</button>
+                    <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 皮肤切换 -->
+<div class="skin-admin-right" id="skin_admin_right">
+	<div class="skin-black" id="skin_black"></div>
+	<div class="skin-blue" id="skin_blue"></div>
+</div>
+
+	<!-- 右边 -->
+	<div class="right">
+		<!-- 右边框架 -->
+		<div class="right-wrapper">
+
+			<!-- 右边头部 -->
+			<section class="right-title">
+				<div class="crumbs_list">当前位置：产业基金</div>
+			</section>
+			<!--./right-title-->
+
+			<!-- 右边内容 -->
+			<!-- <section class="right-body toblefont"> -->
+				<div class="nav-tabs-custom">
+					<ul class="head-nav">
+						<li class="active"><a href="javascript:;" class="nonglin">农林牧渔(16)</a></li>
+						<li><a href="javascript:;" >农副食品工业(11)</a></li>
+						<li><a href="javascript:;">木材加工(11)</a></li>
+						<li><a href="javascript:;">生态和环境(21)</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-12 mb15">
+					<div class="nav-tabs-small">
+						<div class="box1 tabchange" style="display:block;">
+								<table class="table">
+									<thead>
+											<tr><th style="border-bottom:0px;width:4%;">序号</th><th style="border-bottom:0px;width: 20%;">公司名称</th><th style="border-bottom:0px;width: 10%">法定代表人</th><th style="border-bottom:0px;width: 12%;">注册资本</th><th style="border-bottom:0px;width: 8%;">注册时间</th><th style="border-bottom:0px;">地址信息</th><th style="border-bottom:0px;">联系电话</th>
+									</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>贵阳台农种养殖有限公司</td>
+										<td>李嘉川</td>
+										<td>223万美元</td>
+										<td>2013/1/30
+											</td>
+										<td>贵州省贵阳市开阳县双流镇刘育村练马坝村民组</td>
+										<td>18798070089</td>
+										
+									</tr>
+								<tr>
+								<td>2</td>
+								<td>贵州贵茶有限公司</td>
+								<td>徐谦</td>
+								<td>19000万人民币</td>
+								<td>2011/7/12
+									</td>
+								<td>贵州省贵阳市花溪区久安乡小山村</td><td>85823693</td></tr>
+								<tr><td>3</td><td>贵州龙庄茶业投资股份有限公司</td><td>庄秋生</td><td>60000万人民币</td><td>2013/12/10
+									</td>
+								<td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园标准厂房辅助用房B215室</td><td>13708520263</td></tr>
+
+								<tr>
+								<td>4</td>
+								<td>贵州华农集团生态畜牧科技发展有限公司</td>
+								<td>胡丽华</td>
+								<td>5000万人民币</td>
+								<td>2015/5/11
+									</td><td>贵州省贵阳市云岩区渔安安井片区未来方舟G6组团负1层8号</td><td>0851-88559032</td></tr>
+								<tr><td>5</td><td>贵州开磷农业发展有限公司</td><td>李小阳</td><td>50000万人民币</td><td>2013/12/10
+									</td><td>贵州省贵阳市观山湖区金阳北路237号开磷城</td><td>0851-86989036</td></tr>
+								<tr><td>6</td><td>贵阳市乌当区五彩生态农业发展投资有限责任公司</td><td>肖兴菊</td><td>50602万人民币</td><td>2014/1/13
+									</td><td>贵州省贵阳市乌当区羊昌镇</td><td>0851-88325506</td></tr>
+								<tr><td>7</td><td>贵州特驱新农业有限公司</td><td>刘国峰</td><td>5000万人民币</td><td>2013/5/7
+									</td><td>贵州省贵阳市清镇市红枫路</td><td>0851-84106003</td></tr>
+								<tr><td>8</td><td>贵州富之源农业发展有限公司</td><td>罗彦</td><td>5400万人民币</td><td>2015/1/13
+									</td><td>贵州省贵阳市修文县扎佐镇三元村</td><td>0851-82316468</td></tr>
+								<tr><td>9</td><td>贵阳开元生物资源开发有限公司</td><td>潘祖余</td><td>1000万人民币</td><td>2015/8/17
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园</td><td>0851-86607065</td></tr>
+								<tr><td>10</td><td>贵州圣地有机农业有限公司</td><td>路阳春</td><td>1000万人民币</td><td>2013/9/16
+									</td><td>贵州省贵阳市修文县龙场镇朝阳东路阳光家园C栋4层4号</td><td>13811121822</td></tr>
+								<tr><td>11</td><td>贵州黔绿能科技发展有限公司</td><td>崔松青</td><td>700万人民币</td><td>2015/11/5
+									</td><td>贵州省贵安新区马场镇国际数字文化产业园泰豪E时代壹号楼零玖层（1、2、3、9号）写字楼</td><td>13985183555</td></tr>
+								<tr><td>12</td><td>贵州沃润丰农业发展有限公司</td><td>古梦薇</td><td>2000万人民币</td><td>2015/8/12
+									</td><td>贵州省贵阳市南明区观水路46号中科嘉园B栋3005[水口寺社区]</td><td>13885192555</td></tr>
+								<tr><td>13</td><td>贵州禾豐绿色食品有限公司</td><td>唐光钱</td><td>600万人民币</td><td>2015/8/20
+									</td><td>贵州省贵阳市观山湖区会展城A4组团10栋15楼2号</td><td>13885082317</td><tr>
+								<tr><td>15</td><td>贵州森宝生态农业开发有限公司</td><td>陈长斌</td><td>3000万人民币</td><td>2004/4/30
+									</td><td>贵州省铜仁市沿河土家族自治县和平镇开发区</td><td>13888318965</td></tr>
+								<tr><td>16</td><td>金沙县得胜林业专业合作社</td><td>田锦德</td><td>600万人民币</td><td>2012/12/19
+									</td><td>贵州省毕节市金沙县大田乡幸福村黄堰组</td><td>15085315666</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="box2 tabchange" style="">
+							<table class="table">
+								<thead>
+									<tr><th style="border-bottom:0px;width:4%;">序号</th><th style="border-bottom:0px;width: 20%;">公司名称</th><th style="border-bottom:0px;width: 10%">法定代表人</th><th style="border-bottom:0px;width: 12%;">注册资本</th><th style="border-bottom:0px;width: 8%;">注册时间</th><th style="border-bottom:0px;">地址信息</th><th style="border-bottom:0px;">联系电话</th>
+								</thead>
+								<tbody>
+								<tr><td>1</td><td>贵阳正邦畜牧有限公司</td><td>高珩</td><td>2255万人民币</td><td>2006/8/29
+								</td><td>贵州省贵阳市花溪区小孟工业园</td><td>0851-83658100</td></tr>
+								<tr><td>2</td><td>贵州罗汉食品有限公司</td><td>侯洋</td><td>1600万人民币</td><td>2002/9/3
+								</td><td>贵州省贵阳市花溪区青岩镇北街村</td><td>15902685965</td></tr>
+								<tr><td>3</td><td>贵州聚鑫创富实业发展有限公司</td><td>杜晓斌</td><td>1000万人民币</td><td>2016/5/13
+								</td><td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园标准厂房辅助用房B507室</td><td>13208519777</td></tr>
+								<tr><td>4</td><td>贵州五福坊食品股份有限公司</td><td>王怀平</td><td>4243.5万人民币</td><td>2001/5/18
+								</td><td>贵州省贵阳市乌当区高新路278号（东风镇界牌林场）</td><td>0851-86317866</td></tr>
+								<tr><td>5</td><td>贵阳超群实业有限公司</td><td>汪继超</td><td>500万人民币</td><td>1997/6/3
+								</td><td>贵州省贵阳市乌当区高新办事处新庄工业园３６号</td><td>18798712107</td></tr>
+								<tr><td>6</td><td>贵州牛羊肉类加工有限责任公司</td><td>姚作武</td><td>3392.13万人民币</td><td>2005/1/25
+								</td><td>贵州省贵阳市白云区都拉营小河村</td><td>13087841635</td></tr>
+								<tr><td>7</td><td>贵阳富源饲料有限公司</td><td>雷贤义</td><td>5618万人民币</td><td>2000/4/18
+								</td><td>贵州省贵阳市修文县工业园区（扎佐三元）</td><td>84400688</td></tr>
+								<tr><td>8</td><td>贵州金杨油脂有限公司</td><td>田振惠</td><td>1000万人民币</td><td>1990/10/27
+								</td><td>贵州省贵阳市白云区粑粑坳</td><td>暂无信息</td></tr>
+								<tr><td>9</td><td>贵阳金满船饲料有限公司</td><td>黎云</td><td>258.6万人民币</td><td>2002/9/11
+								</td><td>贵州省贵阳市白云区粑粑坳</td><td>0851-84610773</td></tr>
+								<tr><td>10</td><td>贵阳土家食品有限公司</td><td>杜执蛟</td><td>1000万人民币</td><td>2015/3/9
+								</td><td>贵州省贵阳市修文县扎佐镇工业园区</td><td>13809459324</td></tr>
+								<tr><td>11</td><td>贵州武陵集团农牧科技有限公司</td><td>杨通禄</td><td>1700万人民币</td><td>2004/8/20
+								</td><td>贵州省铜仁市万山区鱼塘旗屯村</td><td>18608569001</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="box3 tabchange" style="">
+							<table class="table">
+							<thead>
+								<tr><th style="border-bottom:0px;width:4%;">序号</th><th style="border-bottom:0px;width: 20%;">公司名称</th><th style="border-bottom:0px;width: 10%">法定代表人</th><th style="border-bottom:0px;width: 12%;">注册资本</th><th style="border-bottom:0px;width: 8%;">注册时间</th><th style="border-bottom:0px;">地址信息</th><th style="border-bottom:0px;">联系电话</th>
+							</thead>
+							<tbody>
+								<tr><td>1</td><td>贵州远景木业有限公司</td><td>柯贞龙</td><td>3500万人民币</td><td>2015/11/16
+								</td><td>贵州省贵阳市修文县龙场镇马口村二组</td><td>13518502651</td></tr>
+								<tr><td>2</td><td>贵州四方源达实业股份有限公司</td><td>张正波</td><td>1000万人民币</td><td>2016/5/9
+								</td><td>贵州省贵阳市清镇市站街镇坪子村大寨组乡里坝6号</td><td>18275358531</td></tr>
+								<tr><td>3</td><td>贵州爱家木业有限公司</td><td>翁波</td><td>2800万人民币</td><td>2015/5/27
+								</td><td>贵州省贵阳市白云区麦架镇果园村</td><td>15902696606</td></tr>
+								<tr><td>4</td><td>贵州省木业有限责任公司</td><td>陈贵良</td><td>2478.3万人民币</td><td>1992/2/26
+								</td><td>贵州省贵阳市南明区富源南路４３５号</td><td>0851-83929429</td></tr>
+								<tr><td>5</td><td>贵州福林园木业有限公司</td><td>郑金清</td><td>100万人民币</td><td>2013/3/5
+								</td><td>贵州省贵阳市南明区花溪大道中段19号[中曹司社区]</td><td>15885019878</td></tr>
+								<tr><td>6</td><td>贵州国林竹木开发有限公司</td><td>刘静玟</td><td>500万人民币</td><td>2013/10/15
+								</td><td>贵州省黔东南苗族侗族自治州锦屏县平略镇林星村</td><td>18285534712</td></tr>
+								<tr><td>7</td><td>剑河县鑫隆木业有限公司</td><td>邹雄</td><td>2000万人民币</td><td>2013/11/1
+								</td><td>贵州省黔东南苗族侗族自治州剑河县柳川镇原装饰厂内</td><td>15186837766</td></tr>
+								<tr><td>8</td><td>黔东南凯鑫木器加工有限责任公司</td><td>孙高兴</td><td>1000万人民币</td><td>2013/10/30
+								</td><td>贵州省黔东南苗族侗族自治州凯里市大坡水鸭塘冲</td><td>13618554999</td></tr>
+								<tr><td>9</td><td>凤冈县帝源木业有限公司</td><td>阮国玉</td><td>500万人民币</td><td>2014/5/16
+								</td><td>贵州省遵义市凤冈县龙泉镇柏梓村</td><td>15329522759</td></tr>
+								<tr><td>10</td><td>施秉县振铭木业有限公司</td><td>孔子铭</td><td>100万人民币</td><td>2013/7/18
+								</td><td>贵州省黔东南苗族侗族自治州施秉县城关镇工业园区3号</td><td>15329752525</td></tr>
+								<tr><td>11</td><td>黔东南苗族侗族自治州羊坪林产品贮运经销公司</td><td>杨德兴</td><td>363万人民币</td><td>1989/7/25
+								</td><td>贵州省黔东南苗族侗族自治州镇远县羊坪镇</td><td>0855-5811053</td></tr>
+							</tbody>
+							</table>
+						</div>
+						<div class="box4 tabchange" style="">
+							<table class="table">
+								<thead>
+									<tr><th style="border-bottom:0px;width:4%;">序号</th><th style="border-bottom:0px;width: 20%;">公司名称</th><th style="border-bottom:0px;width: 10%">法定代表人</th><th style="border-bottom:0px;width: 12%;">注册资本</th><th style="border-bottom:0px;width: 8%;">注册时间</th><th style="border-bottom:0px;">地址信息</th><th style="border-bottom:0px;">联系电话</th>
+								</thead>
+								<tbody>
+
+									<tr><td>1</td><td>贵州筑信水务环境产业有限公司</td><td>彭采云</td><td>165000万港元</td><td>2013/1/30
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园标准厂房辅助用房B405室</td><td>0851-86878281</td></tr>
+									<tr><td>2</td><td>贵州山青水绿环保工程有限公司</td><td>丁思猛</td><td>500万人民币</td><td>2011/7/12
+									</td><td>贵州省贵阳市云岩区延安中路48-56号世贸广场A幢12A层A-12A-6号</td><td>17784813896</td></tr>
+									<tr><td>3</td><td>黔东南州宇尘医废处置有限公司</td><td>唐雪炎</td><td>1000万人民币</td><td>2014/4/16
+									</td><td>贵州省黔东南苗族侗族自治州凯里市金泉路3号</td><td>13985278765</td></tr>									
+									<tr><td>4</td><td>贵州阳光环境工程有限公司</td><td>张晓光</td><td>100万人民币</td><td>2015/5/11
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区国家高新区金阳科技产业园标准厂房辅助用房B414室</td><td>18798050657</td></tr>
+									<tr><td>5</td><td>贵州绿兴清源环保有限责任公司</td><td>尹辉</td><td>1000万人民币</td><td>2013/12/10
+									</td><td>贵州省贵阳市南明区遵义路城市方舟1栋A单元16楼1号[新华社区]</td><td>85561451</td></tr>
+									<tr><td>6</td><td>贵州美瑞特环保科技有限公司</td><td>李森</td><td>2000万人民币</td><td>2014/1/13
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区长岭南路留学归国人才创业园别墅A1栋208室</td><td>18302800963</td></tr>
+									<tr><td>7</td><td>贵州季明盛世环保工程有限公司</td><td>彭俊翔</td><td>1000万人民币</td><td>2013/5/7
+									</td><td>贵州省贵阳市金华镇金华村</td><td>暂无信息</td></tr>
+									<tr><td>8</td><td>贵州中创超扬环保科技有限公司</td><td>刘焱昭</td><td>1000万人民币</td><td>2015/1/13
+									</td><td>贵州省贵阳市南明区花果园后街彭家湾花果园项目E区E8（国际金融街2号）1单元34层6号[花果园社区]</td><td>0851-85978879</td></tr>
+									<tr><td>9</td><td>贵州医谷中泰环保科技有限公司</td><td>程立树</td><td>1000万人民币</td><td>2015/8/17
+									</td><td>贵州省贵阳市贵阳综合保税区都拉乡商业街</td><td>0851-84722611</td></tr>
+									<tr><td>10</td><td>贵阳矿投生态环境治理开发有限公司</td><td>陈晓丽</td><td>1000万人民币</td><td>2013/9/16
+									</td><td>贵州省贵阳市云岩区北京路银海元隆广场7栋1单元25层1号</td><td>86653591</td></tr>
+									<tr><td>11</td><td>贵州北创隆兴环境工程有限公司</td><td>高振</td><td>3000万人民币</td><td>2015/11/5
+									</td><td>贵州省贵阳市观山湖区诚信北路8号绿地联盛国际3,4号楼4单元25层12号</td><td>18188011207</td></tr>
+									<tr><td>12</td><td>贵州沙嘉帮再生资源科技开发有限公司</td><td>宋燕文</td><td>1000万人民币</td><td>2015/8/12
+									</td><td>贵州省贵阳市观山湖区窦官村鑫阳砂场</td><td>13765078188</td></tr>
+									<tr><td>13</td><td>贵州中水环境科技有限公司</td><td>张俊红</td><td>5000万人民币</td><td>2015/8/20
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园标准厂房辅助用房B304室</td><td>18785077769</td></tr>
+									<tr><td>14</td><td>贵州泰得环保科技有限公司</td><td>宋昱坪</td><td>300万人民币</td><td>2004/4/30
+									</td><td>贵州省贵阳市白云区艳山红镇尖坡村西贵遵高速边</td><td>0851-84492448</td></tr>
+									<tr><td>15</td><td>贵州申城高科环境发展股份有限公司</td><td>李学敏</td><td>5000万人民币</td><td>2012/12/19
+									</td><td>贵州省贵阳市观山湖区世纪城X组团1-5栋写字楼和1-5栋商业3单元16层1至4号房</td><td>0851-84124373</td></tr>
+									<tr><td>16</td><td>贵州天保生态股份有限公司</td><td>王兴</td><td>2912.3456万人民币</td><td>2008/8/8
+									</td><td>贵州省贵阳市观山湖区甲秀北路235号北大资源A07栋16楼</td><td>0851-83867777</td></tr>
+									<tr><td>17</td><td>贵阳城投北控污水处理运营管理有限公司</td><td>邓隽炜</td><td>1000万人民币</td><td>2010/12/2
+									</td><td>贵州省贵阳市云岩区公园路30号1层1号</td><td>暂无信息</td></tr>
+									<tr><td>18</td><td>贵州光大生态发展有限公司</td><td>王尚文</td><td>3000万人民币</td><td>2012/5/30
+									</td><td>贵州省贵阳市贵阳国家高新技术产业开发区金阳科技产业园标准厂房辅助用房B508</td><td>15818583396</td></tr>
+									<tr><td>19</td><td>贵州恩菲环保有限公司</td><td>石福书</td><td>1006万人民币</td><td>2013/7/29
+									</td><td>贵州省贵阳市南明区观水路46号中科嘉园1410[西湖社区]</td><td>0851-85274707</td></tr>
+									<tr><td>20</td><td>贵阳城投北控污水处理运营管理有限公司</td><td>邓隽炜</td><td>1000万人民币</td><td>2013/7/29
+									</td><td>贵州省贵阳市云岩区公园路30号1层1号</td><td>暂无信息</td></tr>
+									<tr><td>21</td><td>贵州三鼎恒兴环保工程有限公司</td><td>张光云</td><td>1000万人民币</td><td>2010/12/2
+									</td><td>贵州省贵阳市观山湖区绿地联盛国际第6，7号楼（7）2单元17层3号房</td><td>暂无信息</td></tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			<!-- </section> -->
+			<input id="path" value="http://rfiis.rtkj.com.cn:80/rfiis-govt/" type="hidden">
+		</div>
+		<!--./right-wrapper-->
+	</div>
+	<!--./right-->
+<!-- jquery-2.1.1.min.js -->
+<script src="./common/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./common/js/jquery.ba-resize.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- bootstrap.min.js -->
+<script src="./common/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table.js -->
+<script src="./common/plugins/bootstrapTable/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table-zh-CN.js -->
+<script src="./common/plugins/bootstrapTable/locale/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./common/js/animation/comm.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./common/plugins/switch/lc_switch.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js extend.js -->
+<script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js region.js -->
+<script src="./common/js/util/region.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js busic.js -->
+<script src="./common/js/util/busic.js" type="text/javascript" charset="utf-8"></script>
+<script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-dialog.js -->
+<script src="./common/plugins/bootstrapDialog/bootstrap-dialog.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- layer.js -->
+<script src="./common/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+<!-- 日期格式化js -->
+<script src="./common/js/util/date.js"></script>
+<!-- 日期插件 foundation-datepicker.js -->
+<script src="./common/plugins/datepicker/foundation-datepicker.js"></script>
+
+<!-- 输入验证js-->
+<script src="./common/plugins/validate/jquery.validate.min.js"></script>
+<!-- 输入验证js-->
+<script src="./common/plugins/validate/messages_zh.min.js"></script>
+<!-- echarts js-->
+<script src="./common/plugins/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./include/js/logic/head.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./common/js/numeral/numeral.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./产业基金_files/org_user.js"></script>
+<script src="./产业基金_files/role.js"></script>
+<script> 
+//点击切换
+function tabChange() {
+	var $li = $('.head-nav li');
+    var $tabShow = $('.tabchange');
+
+    $li.on('click', function() {
+        var $this = $(this);
+        var $t = $this.index();
+        $li.removeClass('active');
+        $this.addClass('active');
+        // $tabShow.css('display', 'none');
+        // $tabShow.eq($t).css('display', 'block');
+        $tabShow.fadeOut();
+        $tabShow.eq($t).fadeIn();
+    })
+}
+
+tabChange();
+
+</script>
+</body></html>

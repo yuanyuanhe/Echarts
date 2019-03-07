@@ -1,0 +1,208 @@
+/**
+ * 统计分析页面独立使用CSS
+ * 独立使用的CSS不要引入其他页面
+ * 需要写CSS请在下面按照common/comm.css格式书写
+ */
+.ibox.cbg {
+    border: 1px solid #0173bb;
+    background: rgba(2,14,58,0.6);
+    -moz-box-shadow: 0px 0px 17px rgba(17,115,167,1) inset;
+    -webkit-box-shadow: 0px 0px 17px rgba(17,115,167,1) inset;
+    box-shadow: 0px 0px 17px rgba(17,115,167,1) inset;
+    padding: 15px;
+}
+.data_container {
+    position: relative;
+    overflow: hidden;
+}
+.data_wrap1 {
+    float: left;
+    width: 45%;
+    padding-left: 80px;
+    position: relative;
+    padding-top: 15px;
+}
+.info_list {
+    padding: 15px 0 10px;
+    overflow: hidden;
+}
+.company_num {
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    width: 260px;
+}
+.organization_num {
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    width: 90%;
+}
+.company_num em, .organization_num em {
+    font-size: 22px;
+    color: #f28a62;
+    padding-right: 10px;
+}
+.industry_num {
+    float: left;
+    line-height: 45px;
+    padding-left: 10px;
+    color: #fff;
+}
+.industry_list td {
+    color: #fff;
+    height: 32px;
+    line-height: 14px;
+}
+.industry_list .td_industry {
+    padding-left: 15px;
+    line-height: 20px;
+}
+.industry_list .td_industry .t_icon {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    background-color: #079aec;
+}
+.industry_list .td_industry em {
+    padding-left: 15px;
+}
+.pie_info {
+    float: left;
+    width: 50%;
+}
+.tb_info {
+    float: left;
+    width: 40%;
+    margin-top: 40px;
+}
+table.table_company {
+    width: 100%
+}
+.table_company thead {
+    color: #3dbbf5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.table_company thead th {
+    border-bottom: 1px solid #079aec;
+    padding-bottom: 5px;
+    font-weight: 400;
+    text-align: center;
+}
+.table_company tbody tr:first-child td {
+    padding-top: 15px;
+}
+.table_company tbody td {
+    padding: 6px 0;
+    color: #fff;
+    text-align: center;
+}
+.data_wrap2 {
+    position: absolute;
+    top: 0;
+    left: 280px;
+    width: calc(65% - 300px);
+}
+.data_wrap3 {
+    float: right;
+    width: 35%;
+    margin-top: 25px;
+    position: relative;
+}
+.table_list {
+    float: left;
+    width: 45%;
+    min-height: 165px;
+}
+table.table_industry {
+    width: 100%
+}
+.table_industry thead {
+    color: #3dbbf5;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.table_industry thead th {
+    border-bottom: 1px solid #079aec;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+.table_industry tbody tr:first-child td {
+    padding-top: 15px;
+}
+.table_industry tbody td {
+    padding: 6px 0;
+    color: #fff;
+}
+.table_industry tbody td:nth-of-type(2) {
+    text-align: center;
+    color: #40c2fd;
+}
+.table-info>tbody>tr>td {
+    border-left: 0;
+    color: #fff;
+    height: 32px;
+    line-height: 14px;
+}
+.company_info {
+    text-align: center;
+    color: #fff;
+    margin: 10px 0 15px;
+}
+.company_info span {
+    font-size: 18px;
+    padding-right: 15px;
+}
+.company_info em {
+    font-size: 22px;
+    color: #dc2c32;
+    padding-right: 6px;
+}
+.chart_hint {
+    color: #3dbbf5;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 15px;
+}
+
+.info_list .fixed-table-container {
+    height: 305px;
+}
+.fixed-table-pagination .pagination-detail {
+    display: none;
+}
+.fixed-table-pagination .pagination a{
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    color: #45affa;
+    padding: 0 5px;
+}
+.fixed-table-pagination .pagination a:hover,
+.fixed-table-pagination .pagination a:focus {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+}
+.fixed-table-pagination .pagination .page-number a {
+    background: url("../../img/icon_list.png") no-repeat;
+    margin-right: 6px;
+    padding: 0 3px;
+    color: rgba(0,0,0,0);
+}
+.fixed-table-pagination .pagination>.active>a,
+.fixed-table-pagination .pagination>.active>a:focus,
+.fixed-table-pagination .pagination>.active>a:hover {
+    background: url("../../img/icon_active.png") no-repeat;
+    border: 0;
+    color: rgba(0,0,0,0);
+}
+.fixed-table-pagination div.pagination {
+    margin: 0;
+}
+.fixed-table-pagination {
+    position: absolute;
+    bottom: 5px;
+}

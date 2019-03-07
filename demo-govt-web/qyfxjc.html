@@ -1,0 +1,1697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0098)file:///E:/rongtuo/demo-govt-web/views/%E5%8C%BA%E5%9F%9F%E9%A3%8E%E9%99%A9%E7%9B%91%E6%B5%8B.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="http://rfiis.rtkj.com.cn:80/rfiis-govt/">--><!--<base href=".">--><base href=".">
+
+    <title>区域风险监控</title>
+    
+
+
+
+
+
+
+<script>
+	var basePath = 'http://rfiis.rtkj.com.cn:80/rfiis-govt/';
+	// 判断皮肤
+	var bootstarpTablePath = '';
+	var commPath = '';
+	if(localStorage.skin == 'blue' || typeof(localStorage.skin) == 'undefined'){
+		
+		bootstarpTablePath = basePath+"STATIC/template/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/template/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}else if(localStorage.skin =='black'){
+		
+		bootstarpTablePath = basePath+"STATIC/common/plugins/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/common/css/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}
+	
+	function insertAfter( newElement, targetElement ){ // newElement是要追加的元素 targetElement 是指定元素的位置 
+		var parent = targetElement.parentNode; // 找到指定元素的父节点 
+		if( parent.lastChild == targetElement ){ // 判断指定元素的是否是节点中的最后一个位置 如果是的话就直接使用appendChild方法 
+			parent.appendChild( newElement, targetElement ); 
+		}else{ 
+			parent.insertBefore( newElement, targetElement.nextSibling ); 
+		}; 
+	}; 
+	
+</script>
+<!-- bootstrap.css -->
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/bootstrap-theme.min.css">
+<!-- 字体样式font-awesome.css -->
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/font-awesome.css">
+<!-- 开关switch.css -->
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/lc_switch.css">
+<!-- bootstrap-dialog.css -->
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/bootstrap-dialog.css">
+<!-- 日期插件 foundation-datepicker.css -->
+<link rel="stylesheet" type="text/css" href="./qyfxjc_files/foundation-datepicker.css">
+    <link rel="stylesheet" href="./qyfxjc_files/risk.css">
+<link rel="stylesheet" href="./qyfxjc_files/layer.css" id="layuicss-skinlayercss"><link rel="stylesheet" type="text/css" id="comm_template" href="./qyfxjc_files/comm.css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./qyfxjc_files/bootstrap-table.css"></head><link rel="stylesheet" type="text/css" id="comm_template" href="./qyfxjc_files/comm(1).css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./qyfxjc_files/bootstrap-table(1).css">
+
+<body class="bg">
+
+	
+
+
+
+<!-- 头部 -->
+<header class="head bg">
+	<!-- logo -->
+	<div class="pull-left logo-bg">
+		<font>区域金融云平台</font>
+	</div>
+	<a href="http://rfiis.rtkj.com.cn/rfiis-govt/#" class="sidebar" role="button"></a>
+	<div class="pull-left">
+		<ul class="navbar-menu">
+			
+				<li data-id="LDJSC" data-title="4">
+					<a>
+						<i class="i-icon"></i>
+						<font>领导驾驶舱</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+										<i class="i-icon"></i>
+										<font>企业综合信息展示</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_GZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/">贵州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_SH">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_XZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_FJ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="ZLFX" class="menu-mark">
+									<a href="http://101.37.37.100/qyjrzl.html">
+										<i class="i-icon"></i>
+										<font>区域金融总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="SCFX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+										<i class="i-icon"></i>
+										<font>金融服务统计</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DFZZL" class="menu-mark">
+									<a>
+										<i class="i-icon"></i>
+										<font>地方债总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_XEDK" class="menu-mark">
+									<a href="http://101.37.37.100/rongtuo/myDemo/Microfinance.html?other=service/smallLoan/toSmallLoan">
+										<i class="i-icon"></i>
+										<font>小额贷款机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+										<i class="i-icon"></i>
+										<font>民间融资机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+										<i class="i-icon"></i>
+										<font>融资担保机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易市场</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXYJ" data-title="50" class="active">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险预警</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXYJ_FXJC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+										<i class="i-icon"></i>
+										<font>区域风险监测</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+										<i class="i-icon"></i>
+										<font>非集热点追踪</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_YQJK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+										<i class="i-icon"></i>
+										<font>区域舆情监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_SWJR" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+										<i class="i-icon"></i>
+										<font>涉外金融监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_XNHB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+										<i class="i-icon"></i>
+										<font>虚拟货币监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="JYFX" data-title="5">
+					<a>
+						<i class="i-icon"></i>
+						<font>经营分析</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="JYFX_XEDK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+										<i class="i-icon"></i>
+										<font>小额贷款分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+										<i class="i-icon"></i>
+										<font>民间融资分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+										<i class="i-icon"></i>
+										<font>融资担保分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SRZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXGL" data-title="70">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXGL_YQGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+										<i class="i-icon"></i>
+										<font>区域舆情管理</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_SJGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_TJFX">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_JKSZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_BGGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXGL_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>区域非法集资</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="MJLLZS" data-title="6">
+					<a>
+						<i class="i-icon"></i>
+						<font>利率指数</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LLZS" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/interestIndex/toInterestIndex">
+										<i class="i-icon"></i>
+										<font>产业基金</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="QYXX" data-title="13">
+					<a>
+						<i class="i-icon"></i>
+						<font>企业信用管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="QYCX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+										<i class="i-icon"></i>
+										<font>企业信息查询</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SYQY" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>企业运营分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYCX_XYDJ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>企业信用等级</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYXY_CTHC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+										<i class="i-icon"></i>
+										<font>企业穿透核查</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="XTSZ" data-title="14">
+					<a>
+						<i class="i-icon"></i>
+						<font>系统设置</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="ZHSZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+										<i class="i-icon"></i>
+										<font>账号权限管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="YHGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+										<i class="i-icon"></i>
+										<font>金融机构管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+		</ul>
+		<input type="hidden" id="h_index" value="50">
+	</div>
+
+	<!-- 用户信息 -->
+	<div class="pull-right user-box">
+		
+
+		<div class="user-info">
+			<a id="user-info-click">
+				<i class="glyphicon glyphicon-user"></i>
+				<font>admin</font>
+				<i class="glyphicon glyphicon-triangle-bottom"></i>
+			</a>
+			<div class="user-info-details" id="user-info-details-display">
+				<div class="user-details-left">
+					<div class="user-details-img">
+						<img class="img-circle" src="./qyfxjc_files/yea.jpg">
+					</div>
+					<div class="modify-pwd">
+						<a id="editPassword">修改密码</a>
+					</div>
+				</div>
+				<div class="user-details-right">
+					<table class="table-info table-boundless font-color">
+						<tbody>
+							<tr>
+								<td>账号：admin</td>
+							</tr>
+							<tr>
+								<td>管理权限：admin</td>
+							</tr>
+							<tr>
+								<td colspan="2">姓名：
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">机构：</td>
+							</tr>
+							<tr>
+								<td colspan="2">最后登录：2018-07-22 09:24:09</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+			</div>
+		</div>
+		<div class="login-out">
+			<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+				<font>退出</font>
+			</a>
+		</div><!--./login-out-->
+		<div class="enter_fullscreen" style="display: inline-block;">
+			<img src="./qyfxjc_files/full.png">
+		</div>
+	</div><!--./user-box-->
+</header><!--./head-->
+
+
+<!-- 编辑 -->
+<div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">| 修改密码</h4>
+            </div>
+            <form id="editPwds" novalidate="novalidate">
+                <div class="modal-body">
+                    <div class="form-list">
+                        <ul>
+                        	<li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>原密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>新的密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>再次输入密码：</font></div>
+                                    <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                        </ul>
+                         <input type="hidden" value="" id="userId">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-orange"> 确 认</button>
+                    <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 皮肤切换 -->
+<div class="skin-admin-right" id="skin_admin_right">
+	<div class="skin-black" id="skin_black"></div>
+	<div class="skin-blue" id="skin_blue"></div>
+</div>
+
+
+
+<section class="right-title">
+    <div class="right_name">区域风险监控</div>
+</section>
+
+<div class="content">
+    <div class="content-td one">
+        <div class="monitor">
+            <p class="title">检测企业总数为
+                <small>3600</small>
+                家
+            </p>
+            <p class="subtitle">其中，类金融企业
+                <small>350</small>
+                ，其他企业
+                <small>3250</small>
+                家
+            </p>
+        </div>
+        <div class="monitor">
+            <p class="title">风险企业总数为
+                <small>210</small>
+                家
+            </p>
+            <p class="subtitle">其中，类金融企业
+                <small>150</small>
+                ，其他企业
+                <small>60</small>
+                家
+            </p>
+        </div>
+        <div class="monitor monitor-region">
+            <p class="title">检测
+                <small>11</small>
+                个地区
+                <small>36</small>
+                个行业
+            </p>
+            <p class="subtitle">高风险企业主要分布在
+                <small>任城区、兖州区、邹城区</small>
+                等区域，
+                <small>私募、网贷、投资资讯、融资</small>
+                等行业
+            </p>
+            <div class="info">
+                <ul>
+                    <li>全面排查：
+                        <small>3521</small>
+                        家
+                    </li>
+                    <li>重点监测：
+                        <small>210</small>
+                        家
+                    </li>
+                    <li>调查介入：
+                        <small>3</small>
+                        家
+                    </li>
+                </ul>
+                <ul>
+                    <li>正常监测：
+                        <small>400</small>
+                        家
+                    </li>
+                    <li>高风险预警：
+                        <small>10</small>
+                        家
+                    </li>
+                    <li>异常名单：
+                        <small>37</small>
+                        家
+                    </li>
+                </ul>
+            </div>
+            <div class="monitor-chart">
+                <div id="all" _echarts_instance_="ec_1546755497314" style="-webkit-tap-highlight-color: transparent; user-select: none; background: transparent;"><div style="position: relative; overflow: hidden; width: 107px; height: 100px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="107" height="100" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 107px; height: 100px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+                <div id="normal" _echarts_instance_="ec_1546755497315" style="-webkit-tap-highlight-color: transparent; user-select: none; background: transparent;"><div style="position: relative; overflow: hidden; width: 107px; height: 100px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="107" height="100" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 107px; height: 100px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+                <div id="Akey" _echarts_instance_="ec_1546755497316" style="-webkit-tap-highlight-color: transparent; user-select: none; background: transparent;"><div style="position: relative; overflow: hidden; width: 106px; height: 100px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="106" height="100" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 106px; height: 100px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="content-td two">
+        <div class="map">
+            <div id="jining" _echarts_instance_="ec_1546755497317" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 488px; height: 304px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="488" height="304" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 488px; height: 304px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+        </div>
+        <div class="column">
+            <div class="ibox-title">
+                <span>类金融风险企业</span>
+            </div>
+            <div class="num">总数：<small>150</small>家</div>
+            <div id="chartColumn" _echarts_instance_="ec_1546755497318" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 488px; height: 186px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="488" height="186" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 488px; height: 186px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+        </div>
+    </div>
+    <div class="content-td three">
+        <div class="table-risk">
+            <div class="risk-title">
+                <span class="qiehuan active" id="fxdq" data-mark="1">风险地区</span>
+                <span class="qiehuan" id="fxhy" data-mark="2">风险行业</span>
+            </div>
+            <div class="risk-content" id="diqu" style="display: block;">
+                <div class="title">
+                    <span>排名Top8</span>
+                    <span>地区</span>
+                    <span>数量(家)</span>
+                    <span class="a"></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">1</span>
+                    <span class="white">任城区</span>
+                    <span>100</span>
+                    <span class="a"><div style="width:100%;background: #C80D0D"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">2</span>
+                    <span class="white">邹城市</span>
+                    <span>90</span>
+                    <span class="a"><div style="width:90%;background: #C82020"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">3</span>
+                    <span class="white">兖州区</span>
+                    <span>80</span>
+                    <span class="a"><div style="width:80%;background: #D23434"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">4</span>
+                    <span class="white">曲阜市</span>
+                    <span>70</span>
+                    <span class="a"><div style="width:70%;background: #EB4949"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">5</span>
+                    <span class="white">汶上县</span>
+                    <span>60</span>
+                    <span class="a"><div style="width:60%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">6</span>
+                    <span class="white">微山县</span>
+                    <span>50</span>
+                    <span class="a"><div style="width:50%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">7</span>
+                    <span class="white">梁山县</span>
+                    <span>40</span>
+                    <span class="a"><div style="width:40%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">8</span>
+                    <span class="white">泗水县</span>
+                    <span>30</span>
+                    <span class="a"><div style="width:30%;background: #E67A61"></div></span>
+                </div>
+            </div>
+            <div class="risk-content" id="hangye" style="display: none;">
+                <div class="title">
+                    <span>排名Top8</span>
+                    <span>行业</span>
+                    <span>数量(家)</span>
+                    <span class="a"></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">1</span>
+                    <span class="white">网贷</span>
+                    <span>200</span>
+                    <span class="a"><div style="width:100%;background: #C80D0D"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">2</span>
+                    <span class="white">投资理财</span>
+                    <span>190</span>
+                    <span class="a"><div style="width:94%;background: #C82020"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">3</span>
+                    <span class="white">保险</span>
+                    <span>175</span>
+                    <span class="a"><div style="width:78%;background: #D23434"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">4</span>
+                    <span class="white">小额贷款</span>
+                    <span>167</span>
+                    <span class="a"><div style="width:67%;background: #EB4949"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">5</span>
+                    <span class="white">融资担保</span>
+                    <span>155</span>
+                    <span class="a"><div style="width:55%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">6</span>
+                    <span class="white">融资租赁</span>
+                    <span>125</span>
+                    <span class="a"><div style="width:25%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">7</span>
+                    <span class="white">私募</span>
+                    <span>100</span>
+                    <span class="a"><div style="width:10%;background: #E67A61"></div></span>
+                </div>
+                <div class="content-info">
+                    <span class="white">8</span>
+                    <span class="white">股权投资</span>
+                    <span>80</span>
+                    <span class="a"><div style="width:8%;background: #E67A61"></div></span>
+                </div>
+            </div>
+        </div>
+        <div class="other-company">
+            <div class="ibox-title">
+                <span>其他风险企业</span>
+            </div>
+            <div class="num">总数：<small>60</small>家</div>
+            <div class="other-box">
+                <div id="radar" _echarts_instance_="ec_1546755497319" style="-webkit-tap-highlight-color: transparent; user-select: none; background: transparent;"><div style="position: relative; overflow: hidden; width: 201px; height: 179px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="201" height="179" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 201px; height: 179px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div></div>
+                <div class="company-in">
+                    <div class="company-in-box">
+                        <div class="company-in-title">
+                            <span>风险评分</span>
+                            <span><span id="year">2017</span><small id="branch">53</small></span>
+                        </div>
+                        <div class="company-in-content">
+                            <p id="name">宏盛商标咨询公司</p>
+                            <p>评语：</p>
+                            <p id="comment">公司盈利能力较差,长期无招聘</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- jquery-2.1.1.min.js -->
+<script src="./qyfxjc_files/jquery-2.1.1.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./qyfxjc_files/jquery.ba-resize.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<!-- bootstrap.min.js -->
+<script src="./qyfxjc_files/bootstrap.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table.js -->
+<script src="./qyfxjc_files/bootstrap-table.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table-zh-CN.js -->
+<script src="./qyfxjc_files/bootstrap-table-zh-CN.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./qyfxjc_files/comm.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./qyfxjc_files/lc_switch.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js extend.js -->
+<script src="./qyfxjc_files/extendUtil.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js region.js -->
+<script src="./qyfxjc_files/region.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js busic.js -->
+<script src="./qyfxjc_files/busic.js.下载" type="text/javascript" charset="utf-8"></script>
+<script src="./qyfxjc_files/extendUtil.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-dialog.js -->
+<script src="./qyfxjc_files/bootstrap-dialog.min.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- layer.js -->
+<script src="./qyfxjc_files/layer.js.下载" type="text/javascript" charset="utf-8"></script>
+<!-- 日期格式化js -->
+<script src="./qyfxjc_files/date.js.下载"></script>
+<!-- 日期插件 foundation-datepicker.js -->
+<script src="./qyfxjc_files/foundation-datepicker.js.下载"></script>
+
+<!-- 输入验证js-->
+<script src="./qyfxjc_files/jquery.validate.min.js.下载"></script>
+<!-- 输入验证js-->
+<script src="./qyfxjc_files/messages_zh.min.js.下载"></script>
+<!-- echarts js-->
+<script src="./qyfxjc_files/echarts.min.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script src="./qyfxjc_files/head.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script src="./qyfxjc_files/numeral.js.下载" type="text/javascript" charset="utf-8"></script>
+
+<script src="./qyfxjc_files/echarts-3.0.js.下载"></script>
+<script src="./qyfxjc_files/jining.js.下载"></script>
+<script src="./qyfxjc_files/echarts-liquidfill.js.下载"></script>
+<script>
+    $(function () {
+
+        $('.enter_fullscreen').click(function(){
+            if($('.quit_fullscreen')){
+                var html = '<div class="quit_fullscreen" style="display: block;position: fixed;top: 0;right: 0;cursor: pointer">'+
+                        '<img src="http://localhost:8080/STATIC/common/img/out.png">'+
+                        '</div>'
+                $('.right-title').append($(html))
+            }
+            $('.quit_fullscreen').click(function(){
+                $('header').show()
+                $('.quit_fullscreen').hide()
+                $('.enter_fullscreen').show()
+            })
+        })
+
+        $('.qiehuan').on('click',function(){
+            var mark = $(this).data('mark');
+            $('.qiehuan').removeClass('active');
+            $(this).addClass('active');
+            if(mark == '1'){
+                $('#diqu').show();
+                $('#hangye').hide();
+            }else{
+                $('#diqu').hide();
+                $('#hangye').show();
+            }
+        })
+
+        setInterval(function(){
+
+            $('#diqu').toggle();
+            $('#hangye').toggle();
+            if($('#fxhy').hasClass("active")){
+                $('#fxhy').removeClass("active");
+                $('#fxdq').addClass('active');
+            }else{
+                $('#fxhy').addClass("active");
+                $('#fxdq').removeClass('active');
+            }
+
+
+        },3000);
+
+        var bodyHeight = $('body').height();
+        var sfontSize = 14;
+        var arr = ['22%','22%']
+        if(bodyHeight < 900){
+            sfontSize = 12;
+            arr = ['16%','16%'];
+        }else if(bodyHeight < 768){
+            sfontSize = 12;
+            arr = ['14%','14%'];
+        }
+        option = {
+            series: [{
+                type: 'liquidFill',
+                data: [0.35],
+                radius: '80%',
+                color:['#9c4dd8'],
+                label: {
+                    normal: {
+                        position: arr,
+                        formatter: function() {
+                            return '全面排查\n98.1251%';
+                        },
+                        textStyle: {
+                            fontSize: sfontSize,
+                            color: '#FFFFFF'
+                        }
+                    }
+                },
+                backgroundStyle: {
+                    color: 'rgba(225,255,255,0)'
+                },
+                outline: {
+                    itemStyle: {
+                        borderColor: '#9c4dd8',
+                        borderWidth: 5
+                    },
+//                    borderDistance: 0
+                },
+                itemStyle: {
+                    normal: {
+                        backgroundColor: '#000'
+                    }
+                }
+            }]
+        };
+        option1 = {
+            series: [{
+                type: 'liquidFill',
+                data: [0.35],
+                radius: '80%',
+                color:['#FF6565'],
+                label: {
+                    normal: {
+                        position: arr,
+                        formatter: function() {
+                            return '正常监测\n8.2658%';
+                        },
+                        textStyle: {
+                            fontSize: sfontSize,
+                            color: '#FFFFFF'
+                        }
+                    }
+                },
+                backgroundStyle: {
+                    color: 'rgba(225,255,255,0)'
+                },
+                outline: {
+                    itemStyle: {
+                        borderColor: '#FF6565',
+                        borderWidth: 5
+                    },
+//                    borderDistance: 0
+                },
+                itemStyle: {
+                    normal: {
+                        backgroundColor: '#000'
+                    }
+                }
+            }]
+        };
+        option2 = {
+            series: [{
+                type: 'liquidFill',
+                data: [0.35],
+                radius: '80%',
+                color:['#F89067'],
+                label: {
+                    normal: {
+                        position: arr,
+                        formatter: function() {
+                            return '重点监测\n0.1289%';
+                        },
+                        textStyle: {
+                            fontSize: sfontSize,
+                            color: '#FFFFFF'
+                        }
+                    }
+                },
+                backgroundStyle: {
+                    color: 'rgba(225,255,255,0)'
+                },
+                outline: {
+                    itemStyle: {
+                        borderColor: '#F89067',
+                        borderWidth: 5
+                    },
+//                    borderDistance: 0
+                },
+                itemStyle: {
+                    normal: {
+                        backgroundColor: '#000'
+                    }
+                }
+            }]
+        };
+        var myChart = echarts.init(document.getElementById('all'));
+        var myChart1 = echarts.init(document.getElementById('normal'));
+        var myChart2 = echarts.init(document.getElementById('Akey'));
+        myChart.setOption(option);
+        myChart1.setOption(option1);
+        myChart2.setOption(option2);
+
+
+        var mydata = [
+            {name: '梁山县', value: 60},
+            {name: '汶上县', value: 60},
+            {name: '兖州区', value: 30},
+            {name: '曲阜市', value: 60},
+            {name: '泗水县', value: 40},
+            {name: '嘉祥县', value: 36},
+            {name: '任城区', value: 85},
+            {name: '邹城市', value: 90},
+            {name: '金乡县', value: 12},
+            {name: '鱼台县', value: 21},
+            {name: '微山县', value: 23}
+
+        ];
+        var lastData=[
+            {name:'邹城市',value:[117.077645,35.326283]},
+            {name:'任城区',value:[116.574305,35.384217]}
+        ]
+        var option3 = {
+            backgroundColor: 'transparent',
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}'
+            },
+            roam: false,
+            visualMap: {
+                type: 'piecewise',
+                splitNumber: 3,
+                pieces: [
+                    {
+                        min: 80,
+                        max: 100,
+                        label: '80-100',
+                        color: '#00037d'
+                    }, {
+                        max: 80,
+                        min: 60,
+                        label: '60-80',
+                        color: '#1c37be'
+                    }, {
+                        min: 40,
+                        max: 60,
+                        label: '40-60',
+                        color: '#0e6aed'
+                    },{
+                        min: 20,
+                        max: 40,
+                        label: '20-40',
+                        color: '#1c37be'
+                    },{
+                        min: 0,
+                        max: 20,
+                        label: '00-60',
+                        color: '#5ec5ff'
+                    },
+                ],
+                textStyle: {
+                    color: '#fff'
+                },
+                min: 0,
+                max: 3,
+                x: '10%',
+                y: '65%',
+                calculable: true,
+                show: true,
+                seriesIndex: 0
+
+            },
+            geo: {
+                map: 'jining',
+                zoom:1,
+                layoutCenter : ['50%','50%'],
+                layoutSize : '100%',
+
+            },
+            series: [{
+                name: '市县',
+                type: 'map',
+                //map: 'jining',
+                mapType: 'jining',
+                showLegendSymbol: false,
+                roam: false,
+                zoom: 1,
+                layoutCenter : ['50%','50%'],
+                layoutSize : '100%',
+                areaColor: '#fff',
+                label:{
+                    normal:{
+                        color:'#fff'
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true
+                        },
+                        show:true,
+                        borderColor: '#1382d7',
+                        color:'#fff'
+                    },
+                    emphasis: {
+                        label: {
+                            show: false
+                        }
+                    }
+                },
+                data: mydata
+            },
+                {
+                    name: '点',
+                    type: 'effectScatter',
+                    coordinateSystem: 'geo',
+                    itemStyle: {
+                        normal: {
+                            shadowBlur: 20,
+                            shadowColor: '#FFF68F'
+                        }
+                    },
+                    data: lastData,
+                    symbolSize: 20,
+                    /* symbolSize: function (val) {
+                     return val[2] / 2;
+                     },*/
+                    label: {
+                        normal: {
+                            show: false
+                        },
+                        emphasis: {
+                            show: false
+                        }
+                    }
+                }]
+        };
+        // 初始化echarts示例mapChart
+        var mapChart3 = echarts.init(document.getElementById('jining'));
+        mapChart3.setOption(option3);
+
+
+        option4 = {
+            title: {
+                text: "风险指数",
+                textStyle: {
+                    color: '#ffffff',
+                    fontSize: 12
+                },
+                top: '11%',
+                left:10
+            },
+            color: ['#3398DB'],
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    data : ['小额贷款', '民间融资', '融资担保', '融资租赁', '典当行', '股权交易', '商业保理', 'P2P'],
+                    axisTick: {
+                        show:false,
+                        alignWithLabel: false
+                    },
+                    splitLine: { //设置X轴的网格
+                        show: false,
+                        interval: 'auto'
+                    },
+                    axisLine: { //设置X轴的颜色
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLine: { //设置y轴的颜色
+                        lineStyle: {
+                            color: '#fff'
+                        }
+                    }
+                }
+            ],
+            series : [
+                {
+//                    name:'',
+                    type:'bar',
+                    barWidth: '20%',
+                    data:[10, 52, 85, 40, 55, 12, 66, 44],
+                    "itemStyle": {
+                        "normal": {
+                            "color": new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                "offset": 0,
+                                "color": "#ff956b" // 0% 处的颜色
+                            }, {
+                                "offset": 1,
+                                "color": "#e9581f" // 100% 处的颜色
+                            }], false)
+                        }
+                    }
+                }
+            ]
+        };
+
+        var mapChart4 = echarts.init(document.getElementById('chartColumn'));
+        mapChart4.setOption(option4);
+
+
+
+
+
+        var arr = [
+            {data:[5000, 14000, 28000, 31000, 42000, 21000], name:'富民小额贷款公司', date:'2017', num:'58', comment:'公司盈利能力较差，负债情况严重'},
+            {data:[6000, 11000, 2000, 22000, 35000, 18000], name:'辰祥建设有限公司', date:'2017', num:'52', comment:'公司盈利能力较差'},
+            {data:[3000, 1000, 8000, 25600, 42000, 21000], name:'济宁惠民企业管理有限公司', date:'2017', num:'54', comment:'办公地址不稳定'},
+            {data:[2000, 5000, 9000, 18900, 41000, 9000], name:'金乡农贸有限公司', date:'2017', num:'51', comment:'长期无招聘'},
+            {data:[4000, 7000, 11000, 5800, 11000, 11000], name:'宏盛商标咨询公司', date:'2017', num:'53', comment:'公司盈利能力较差,长期无招聘'}
+        ];
+        ecOption5(arr[0].data);
+        setInterval(function(){
+
+//            <span><span id="year">2017</span><small id="branch">58</small></span>
+//            </div>
+//            <div class="company-in-content">
+//                    <p id="name">富民小额贷款公司</p>
+//                    <p>评语：</p>
+//            <p id="comment">公司盈利能力较差，负债情况严重</p>
+//            </div>
+            var random = Math.floor(Math.random()*5);
+            $('#year').html(arr[random].date);
+            $('#branch').html(arr[random].num);
+            $('#name').html(arr[random].name);
+            $('#comment').html(arr[random].comment);
+
+            ecOption5(arr[random].data);
+
+
+
+
+        },'1500');
+
+        function ecOption5(data){
+
+            console.log(data)
+
+            var option5 = {
+                radar: {
+                    // shape: 'circle',
+                    name: {
+                        textStyle: {
+                            color: '#FFFFFF',
+                        }
+                    },
+                    splitLine: {
+                        lineStyle: {
+                            color: '#bf2925',
+                            opacity: 1
+                        }
+                    },
+                    splitArea: {
+                        areaStyle: {
+                            color: 'rgba(191,41,37,.5)',
+                            shadowColor: 'rgba(191,41,37, 0.3)'
+                        }
+                    },
+                    axisLine: {
+                        show: true,
+                        lineStyle: {
+                            color: "#bf2925",
+                            type:"dashed",
+                        }
+                    },
+                    indicator: [
+                        {name: '营收', max: 6500},
+                        {name: '招聘', max: 16000},
+                        {name: '员工数', max: 30000},
+                        {name: '办公地址', max: 38000},
+                        {name: '负债', max: 52000},
+                        {name: '利润', max: 25000}
+                    ]
+                },
+                series: [{
+                    type: 'radar',
+                    data: [
+                        {
+                            value: data,
+                            name: '数据',
+                            itemStyle: {
+                                normal: {
+                                    color: 'rgba(5, 128, 242, 0.8)'
+                                }
+                            },
+                            areaStyle: {
+                                normal: {
+                                    color: 'rgba(191,41,37,0.8)'
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    borderColor: '#bf2925',
+                                    borderWidth: 4,
+                                }
+                            },
+                            lineStyle:{
+                                normal:{
+                                    color:"#bf2925"
+                                }
+                            },
+                        }
+                    ]
+                }],
+            }
+
+            var mapChart5 = echarts.init(document.getElementById('radar'));
+            mapChart5.setOption(option5);
+        }
+
+
+    })
+</script>
+
+</body></html>

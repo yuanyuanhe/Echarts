@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan -->
+<html class="bg">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>贵州省地方贷</title>
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap-theme.min.css">
+    <!-- 字体样式font-awesome.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/font-awesome.css">
+    <!-- 开关switch.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/switch/lc_switch.css">
+    <!-- bootstrap-dialog.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/bootstrapDialog/bootstrap-dialog.css">
+    <!-- 日期插件 foundation-datepicker.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/datepicker/foundation-datepicker.css">
+    <link rel="stylesheet" href="./qiyexinxixuzhouzonglanfiles/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="./organizationAnalysis/css/analysis.css">
+    <link rel="stylesheet" href="./common/plugins/layer/mobile/need/layer.css" id="layuicss-skinlayercss">
+</head>
+<link rel="stylesheet" type="text/css" id="comm_template" href="./xiaoedaikuanfenxifiles/comm.css">
+<link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./xiaoedaikuanfenxifiles/bootstrap-table.css">
+
+<body class="bg">
+    <style>
+        .table>thead>tr>th {
+            vertical-align: bottom;
+            border-bottom: 0px;
+        }
+        
+        .swiper-container .table {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .table {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .table th {
+            color: #fff;
+        }
+        /* .swiper-container {
+            width: 300px;
+            overflow: hidden;
+        } */
+        
+        .table thead {
+            background: rgba(255, 255, 255, 0.1)
+        }
+        
+        .table thead tr {
+            border: none;
+        }
+        
+        .table thead th {
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            border: 0px solid transparent
+        }
+        
+        .table>tbody>tr>td {
+            line-height: 15px;
+            height: 15px;
+            text-align: center;
+            font-weight: normal;
+            border-color: #555;
+        }
+        
+        .table tbody td {
+            font-size: 9px;
+            font-weight: normal;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .tabchange {
+            display: none;
+        }
+        
+        .canShow {
+            display: block;
+        }
+        #map {
+            position: relative;
+            padding-top: 10%;
+        }
+    </style>
+    <!-- 头部 -->
+	
+	<div class="swiper-button-prev" onclick="location='quyuzonglan.html'"></div>
+    <header class="head bg">
+        <!-- logo -->
+        <div class="pull-left logo-bg">
+            <font>区域金融云平台</font>
+        </div>
+        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan#" class="sidebar" role="button"></a>
+        <div class="pull-left">
+            <ul class="navbar-menu">
+                <li data-id="LDJSC" data-title="4" class="active">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>领导驾驶舱</font>
+                    </a>
+                    <div class="menu-area">
+                        <ul class="slide-menu">
+                            <li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+                                    <i class="i-icon"></i>
+                                    <font>企业综合信息展示</font>
+                                    <!-- 尖角号是否显示 -->
+                                    <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+                                </a>
+                                <!-- 循环三级菜单 -->
+
+                                <ul class="slide-mark">
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+
+                                    <li data-id="LJRJGFX_QYZHXX_SH">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+                                    </li>
+
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+
+                                    <li data-id="LJRJGFX_QYZHXX_XZ">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+                                    </li>
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+
+                                    <li data-id="LJRJGFX_QYZHXX_FJ">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+                                    </li>
+                                    <li data-id="LJRJGFX_QYZHXX_FJ">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">贵州</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li data-id="ZLFX" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/totailyInformation/toAnalysis">
+                                    <i class="i-icon"></i>
+                                    <font>区域金融总览</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="SCFX" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+                                    <i class="i-icon"></i>
+                                    <font>金融服务统计</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_XEDK" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan">
+                                    <i class="i-icon"></i>
+                                    <font>小额贷款机构</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_MJRZ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+                                    <i class="i-icon"></i>
+                                    <font>民间融资机构</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_RZDB" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+                                    <i class="i-icon"></i>
+                                    <font>融资担保机构</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_RZZL" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>融资租赁机构</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>典当行业机构</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>股权交易市场</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>商业保理机构</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li data-id="FXYJ" data-title="50">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险预警</font>
+                    </a>
+                    <div class="menu-area">
+
+                        <ul class="slide-menu">
+
+
+                            <li data-id="FXYJ_FXJC" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+                                    <i class="i-icon"></i>
+                                    <font>区域风险监测</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="FXYJ_FFJZ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+                                    <i class="i-icon"></i>
+                                    <font>非集热点追踪</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="FXYJ_YQJK" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+                                    <i class="i-icon"></i>
+                                    <font>区域舆情监控</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="FXYJ_SWJR" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+                                    <i class="i-icon"></i>
+                                    <font>涉外金融监控</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="FXYJ_XNHB" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+                                    <i class="i-icon"></i>
+                                    <font>虚拟货币监控</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li data-id="JYFX" data-title="5">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>经营分析</font>
+                    </a>
+                    <div class="menu-area">
+                        <ul class="slide-menu">
+                            <li data-id="JYFX_XEDK" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+                                    <i class="i-icon"></i>
+                                    <font>小额贷款分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="JYFX_MJRZ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+                                    <i class="i-icon"></i>
+                                    <font>民间融资分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="JYFX_RZDB" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+                                    <i class="i-icon"></i>
+                                    <font>融资担保分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="JYFX_SRZZL" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>融资租赁分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>典当行业分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>股权交易分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                            <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>商业保理分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li data-id="FXGL" data-title="70">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险管理</font>
+                    </a>
+                    <div class="menu-area">
+                        <ul class="slide-menu">
+                            <li data-id="FXGL_YQGL" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+                                    <i class="i-icon"></i>
+                                    <font>区域舆情管理</font>
+                                    <!-- 尖角号是否显示 -->
+                                    <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                                <ul class="slide-mark">
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                    <li data-id="YQGL_SJGL">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+                                    </li>
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+
+                                    <li data-id="YQGL_TJFX">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+                                    </li>
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                    <li data-id="YQGL_JKSZ">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+                                    </li>
+
+                                    <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                    <li data-id="YQGL_BGGL">
+                                        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+                                    </li>
+                                </ul>
+
+                            </li>
+                            <li data-id="FXGL_FFJZ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+                                    <i class="i-icon"></i>
+                                    <font>区域非法集资</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li data-id="MJLLZS" data-title="6">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>利率指数</font>
+                    </a>
+                    <div class="menu-area">
+                        <ul class="slide-menu">
+                            <li data-id="LLZS" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/interestIndex/toInterestIndex">
+                                    <i class="i-icon"></i>
+                                    <font>民间利率指数</font>
+                                    <!-- 尖角号是否显示 -->
+                                </a>
+                                <!-- 循环三级菜单 -->
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li data-id="QYXX" data-title="13">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>企业信用管理</font>
+                    </a>
+                    <div class="menu-area">
+                        <ul class="slide-menu">
+                            <li data-id="QYCX" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+                                    <i class="i-icon"></i>
+                                    <font>企业信息查询</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+
+                            <li data-id="JYFX_SYQY" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+                                    <i class="i-icon"></i>
+                                    <font>企业运营分析</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="QYCX_XYDJ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                    <i class="i-icon"></i>
+                                    <font>企业信用等级</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                            <li data-id="QYXY_CTHC" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+                                    <i class="i-icon"></i>
+                                    <font>企业穿透核查</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </li>
+
+                <li data-id="XTSZ" data-title="14">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>系统设置</font>
+                    </a>
+                    <div class="menu-area">
+
+                        <ul class="slide-menu">
+
+
+                            <li data-id="ZHSZ" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+                                    <i class="i-icon"></i>
+                                    <font>账号权限管理</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+
+                            <li data-id="YHGL" class="menu-mark">
+                                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+                                    <i class="i-icon"></i>
+                                    <font>金融机构管理</font>
+                                    <!-- 尖角号是否显示 -->
+
+                                </a>
+
+                                <!-- 循环三级菜单 -->
+
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+            </ul>
+            <input type="hidden" id="h_index" value="4">
+        </div>
+        <!-- 用户信息 -->
+        <div class="pull-right user-box">
+            <div class="user-info">
+                <a id="user-info-click">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <font>admin</font>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                </a>
+                <div class="user-info-details" id="user-info-details-display">
+                    <div class="user-details-left">
+                        <div class="user-details-img">
+                            <img class="img-circle" src="./xiaoedaikuanfenxifiles/yea.jpg">
+                        </div>
+                        <div class="modify-pwd">
+                            <a id="editPassword">修改密码</a>
+                        </div>
+                    </div>
+                    <div class="user-details-right">
+                        <table class="table-info table-boundless font-color">
+                            <tbody>
+                                <tr>
+                                    <td>账号：admin</td>
+                                </tr>
+                                <tr>
+                                    <td>管理权限：admin</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">姓名：
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">机构：</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">最后登录：2018-07-18 12:37:02</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="login-out">
+                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+                    <font>退出</font>
+                </a>
+            </div>
+            <!--./login-out-->
+            <div class="enter_fullscreen" style="display: inline-block;">
+                <img src="./xiaoedaikuanfenxifiles/full.png">
+            </div>
+        </div>
+        <!--./user-box-->
+    </header>
+    <!--./head-->
+
+
+    <!-- 编辑 -->
+    <div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">| 修改密码</h4>
+                </div>
+                <form id="editPwds" novalidate="novalidate">
+                    <div class="modal-body">
+                        <div class="form-list">
+                            <ul>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>原密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>新的密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>再次输入密码：</font>
+                                        </div>
+                                        <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                            </ul>
+                            <input type="hidden" value="" id="userId">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-orange"> 确 认</button>
+                        <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 皮肤切换 -->
+    <div class="skin-admin-right" id="skin_admin_right">
+        <div class="skin-black" id="skin_black"></div>
+        <div class="skin-blue" id="skin_blue"></div>
+    </div>
+    <!-- 右边 -->
+    <div class="right">
+        <!-- 右边框架 -->
+        <div class="right-wrapper bg">
+            <section class="right-title">
+                <div class="right_name">贵州省地方债</div>
+                <div class="quit_fullscreen">
+                    <img src="./xiaoedaikuanfenxifiles/out.png">
+                </div>
+            </section>
+            <section class="right-body" style="min-height:600px;">
+                <!-- module1 -->
+                <div class="row mt10" id="module1">
+                    <div class="row">
+                        <!-- 贵州地图 -->
+                        <div class="col-sm-6">
+                            <div id="map" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;top:65px;left:2%;font-size:10px;" _echarts_instance_="ec_1546507883796">
+                                <div style="position: relative; overflow: hidden; width: 429px; height: 179px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="429" height="179" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 429px; height: 179px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                            </div>
+                        </div>
+                        <!-- 贵州地图 -->
+                        <!-- 侧边内容 -->
+                        <div class="col-sm-6">
+                            <div class="ibox">
+                                <div class="ibox-title" style="margin-bottom:15px;float: left;">
+                                    <span>城投平台权重排名</span>
+                                </div>
+                                <div class="rightTitle zhibiao" style="float: right;color:#6dd5ff;margin-right: 15px;top:5px;position: relative;">
+                                    <span style="font-size: 15px;display:block;padding:5px 10px;background:rgba(255, 255, 255, 0.1)">指标与权重</span>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <div class="col-sm-12 tab1">
+                                    <div class="swiper-container" style="width:100%;">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>贵阳经济技术开发区国有资产投资经营有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>65.00</td>
+                                                            <td>100.00</td>
+                                                            <td>60.00</td>
+                                                            <td>62.50</td>
+                                                            <td>74.75</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>安顺市国有资产管理有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>75.00</td>
+                                                            <td>72.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>54.00</td>
+                                                            <td>75.00</td>
+                                                            <td>100.00</td>
+                                                            <td>47.50</td>
+                                                            <td>68.75</td>
+                                                            <td>72.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>遵义市红花岗区国有资产投资经营有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>93.75</td>
+                                                            <td>71.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>21</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>23</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>26</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>28</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>29</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>30</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>31</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>32</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>33</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>34</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>35</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>36</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>37</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>38</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>39</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>40</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 guizhoutable">
+
+                                </div>
+                            </div>
+                            <div class="ibox tab2">
+                                <div class="ibox-title" style="margin-bottom:15px;float: left;">
+                                    <span>地方债明细</span>
+                                </div>
+                                <div class="rightTitle" style="float: right;color:#6dd5ff;margin-right: 15px;top:5px;position: relative">
+                                    <ul class="head-nav">
+                                        <li class="active">发行债券</li>
+                                        <li class="">存量债券</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-12 tabchange" style="display:block;">
+                                    <div class="swiper-container" style="width:100%;">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>贵阳经济技术开发区国有资产投资经营有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>65.00</td>
+                                                            <td>100.00</td>
+                                                            <td>60.00</td>
+                                                            <td>62.50</td>
+                                                            <td>74.75</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>安顺市国有资产管理有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>75.00</td>
+                                                            <td>72.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>54.00</td>
+                                                            <td>75.00</td>
+                                                            <td>100.00</td>
+                                                            <td>47.50</td>
+                                                            <td>68.75</td>
+                                                            <td>72.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>遵义市红花岗区国有资产投资经营有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>93.75</td>
+                                                            <td>71.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>21</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>23</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>26</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>28</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>29</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>30</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>31</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>32</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>33</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>34</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>35</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>36</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>37</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>38</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>39</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>40</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 tabchange">
+                                    <div class="swiper-container" style="width:100%;">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>贵阳经济技术开发区国有资产投资经营有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>65.00</td>
+                                                            <td>100.00</td>
+                                                            <td>60.00</td>
+                                                            <td>62.50</td>
+                                                            <td>74.75</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>安顺市国有资产管理有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>75.00</td>
+                                                            <td>72.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>54.00</td>
+                                                            <td>75.00</td>
+                                                            <td>100.00</td>
+                                                            <td>47.50</td>
+                                                            <td>68.75</td>
+                                                            <td>72.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>遵义市红花岗区国有资产投资经营有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>93.75</td>
+                                                            <td>71.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>21</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>22</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>23</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>26</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>28</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>29</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>30</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>排名</th>
+                                                            <th>城投平台名称</th>
+                                                            <th>地方政府得分</th>
+                                                            <th>城投重要性得分</th>
+                                                            <th>资金来源得分</th>
+                                                            <th>资金去向得分</th>
+                                                            <th>财务情况得分</th>
+                                                            <th>总得分</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>31</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>32</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>33</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>34</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>35</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>36</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>37</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>38</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>39</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>40</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64</td>
+                                                            <td>35</td>
+                                                            <td>75</td>
+                                                            <td>60</td>
+                                                            <td>81.25 </td>
+                                                            <td>59.175</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="weights" style="display:none;">
+                                <div class="col-sm-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>分类</th>
+                                                <th>指标</th>
+                                                <th>权重</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="5" style="border-right:1px solid #555;vertical-align:middle;">地方城投情况（20%）</td>
+                                                <td>地方政府GDP增长率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>地方政府税收占比</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>地方政府债务率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>地方政府财政自给率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>城投公司行政级别</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" style="border-right:1px solid #555;vertical-align:middle;">资金来源（30%）</td>
+                                                <td>第一大股东性质</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>注册资本规模</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3" style="border-right:1px solid #555;vertical-align:middle;">资金去向（25%）</td>
+                                                <td>债务负担率</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>在建项目尚需投资/净资产</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>存量债务/有息债务</td>
+                                                <td>0%</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="2" style="border-right:1px solid #555;vertical-align:middle;">经营情况（15%）</td>
+                                                <td>盈利能力</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>运营效率</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" style="border-right:1px solid #555;vertical-align:middle;">企业信用（10%）</td>
+                                                <td>诉讼情况</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>行政处罚</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>经营异常</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>风险舆情信息</td>
+                                                <td>25%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 侧边内容 -->
+                    </div>
+
+                </div>
+        </div>
+        </section>
+        <input type="hidden" id="path" value="http://rfiis.rtkj.com.cn:80/rfiis-govt/">
+    </div>
+    <!--./right-wrapper-->
+    </div>
+    <!--./right-->
+
+
+
+    <!-- jquery-2.1.1.min.js -->
+    <script src="./common/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/jquery.ba-resize.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- bootstrap.min.js -->
+    <script src="./common/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table.js -->
+    <script src="./common/plugins/bootstrapTable/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table-zh-CN.js -->
+    <script src="./common/plugins/bootstrapTable/locale/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/js/animation/comm.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/plugins/switch/lc_switch.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js extend.js -->
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js region.js -->
+    <script src="./common/js/util/region.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js busic.js -->
+    <script src="./common/js/util/busic.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-dialog.js -->
+    <script src="./common/plugins/bootstrapDialog/bootstrap-dialog.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- layer.js -->
+    <script src="./common/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 日期格式化js -->
+    <script src="./common/js/util/date.js"></script>
+    <!-- 日期插件 foundation-datepicker.js -->
+    <script src="./common/plugins/datepicker/foundation-datepicker.js"></script>
+
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/jquery.validate.min.js"></script>
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/messages_zh.min.js"></script>
+    <!-- echarts js-->
+    <script src="./common/plugins/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./include/js/logic/head.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./common/js/numeral/numeral.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./qiyexinxixuzhouzonglanfiles/swiper-3.4.2.jquery.min.js"></script>
+    <!-- <script src="./organizationAnalysis/organizationAnalysis/js/logic/petty_loan.js"></script> -->
+    <script src="./common/js/guizhou/guizhou.js"></script>
+    <!-- <script src="./guizhou/analysis.js"></script> -->
+    <script src="./guizhouzhai.js"></script>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		}
+    })
+</script>
+
+</html>

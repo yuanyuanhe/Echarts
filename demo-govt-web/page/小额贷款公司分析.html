@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan -->
+<html class="bg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>小额贷款公司分析</title>
+		
+		<!-- bootstrap.css -->
+<link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap-theme.min.css">
+<!-- 字体样式font-awesome.css -->
+<link rel="stylesheet" type="text/css" href="./font-awesome.css">
+<!-- 开关switch.css -->
+<link rel="stylesheet" type="text/css" href="./lc_switch.css">
+<!-- bootstrap-dialog.css -->
+<link rel="stylesheet" type="text/css" href="./bootstrap-dialog.css">
+<!-- 日期插件 foundation-datepicker.css -->
+<link rel="stylesheet" type="text/css" href="./foundation-datepicker.css">
+        <link rel="stylesheet" type="text/css" href="./analysis.css">
+	<link rel="stylesheet" href="./layer.css" id="layuicss-skinlayercss"></head><link rel="stylesheet" type="text/css" id="comm_template" href="./comm.css"><link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./bootstrap-table.css">
+
+
+
+
+
+<script>
+	var basePath = 'http://rfiis.rtkj.com.cn:80/rfiis-govt/';
+	// 判断皮肤
+	var bootstarpTablePath = '';
+	var commPath = '';
+	if(localStorage.skin == 'blue' || typeof(localStorage.skin) == 'undefined'){
+		
+		bootstarpTablePath = basePath+"STATIC/template/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/template/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}else if(localStorage.skin =='black'){
+		
+		bootstarpTablePath = basePath+"STATIC/common/plugins/bootstrapTable/bootstrap-table.css";
+		commPath = basePath+"STATIC/common/css/comm.css";
+		
+		var header = document.getElementsByTagName("head")[0];
+		
+		var bootstarpTableCss = document.createElement("link");
+		bootstarpTableCss.setAttribute("rel", "stylesheet");
+		bootstarpTableCss.setAttribute("type", "text/css");
+		bootstarpTableCss.setAttribute("id", "bootstrap_table_template");
+		bootstarpTableCss.setAttribute("href", bootstarpTablePath);
+		insertAfter(bootstarpTableCss,header);
+		
+		var commCss = document.createElement("link");
+		commCss.setAttribute("rel", "stylesheet");
+		commCss.setAttribute("type", "text/css");
+		commCss.setAttribute("id", "comm_template");
+		commCss.setAttribute("href", commPath);
+		insertAfter(commCss,header);
+		
+	}
+	
+	function insertAfter( newElement, targetElement ){ // newElement是要追加的元素 targetElement 是指定元素的位置 
+		var parent = targetElement.parentNode; // 找到指定元素的父节点 
+		if( parent.lastChild == targetElement ){ // 判断指定元素的是否是节点中的最后一个位置 如果是的话就直接使用appendChild方法 
+			parent.appendChild( newElement, targetElement ); 
+		}else{ 
+			parent.insertBefore( newElement, targetElement.nextSibling ); 
+		}; 
+	}; 
+	
+</script>
+
+
+<body class="bg">
+	
+	
+
+
+
+<!-- 头部 -->
+<header class="head bg">
+	<!-- logo -->
+	<div class="pull-left logo-bg">
+		<font>区域金融云平台</font>
+	</div>
+	<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan#" class="sidebar" role="button"></a>
+	<div class="pull-left">
+		<ul class="navbar-menu">
+			
+				<li data-id="LDJSC" data-title="4" class="active">
+					<a>
+						<i class="i-icon"></i>
+						<font>领导驾驶舱</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+										<i class="i-icon"></i>
+										<font>企业综合信息展示</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_SH">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_XZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="LJRJGFX_QYZHXX_FJ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="ZLFX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/totailyInformation/toAnalysis">
+										<i class="i-icon"></i>
+										<font>区域金融总览</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="SCFX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+										<i class="i-icon"></i>
+										<font>金融服务统计</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_XEDK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan">
+										<i class="i-icon"></i>
+										<font>小额贷款机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+										<i class="i-icon"></i>
+										<font>民间融资机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+										<i class="i-icon"></i>
+										<font>融资担保机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_RZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易市场</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理机构</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXYJ" data-title="50">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险预警</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXYJ_FXJC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+										<i class="i-icon"></i>
+										<font>区域风险监测</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+										<i class="i-icon"></i>
+										<font>非集热点追踪</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_YQJK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+										<i class="i-icon"></i>
+										<font>区域舆情监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_SWJR" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+										<i class="i-icon"></i>
+										<font>涉外金融监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXYJ_XNHB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+										<i class="i-icon"></i>
+										<font>虚拟货币监控</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="JYFX" data-title="5">
+					<a>
+						<i class="i-icon"></i>
+						<font>经营分析</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="JYFX_XEDK" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+										<i class="i-icon"></i>
+										<font>小额贷款分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_MJRZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+										<i class="i-icon"></i>
+										<font>民间融资分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_RZDB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+										<i class="i-icon"></i>
+										<font>融资担保分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SRZZL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>融资租赁分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_DDH" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>典当行业分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_JYSC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>股权交易分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="LJRJGFX_SYB" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>商业保理分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="FXGL" data-title="70">
+					<a>
+						<i class="i-icon"></i>
+						<font>风险管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="FXGL_YQGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+										<i class="i-icon"></i>
+										<font>区域舆情管理</font>
+										<!-- 尖角号是否显示 -->
+										
+											<i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+										<ul class="slide-mark">
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_SJGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_TJFX">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_JKSZ">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+										</li>
+										
+									
+										
+										<!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+										
+
+
+										<li data-id="YQGL_BGGL">
+											<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+										</li>
+										</ul>
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="FXGL_FFJZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>区域非法集资</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="MJLLZS" data-title="6">
+					<a>
+						<i class="i-icon"></i>
+						<font>利率指数</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="LLZS" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/interestIndex/toInterestIndex">
+										<i class="i-icon"></i>
+										<font>民间利率指数</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="QYXX" data-title="13">
+					<a>
+						<i class="i-icon"></i>
+						<font>企业信用管理</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="QYCX" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+										<i class="i-icon"></i>
+										<font>企业信息查询</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="JYFX_SYQY" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+										<i class="i-icon"></i>
+										<font>企业运营分析</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYCX_XYDJ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+										<i class="i-icon"></i>
+										<font>企业信用等级</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="QYXY_CTHC" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+										<i class="i-icon"></i>
+										<font>企业穿透核查</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+				<li data-id="XTSZ" data-title="14">
+					<a>
+						<i class="i-icon"></i>
+						<font>系统设置</font>
+					</a>
+					<div class="menu-area">
+						
+							<ul class="slide-menu">
+							
+							
+								<li data-id="ZHSZ" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+										<i class="i-icon"></i>
+										<font>账号权限管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							
+						
+							
+							
+							
+								<li data-id="YHGL" class="menu-mark">
+									<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+										<i class="i-icon"></i>
+										<font>金融机构管理</font>
+										<!-- 尖角号是否显示 -->
+										
+									</a>
+
+									<!-- 循环三级菜单 -->
+									
+								</li>
+							
+							</ul>
+						
+					</div>
+				</li>
+			
+		</ul>
+		<input type="hidden" id="h_index" value="4">
+	</div>
+
+	<!-- 用户信息 -->
+	<div class="pull-right user-box">
+		
+
+		<div class="user-info">
+			<a id="user-info-click">
+				<i class="glyphicon glyphicon-user"></i>
+				<font>admin</font>
+				<i class="glyphicon glyphicon-triangle-bottom"></i>
+			</a>
+			<div class="user-info-details" id="user-info-details-display">
+				<div class="user-details-left">
+					<div class="user-details-img">
+						<img class="img-circle" src="./yea.jpg">
+					</div>
+					<div class="modify-pwd">
+						<a id="editPassword">修改密码</a>
+					</div>
+				</div>
+				<div class="user-details-right">
+					<table class="table-info table-boundless font-color">
+						<tbody>
+							<tr>
+								<td>账号：admin</td>
+							</tr>
+							<tr>
+								<td>管理权限：admin</td>
+							</tr>
+							<tr>
+								<td colspan="2">姓名：
+								
+								
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">机构：</td>
+							</tr>
+							<tr>
+								<td colspan="2">最后登录：2018-07-18 12:37:02</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+			</div>
+		</div>
+		<div class="login-out">
+			<a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+				<font>退出</font>
+			</a>
+		</div><!--./login-out-->
+		<div class="enter_fullscreen" style="display: inline-block;">
+			<img src="./full.png">
+		</div>
+	</div><!--./user-box-->
+</header><!--./head-->
+
+
+<!-- 编辑 -->
+<div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">| 修改密码</h4>
+            </div>
+            <form id="editPwds" novalidate="novalidate">
+                <div class="modal-body">
+                    <div class="form-list">
+                        <ul>
+                        	<li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>原密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>新的密码：</font></div>
+                                    <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                            <li>
+                                <div class="form-list-group">
+                                    <div class="in-title"><font><b>*</b>再次输入密码：</font></div>
+                                    <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                </div>
+                                <div class="error"></div>
+                            </li>
+                        </ul>
+                         <input type="hidden" value="" id="userId">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-orange"> 确 认</button>
+                    <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 皮肤切换 -->
+<div class="skin-admin-right" id="skin_admin_right">
+	<div class="skin-black" id="skin_black"></div>
+	<div class="skin-blue" id="skin_blue"></div>
+</div>
+
+
+
+	<!-- 右边 -->
+	<div class="right">
+		<!-- 右边框架 -->
+		<div class="right-wrapper bg">
+			<section class="right-title">
+                <div class="right_name">小额贷款</div>
+                <div class="quit_fullscreen">
+                    <img src="./out.png">
+                </div>
+            </section>
+			<section class="right-body">
+                <div class="row mt10" id="module1">
+                    <div class="col-md-6">
+                        <div class="data_module data_loan">
+                            <div class="data_list cor2">
+                                <div class="pull-left">
+                                    <p class="number">
+                                        <em>
+                                            
+                                            0
+                                        </em>万元
+                                    </p>
+                                    <p class="name">本年度贷款发生额</p>
+                                </div>
+                                <div class="pull-right">
+                                    <p class="number">
+                                        <em>
+                                            
+                                            0
+                                        </em>笔
+                                    </p>
+                                    <p class="name">本年度贷款笔数</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="data_module data_loan">
+                            <div class="data_list cor3">
+                                <div class="pull-left">
+                                    <p class="number">
+                                        <em class="value">
+                                            
+                                            0
+                                        </em>万元
+                                    </p>
+                                    <p class="name">本年度累计投资金额</p>
+                                </div>
+                                <div class="pull-right">
+                                    <p class="number">
+                                        <em>
+                                            
+                                            0
+                                        </em>万元
+                                    </p>
+                                    <p class="name">本年度融资余额</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="row">
+					<div class="col-sm-4">
+                        <!-- 贷款金额及环比情况 -->
+                        <div class="ibox">
+                            <ul class="head-nav">
+                                <li class="active">贷款笔数</li>
+                                <li>贷款金额</li>
+                                <li>股权投资</li>
+                                <li>融资余额</li>
+                            </ul>
+                            <div class="nav_content">
+                                <div class="echarts" id="echart_1" _echarts_instance_="ec_1546421589528" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 395px; height: 300px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="790" height="600" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div style="position: absolute; display: none; border-style: solid; white-space: nowrap; z-index: 9999999; transition: left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s; background-color: rgba(50, 50, 50, 0.7); border-width: 0px; border-color: rgb(51, 51, 51); border-radius: 4px; color: rgb(255, 255, 255); font: 14px/21px sans-serif; padding: 5px; left: 140px; top: 145px;">2017年<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#ff6b6b;"></span>贷款笔数: 360<br><span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:#ff6c6b;"></span>贷款笔数环比: 1.14</div></div>
+                            </div>
+                        </div>
+                        <!-- 本年5级贷款分类贷款余额分布情况-->
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <span>本年5级贷款分类贷款余额分布情况</span>
+                            </div>
+                            <div class="echarts" id="rose_echart" _echarts_instance_="ec_1546421589532" style="-webkit-tap-highlight-color: transparent; user-select: none;"><div style="position: relative; overflow: hidden; width: 395px; height: 300px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"></div></div>
+                        </div>
+					</div><!-- /col-md-4 -->
+                    <div class="col-sm-4">
+                        <div class="ibox bg">
+                            <div class="ibox-head">各地区累计贷款、投资、融资余额概况</div>
+                            <div class="echarts" id="polar_echart" style="height: 620px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;" _echarts_instance_="ec_1546421589531"><div style="position: relative; overflow: hidden; width: 395px; height: 620px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="790" height="1240" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 620px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+                        </div>
+                    </div><!-- /col-md-4 -->
+                    <div class="col-sm-4">
+                        <!-- 股权性投资金额与环比情况 -->
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <span>涉农、小微贷款金额</span>
+                            </div>
+                            <div class="echarts" id="echart_3" _echarts_instance_="ec_1546421589529" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 395px; height: 300px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="790" height="600" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+                        </div>
+
+                        <!-- 不同贷款期限 -->
+                        <div class="ibox">
+                            <div class="ibox-title">
+                                <span>不同贷款期限-贷款额</span>
+                            </div>
+                            <div class="echarts" id="echart_13" _echarts_instance_="ec_1546421589530" style="-webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;"><div style="position: relative; overflow: hidden; width: 395px; height: 300px; padding: 0px; margin: 0px; border-width: 0px;"><canvas width="790" height="600" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 395px; height: 300px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div><div></div></div>
+                        </div>
+
+                    </div><!-- /col-md-4 -->
+				</div>
+			</section>
+<input type="hidden" id="path" value="http://rfiis.rtkj.com.cn:80/rfiis-govt/">
+		</div><!--./right-wrapper-->
+	</div>
+	<!--./right-->
+
+
+
+<!-- jquery-2.1.1.min.js -->
+<script src="./jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="./jquery.ba-resize.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- bootstrap.min.js -->
+<script src="./bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table.js -->
+<script src="./bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-table-zh-CN.js -->
+<script src="./bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./comm.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共控制comm.js -->
+<script src="./lc_switch.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js extend.js -->
+<script src="./extendUtil.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js region.js -->
+<script src="./region.js" type="text/javascript" charset="utf-8"></script>
+<!-- 自定义公共js busic.js -->
+<script src="./busic.js" type="text/javascript" charset="utf-8"></script>
+<script src="./extendUtil.js" type="text/javascript" charset="utf-8"></script>
+<!-- bootstrap-dialog.js -->
+<script src="./bootstrap-dialog.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- layer.js -->
+<script src="./layer.js" type="text/javascript" charset="utf-8"></script>
+<!-- 日期格式化js -->
+<script src="./date.js"></script>
+<!-- 日期插件 foundation-datepicker.js -->
+<script src="./foundation-datepicker.js"></script>
+
+<!-- 输入验证js-->
+<script src="./jquery.validate.min.js"></script>
+<!-- 输入验证js-->
+<script src="./messages_zh.min.js"></script>
+<!-- echarts js-->
+<script src="./echarts.min.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./head.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="./numeral.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./petty_loan.js"></script>
+</body></html>

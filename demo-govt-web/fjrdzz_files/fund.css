@@ -1,0 +1,123 @@
+.right-title .right_name {
+    width: 270px!important;
+    background-position-y: 10px!important;
+    background-size: 100% 75%!important;
+}
+.box ul{margin:0px; padding:0px; list-style:none;border: 0;}
+.box ul li{  padding: 0px; width: auto; height: 35px; display: block; border-radius: 0px; box-shadow: #000 0px 0px 1px; border: 0; background-color: rgba(0,0,0,0.5); }
+.box ul li:hover ul{display:block;}
+.box ul li a{text-align:center; width:121px; height:37px; line-height:35px; display:block; text-decoration:none;}
+.box ul li ul{display:none;position:relative; top:-37px; left:121px;}
+.box ul li ul li{ padding:0px 	; background-color:rgba(0,0,0,0.5);}
+.sech{background-color:#559ffa;}
+.box ul li ul li:hover{background:#559ffa;}
+.box ul li ul li:hover ul{visibility:visible;}
+.box ul li ul li ul{visibility:hidden; position:relative; top:-37px; left:121px;}
+.box ul li ul li ul li{background:rgba(0,0,0,0.5);}
+.box ul li ul li ul li:hover{background:#559ffa;}
+.thirdh{background-color: #1E90FF;}
+.box>ul{
+    opacity: 0;
+    transition: all .3s;
+}
+.dropdownBox:hover .box>ul{
+    opacity:1;
+}
+.dropdownBoxinput{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100px;
+    height: 20px;
+    text-align: center;
+}
+.dropdownBoxinput{
+    display: inline-block;
+    color: #fff;
+}
+.content .row:nth-of-type(1) .col-sm-6{
+    position: relative;
+}
+.dropdownBox{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 20;
+}
+canvas{
+    z-index: 10;
+}
+.tableBox{
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+    z-index: 999;
+}
+.tableBox thead th{
+    text-align: center;
+}
+.tableBox{
+    color: #fff;
+}
+.tableBox{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+.tableBox td{
+    padding: 0 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+.newsList{
+    padding: 20px 10px;
+    margin-right: 205px;
+    border: 1px solid #0173bb;
+    background: rgba(2,14,58,0.6);
+    -moz-box-shadow:0px 0px 17px rgba(17,115,167,1) inset;               /* For Firefox3.6+ */
+    -webkit-box-shadow:0px 0px 17px rgba(17,115,167,1) inset;            /* For Chrome5+, Safari5+ */
+    box-shadow:0px 0px 17px rgba(17,115,167,1) inset;
+    margin-bottom: 20px;
+}
+.content .col-sm-7{
+    width: 60%;
+}
+.content .col-sm-5{
+    width: 40%;
+}
+.newsNum{
+    position: relative;
+    padding: 20px 10px;
+    margin-right: 205px;
+    border: 1px solid #0173bb;
+    background: rgba(2,14,58,0.6);
+    -moz-box-shadow:0px 0px 17px rgba(17,115,167,1) inset;               /* For Firefox3.6+ */
+    -webkit-box-shadow:0px 0px 17px rgba(17,115,167,1) inset;            /* For Chrome5+, Safari5+ */
+    box-shadow:0px 0px 17px rgba(17,115,167,1) inset;
+}
+.newsNum .ibox-title{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 20;
+    width: 100%;
+}
+
+table th,td{
+    text-align: center;
+    color: #fff;
+}
+.newsList table{
+    width: 100%;
+}
+.newsList thead th{
+    height: 25px;
+}
+.newsList table{
+    margin-top: 10px;
+}
+.newsList table td{
+    line-height: 25px;
+}
+#barCharts{
+    height: 290px;
+}

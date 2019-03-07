@@ -1,0 +1,319 @@
+$(function(){
+    //function getNowDate(){
+        var time = new Date();
+        var year = time.getFullYear();
+        var month = time.getMonth() + 1;
+        var day = time.getDate();
+
+        $('.dropdownBoxinput').text(year+'年'+month+'月'+day+'日');
+        $('.tableYears').text(year+'年'+month+'月'+day+'日');
+        $('.ibox-title>div').text(year+'.'+month+'.'+day+'');
+   // }
+    $('.dropdownBox').hover(function(){
+        $('.dropdownBoxMenu').css({'height':100,'opacity':1})
+    },function(){
+        $('.dropdownBoxMenu').css({'height':0,'opacity':0})
+    })
+    var Wheight = $(window).height();
+    $('#mapCharts').height($(document).height()-90)
+    function editSearch(){
+       if($(window).width()<1580){
+           //$('#mapCharts').height($(document).height()-90-160)
+           $('.newsList').css('margin-right',100)
+           $('.newsNum').css('margin-right',100)
+           //$('.tableBox').css('bottom',0)
+       }
+    }
+    $('.dropdown-item').click(function(){
+        $(this).css('background','#559ffa')
+        $(this).find('.dropdown-item-item').css({'opacity':1})
+    })
+    var mydata = [
+        {name: '梁山县', value: 1},
+        {name: '汶上县', value: 10},
+        {name: '兖州区', value: 50},
+        {name: '曲阜市', value: 60},
+        {name: '泗水县', value: 70},
+        {name: '嘉祥县', value:80},
+        {name: '任城区', value: 85},
+        {name: '邹城市', value: 93},
+        {name: '金乡县', value: 97},
+        {name: '鱼台县', value: 99},
+        {name: '微山县', value: 100}
+
+    ];
+    function creatTable(){
+        $('.dataBody').html('')
+        var tableHtml1 = '<tr><td>序号</td>'
+        $.each(mydata,function(k,v){
+            tableHtml1+='<td>'+ (k-0+1)+'</td>'
+        })
+        tableHtml1+='</tr>'
+        $('.dataBody').append(tableHtml1)
+        var tableHtml2 = '<tr><td>地区</td>'
+        $.each(mydata,function(k,v){
+            tableHtml2+='<td>'+ v.name+'</td>'
+        })
+        tableHtml2+='</tr>'
+        $('.dataBody').append(tableHtml2)
+        var tableHtml3 = '<tr><td>热度值</td>'
+        $.each(mydata,function(k,v){
+            tableHtml3+='<td style="color: #f56432">'+ v.value+'万</td>'
+        })
+        tableHtml3+='</tr>'
+        $('.dataBody').append(tableHtml3)
+    }
+    var newsData = [
+        {content:'低投资，高回报项目大盘点',value:100},
+        {content:'高额利息，投资十万汇报翻倍！',value:90},
+        {content:'微商招代理，10w加盟费回报率50%',value:80},
+        {content:'发财致富好帮手！农产品回购项目现招募合伙人',value:70},
+        {content:'比华利十期火爆招商认筹中',value:60},
+        {content:'诚邀各界人士前来！好项目筹资',value:50},
+        {content:'绝好投资自会不容错过！机不可失',value:40},
+        {content:'高新区产业园区投资一本万利，错过再等十年',value:30},
+        {content:'高科技养猪无风险，高利润',value:20},
+        {content:'来吧想提高收入拒绝上班吗',value:10}
+
+    ]
+    $('#newsSelect').change(function(e){
+        if($(this).val()==8){
+            newsData = [
+                {content:'低投资，高回报项目大盘点',value:100},
+                {content:'高额利息，投资十万汇报翻倍！',value:90},
+                {content:'微商招代理，10w加盟费回报率50%',value:80},
+                {content:'发财致富好帮手！农产品回购项目现招募合伙人',value:70},
+                {content:'比华利十期火爆招商认筹中',value:60},
+                {content:'诚邀各界人士前来！好项目筹资',value:50},
+                {content:'绝好投资自会不容错过！机不可失',value:40},
+                {content:'高新区产业园区投资一本万利，错过再等十年',value:30},
+                {content:'高科技养猪无风险，高利润',value:20},
+                {content:'来吧想提高收入拒绝上班吗',value:10}
+
+            ]
+        }
+        if($(this).val()==9){
+            newsData = [
+                {content:'来吧想提高收入拒绝上班吗',value:100},
+                {content:'高额利息，投资十万汇报翻倍！',value:90},
+                {content:'诚邀各界人士前来！好项目筹资',value:80},
+                {content:'发财致富好帮手！农产品回购项目现招募合伙人',value:70},
+                {content:'高科技养猪无风险，高利润',value:60},
+                {content:'微商招代理，10w加盟费回报率50%',value:50},
+                {content:'绝好投资自会不容错过！机不可失',value:40},
+                {content:'高新区产业园区投资一本万利，错过再等十年',value:30},
+                {content:'比华利十期火爆招商认筹中',value:20},
+                {content:'低投资，高回报项目大盘点',value:10}
+
+            ]
+        }
+        if($(this).val()==10){
+            newsData = [
+                {content:'诚邀各界人士前来！好项目筹资',value:100},
+                {content:'高新区产业园区投资一本万利，错过再等十年',value:90},
+                {content:'来吧想提高收入拒绝上班吗',value:80},
+                {content:'发财致富好帮手！农产品回购项目现招募合伙人',value:70},
+                {content:'比华利十期火爆招商认筹中',value:60},
+                {content:'微商招代理，10w加盟费回报率50%',value:50},
+                {content:'绝好投资自会不容错过！机不可失',value:40},
+                {content:'高额利息，投资十万汇报翻倍！',value:30},
+                {content:'高科技养猪无风险，高利润',value:20},
+                {content:'低投资，高回报项目大盘点',value:10}
+
+            ]
+        }
+        console.log(1)
+        creatNewsTable()
+    })
+
+    $('body').height($(document).height())
+    function creatNewsTable(){
+        $('.newsListTbody').html('')
+        var tableHtml = ''
+        $.each(newsData,function(k,v){
+            tableHtml+='<tr><td>'+(k+1)+'</td><td style="color:#17b7d0;font-size: 15px;">'+ v.content+'</td><td style="color: #e96214;">'+ v.value+'万</td></tr>'
+        })
+        $('.newsListTbody').append(tableHtml)
+    }
+    chartsbar(['8:00','8:10','8:20','8:30','8:40','8:50','9:00'],[1000, 1002, 500, 532, 390, 330, 220]);
+    function chartsMap(mydata) {
+        var option =  {
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}:{c}万'
+            },
+            visualMap: {
+                show:false,
+                min: 10,
+                max: 100,
+                realtime: false,
+                calculable: false,
+                inRange: {
+                    color: ['#1b4bde','#0768ec', '#079aec']
+                }
+            },
+            series: [{
+                type: 'map',
+                map: 'jining',
+                //selectedMode:'single',
+                itemStyle:{
+                    normal:{
+                        label:{
+                            show:true,
+                            textStyle:{
+                                color:'#fff'
+                            }
+                        }
+                    },
+                    emphasis:{
+                        label:{
+                            show:true
+                        }
+                    }
+                },
+                data:mydata
+            }]
+        }
+        var myChart = echarts.init(document.getElementById('mapCharts'));
+        myChart.setOption(option);
+    }
+    $('.moonSelectday').on('click','li',function(){
+
+        mydata = [{name: '梁山县', value: parseInt(Math.random()*100)},
+            {name: '汶上县', value: parseInt(Math.random()*100)},
+            {name: '兖州区', value: parseInt(Math.random()*100)},
+            {name: '曲阜市', value: parseInt(Math.random()*100)},
+            {name: '泗水县', value: parseInt(Math.random()*100)},
+            {name: '嘉祥县', value:parseInt(Math.random()*100)},
+            {name: '任城区', value: parseInt(Math.random()*100)},
+            {name: '邹城市', value: parseInt(Math.random()*100)},
+            {name: '金乡县', value: parseInt(Math.random()*100)},
+            {name: '鱼台县', value: parseInt(Math.random()*100)},
+            {name: '微山县', value: parseInt(Math.random()*100)}];
+        $('.dropdownBoxinput').html()
+        for(var unfix=mydata.length-1; unfix>0; unfix--){
+            /*给进度做个记录，比到未确定位置*/
+            for(var i=0; i<unfix;i++){
+                if(mydata[i].value>mydata[i+1].value){
+                    var temp = mydata[i];
+                    mydata.splice(i,1,mydata[i+1]);
+                    mydata.splice(i+1,1,temp);
+                }
+            }
+        }
+        creatTable();
+        chartsMap(mydata);
+    })
+    $('#NumSelect').change(function(){
+        if($(this).val()==8){
+            chartsbar(['8:00','8:10','8:20','8:30','8:40','8:50','9:00'],[1000, 1002, 500, 532, 390, 330, 220]);
+        }
+        if($(this).val()==9){
+            chartsbar(['9:00','9:10','9:20','9:30','9:40','9:50','10:00'],[220, 1000, 2000, 1500, 300, 330, 1600]);
+        }
+        if($(this).val()==10){
+            chartsbar(['10:00','10:10','10:20','10:30','10:40','10:50','10:00'],[1600, 3200, 1500, 500, 320, 600, 680]);
+        }
+        if($(this).val()==11){
+            chartsbar(['11:00','11:10','11:20','11:30','11:40','11:50','11:00'],[680, 1200, 1300, 900, 1800, 1320, 1520]);
+        }
+        if($(this).val()==12){
+            chartsbar(['12:00','12:10','12:20','12:30','12:40','12:50','12:00'],[1520, 1366, 768, 1400, 1920, 800, 320]);
+        }
+    })
+    function chartsbar(dateData,Xdata){
+        var option = {
+            color: ['#3398DB'],
+            right:30,
+            padding:0,
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis :
+                {
+                    type : 'category',
+                    data : dateData,
+                    axisTick: {
+                        alignWithLabel: true
+                    },
+                    axisLine:{
+                        color:'#fff',
+                        lineStyle:{
+                            color:'#fff'
+                        }
+                    }
+                }
+            ,
+            yAxis : [
+                {
+                    show:false,
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name: '',
+                    type: 'bar',
+                    barWidth: '60%',
+                    data: Xdata,
+                    itemStyle:{
+                        normal:{
+                            color:'#177ed1'
+                        }
+                    },
+                    markLine:{
+                        show:true,
+                        symbolSize:[0,0],
+                        label:{
+                            normal:{
+                                show:true,
+                                position:'start',
+                                formatter:'警戒线'
+                            }
+                        },
+                        data: [{
+                            name: '',
+                            yAxis: 800
+                        }]
+                    }
+                }]
+        };
+        var myChart = echarts.init(document.getElementById('barCharts'));
+        myChart.setOption(option);
+    }
+    creatNewsTable()
+    creatTable()
+    //$('#mapCharts').height($(document).height()-90)
+    chartsMap(mydata);
+    editSearch();
+    $('.col-sm-7').height($(document).height()-90)
+    $('.enter_fullscreen').click(function(){
+        if($('.quit_fullscreen')){
+            var html = '<div class="quit_fullscreen" style="display: block;position: fixed;top: 0;right: 0;cursor: pointer">'+
+                '<img src="http://localhost:8080/STATIC/common/img/out.png">'+
+                '</div>'
+            $('.right-title').append($(html))
+        }
+        $('.quit_fullscreen').click(function(){
+            $('header').show()
+            $('.quit_fullscreen').hide()
+            $('.enter_fullscreen').show()
+        })
+    })
+    $('.moonSelectday').on('click','li',function(){
+        var day = $(this).children('a').text();
+        var moon = $(this).parent().parent().children('a').text()
+        var year = $(this).parents('._year').children('a').text()
+        $('.dropdownBoxinput').text(year+moon+day)
+        $('.tableYears').text(year+moon+day)
+    })
+});

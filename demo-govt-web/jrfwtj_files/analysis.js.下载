@@ -1,0 +1,864 @@
+/**
+ * 业务分析JS逻辑处理
+ *
+ */
+$(function() {
+	var h = document.documentElement.clientHeight;
+	setClientHeight(h-50);
+
+	// 全屏
+	$('.head').on('click', '.enter_fullscreen', function(){
+		setClientHeight(h);
+	});
+	// 退出全屏
+	$('.right').on('click', '.quit_fullscreen', function(){
+		setClientHeight(h-50);
+	});
+});
+
+function setClientHeight(h) {
+	if (h > 900) {
+		var h = h - 50;
+		var ih = $(".data_bank").outerHeight()+20;
+
+		$("#echart_1,#echart_3").height((h-20)/2-32-20-46);
+		$("#echart_5").height((h-20)/2-35-45-20);
+		$("#pie_chart").height((h-20)/2-45-20);
+		$("#map").height(h-ih);
+	}
+}
+
+$(function () {
+	refreshChart1(0);
+	refreshChart2(0);
+	//refreshChart3();
+	//refreshChart4();
+	refreshChart5();
+	refreshMap();
+	refreshPieChart();
+
+	// 自动切换
+	setInterval(changeChart1, 3500);
+	setInterval(changeChart2, 3500);
+
+	// 促成企业数量、促成交易笔数
+	$("#module1 .head-nav li").click(function() {
+		var i = $(this).index();
+		index1 = i;
+		$("#module1 .head-nav li").removeClass("active");
+		$("#module1 .head-nav li").eq(i).addClass("active");
+		refreshChart1(i);
+	});
+
+	// 成员金融机构数量、服务企业数量
+	$("#module2 .head-nav li").click(function() {
+		var i = $(this).index();
+		index2 = i;
+		$("#module2 .head-nav li").removeClass("active");
+		$("#module2 .head-nav li").eq(i).addClass("active");
+		refreshChart2(i);
+	});
+});
+
+var index1 = 0;
+var index2 = 0;
+function changeChart1() {
+	$("#module1 .head-nav li").removeClass("active");
+	$("#module1 .head-nav li").eq(index1).addClass("active");
+	var len = $("#module1 .head-nav li").length;
+	refreshChart1(index1);
+	index1++;
+	if (index1 == len) {
+		index1 = 0;
+	}
+}
+function changeChart2() {
+	$("#module2 .head-nav li").removeClass("active");
+	$("#module2 .head-nav li").eq(index2).addClass("active");
+	var len = $("#module2 .head-nav li").length;
+	refreshChart2(index2);
+	index2++;
+	if (index2 == len) {
+		index2 = 0;
+	}
+}
+
+// 区域企业数量分析的图表
+var refreshChart1 = function (n) {
+	var e = echarts.init(document.getElementById("echart_1"));
+	$('.nav_content').resize(function() {
+		e.resize();
+	});
+
+	// 同步执行
+	$.ajaxSettings.async = false;
+
+	if (n == 0) {
+		var numArray = [];
+		var yearArray = [];
+
+		$.post("getComCountSuccessByYear",function(data){
+			if(data){
+				numArray = data.numList;
+				yearArray = data.yearList;
+				$(".nav_content .e_year").text(data.nowYear+"年：");
+				$(".nav_content .e_amount").text(data.amount);
+			}
+		}, 'json');
+
+		var option = {
+			tooltip : {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				}
+			},
+			grid: {
+				top: '30',
+				left: '20',
+				right: '20',
+				bottom: '20',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'category',
+					boundaryGap : false,
+					//data: yearArray,
+					data: ['2012年','2013年','2014年','2015年','2016年','2017年'],
+					axisPointer: {
+						type: 'shadow'
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+					name: '单位：个',
+					nameTextStyle: {
+						color: '#fff'
+					},
+					axisLine:{
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: {
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			series : [
+				{
+					name:'企业数量',
+					type:'line',
+					stack: '总量',
+					itemStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#f85757'
+							}, {
+								offset: 1,
+								color: '#0e2a43'
+							}]),
+							lineStyle:{
+								color:'#f45656'
+							},
+							areaStyle: {
+								type: 'default'
+							}
+						}
+					},
+					//data:numArray
+					data:[11, 13, 14, 12.5, 16, 13.5]
+				}
+			]
+		};
+		e.setOption(option);
+	}
+	else if (n == 1) {
+		var numArray = [];
+		var yearArray = [];
+
+		$.post("selectCompanyNum",function(data){
+			if(data){
+				numArray = data.numList;
+				yearArray = data.yearList;
+				$(".nav_content .e_year").text(data.nowYear+"年：");
+				$(".nav_content .e_amount").text(data.amount);
+			}
+		}, 'json');
+
+		var option = {
+			tooltip : {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'cross',
+					label: {
+						backgroundColor: '#6a7985'
+					}
+				}
+			},
+			grid: {
+				left: '20',
+				right: '30',
+				bottom: '20',
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'category',
+					boundaryGap : false,
+					//data: yearArray,
+					data: ['2012年','2013年','2014年','2015年','2016年','2017年'],
+					axisPointer: {
+						type: 'shadow'
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			yAxis : [
+				{
+					type : 'value',
+					name: '单位：个',
+					interval: 5,
+					nameTextStyle: {
+						color: '#fff'
+					},
+					axisLine:{
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: {
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			series : [
+				{
+					name:'企业数量',
+					type:'line',
+					stack: '总量',
+					areaStyle: {normal: {}},
+					itemStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#00a2ff'
+							}, {
+								offset: 1,
+								color: '#122c49'
+							}]),
+							lineStyle:{
+								color:'#c8f9ff'
+							}
+						}
+					},
+					//data:numArray
+					data:[13, 15, 17, 14.5, 18, 15.5]
+				}
+			]
+		};
+		e.setOption(option);
+	}
+};
+
+var refreshChart2 = function (n) {
+	var e = echarts.init(document.getElementById("echart_3"));
+	$('.nav_content').resize(function() {
+		e.resize();
+	});
+
+	// 同步执行
+	$.ajaxSettings.async = false;
+
+	if (n == 0) {
+		var numArray = [];
+		var yearArray = [];
+
+		$.post("selectBankNum",function(data){
+			if(data){
+				numArray = data.numList;
+				yearArray = data.yearList;
+				$(".nav_content .e_title").text(data.nowYear+"年：");
+				$(".nav_content .e_amount").text(data.amount);
+			}
+		}, 'json');
+
+		var option = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'shadow',
+					crossStyle: {
+						color: '#999'
+					}
+				}
+			},
+			grid: {
+				top: '30',
+				left: '20',
+				right: '20',
+				bottom: '20',
+				containLabel: true
+			},
+			xAxis: [
+				{
+					type: 'category',
+					//data: yearArray,
+					data: ['2012年','2013年','2014年','2015年','2016年','2017年'],
+					axisPointer: {
+						type: 'shadow'
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			yAxis: [
+				{
+					type: 'value',
+					name: '单位：个',
+					interval: 5,
+					nameTextStyle: {
+						color: '#fff'
+					},
+					axisLine:{
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					},
+					axisLabel: {
+						color: '#fff'
+					},
+					splitLine: {
+						show: true,
+						lineStyle:{
+							color:'#72849d'
+						}
+					}
+				}
+			],
+			series: [
+				{
+					name:'数量',
+					type: 'bar',
+					//data: numArray,
+					data:[11, 13, 14, 12.5, 16, 13.5],
+					barWidth: '15px',
+					itemStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#ff9470'
+							}, {
+								offset: 1,
+								color: '#ff716b'
+							}]),
+							barBorderRadius: 10
+						}
+					},
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+                            formatter: "{c}",
+                            color: '#fff'
+                        }
+                    }
+				}
+			]
+		};
+		e.setOption(option);
+	}
+	else if (n == 1) {
+		$(".nav_content .e_title").text("2017年：");
+		$(".nav_content .e_amount").text(249);
+
+		var option = {
+			tooltip: {
+				trigger: 'axis',
+				axisPointer: {
+					type: 'shadow',
+					crossStyle: {
+						color: '#999'
+					}
+				}
+			},
+			grid: {
+				top: '30',
+				left: '20',
+				right: '20',
+				bottom: '20',
+				containLabel: true
+			},
+			xAxis: [
+				{
+					type: 'category',
+					data: ['2012年','2013年','2014年','2015年','2016年','2017年'],
+					axisPointer: {
+						type: 'shadow'
+					},
+					axisLine:{
+						lineStyle:{
+							color:'#fff'
+						}
+					}
+				}
+			],
+			yAxis: [
+				{
+					type: 'value',
+					name: '单位：笔',
+					splitLine: {show: true},
+					axisLine:{
+						lineStyle:{
+							color:'#fff'
+						}
+					}
+				}
+			],
+			series: [
+				{
+					name:'数量',
+					type: 'bar',
+					data:[12, 14, 19, 14, 17, 13.5],
+					barWidth: '15px',
+					itemStyle: {
+						normal: {
+							color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+								offset: 0,
+								color: '#69d8ff'
+							}, {
+								offset: 1,
+								color: '#1d8af9'
+							}])
+						}
+					}
+				}
+			]
+		};
+		e.setOption(option);
+	}
+
+};
+
+var refreshChart4 = function () {
+	var e = echarts.init(document.getElementById("echart_4"));
+	e.showLoading({
+		text: '加载中...',
+		effect: 'whirling'
+	});
+	var numArray = [];
+	var yearArray = [];
+	// 同步执行
+	$.ajaxSettings.async = false;
+	$.post("getCountTradeByYear",function(data){
+		if(data){
+			numArray = data.numList;
+			yearArray = data.yearList;
+			$(".row .e_text:eq(3) .e_title").text(data.nowYear+"年：");
+			$(".row .e_text:eq(3) .e_amount").text(data.amount);
+		}
+	}, 'json');
+	var option = {
+		tooltip: {
+			trigger: 'axis',
+			axisPointer: {
+				type: 'shadow',
+				crossStyle: {
+					color: '#999'
+				}
+			}
+		},
+		grid: {
+			left: '20',
+			right: '20',
+			bottom: '20',
+			containLabel: true
+		},
+		xAxis: [
+			{
+				type: 'category',
+				data: yearArray,
+				axisPointer: {
+					type: 'shadow'
+				},
+				axisLine:{
+					lineStyle:{
+						color:'#fff'
+					}
+				}
+			}
+		],
+		yAxis: [
+			{
+				type: 'value',
+				name: '单位：笔',
+				splitLine: {show: true},
+				axisLine:{
+					lineStyle:{
+						color:'#fff'
+					}
+				}
+			}
+		],
+		series: [
+			{
+				name:'数量',
+				type: 'bar',
+				data:numArray,
+				barWidth: '25px',
+				itemStyle: {
+					normal: {
+						color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+							offset: 0,
+							color: '#b695f4'
+						}, {
+							offset: 1,
+							color: '#9d6aff'
+						}])
+					}
+				}
+			}
+		]
+	};
+
+	e.hideLoading();
+	e.setOption(option), $(window).resize(e.resize);
+};
+
+var refreshChart5 = function () {
+	var e = echarts.init(document.getElementById("echart_5"));
+	e.showLoading({
+		text: '加载中...',
+		effect: 'whirling'
+	});
+	var yearArray = [];
+	var seriesArray = [];
+	var loanArray = [];
+	// 同步执行
+	$.ajaxSettings.async = false;
+	$.post("selectIndustryLoan",function(data){
+		if(data){
+			yearArray = data.yearList;
+			loanArray = data.loanList;
+			$("#total").text(loanArray[0]);
+			var numArray = [];
+			var amountArray = data.amountList;
+			for (var i = 0; i < amountArray.length; i++){
+				numArray = amountArray[i];
+				var dataJson = {data: numArray};
+				var seriesJson = {series: dataJson};
+				seriesArray.push(seriesJson);
+			}
+		}
+	}, 'json');
+	var option = {
+		baseOption: {
+			timeline: {
+				left: 20,
+				top: 10,
+				axisType: 'category',
+				autoPlay: true,
+				playInterval: 3000,
+				lineStyle: { //时间线颜色
+					color: '#fff',
+					type: 'dashed',
+				},
+				label: {
+					normal : {
+						color: '#fff'
+					}
+				},
+				controlStyle: {
+					showPlayBtn: false,
+					showPrevBtn: false,
+					showNextBtn: false
+				},
+				checkpointStyle: {
+					color: '#cd1853'
+				},
+				//data: yearArray
+				data: ['2012年','2013年','2014年','2015年','2016年','2017年']
+			},
+			tooltip: {
+			},
+			calculable : true,
+			grid: {
+				left: 20,
+				top: 60,
+				bottom: 10,
+				containLabel: true
+			},
+			xAxis : [
+				{
+					type : 'value',
+					axisLine: {show: false},
+					axisLabel: {show: false},
+					axisTick: {show: false},
+					splitLine: {show: false}
+				}
+			],
+			yAxis: [
+				{
+					type: 'category',
+					axisLine: {show: false},
+					axisLabel: {
+						show: true,
+						color:'#fff'
+					},
+					axisTick: {show: false},
+					splitLine: {show: false},
+					data:['其他','深加工','渔业','林业','农业']
+				}
+			],
+			series: [
+				{
+					name: '年度总额度',
+					type: 'bar',
+					barWidth: '15px',
+					itemStyle: {
+						normal: {
+							color: '#c61d58',
+							barBorderRadius: 10
+						}
+					},
+					label: {
+						normal: {
+							show: true,
+							position: 'insideRight',
+							formatter: "{c} 万元"
+						}
+					}
+				}
+			]
+		},
+		//options: seriesArray
+		options: [
+			{
+				series: [
+					{data: [13, 18, 20, 12, 5]}
+				]
+			},
+			{
+				series : [
+					{data: [10, 6, 20, 12, 17]}
+				]
+			},
+			{
+				series : [
+					{data: [8, 14, 20, 15, 16]}
+				]
+			},
+			{
+				series : [
+					{data: [16, 10, 20, 12, 14]}
+				]
+			},
+			{
+				series : [
+					{data: [12, 19, 20, 18, 12]}
+				]
+			},
+			{
+				series : [
+					{data: [10, 14, 20, 12, 13]}
+				]
+			}
+		]
+	};
+
+	e.hideLoading();
+	e.setOption(option), $(".ibox").resize(e.resize);
+
+    // 默认年度总额度
+    var list = option.options[0].series[0].data;
+    var sum = 0;
+    for (var i = 0; i < list.length; i++) {
+        sum += list[i];
+    }
+    $("#total").html(sum);
+
+    // 时间点改变后的年度总额度
+	e.on('timelinechanged', function (params) {
+		var index = params.currentIndex;
+        var data = option.options[index].series[0].data;
+        var total = 0;
+        for (var i = 0; i < data.length; i++) {
+            total += data[i];
+        }
+		$("#total").html(total);
+	});
+};
+
+var refreshMap = function () {
+	var e = echarts.init(document.getElementById('map'));
+	var dataArray = [];
+	// 同步执行
+	$.ajaxSettings.async = false;
+	$.post("getTotalLoansByArea",function(data){
+		if(data){
+			dataArray = data.dataArray;
+		}
+	}, 'json');
+
+	var allData = {
+		"city": [
+			{name: '嘉祥县', selected: true, value: 251, itemStyle: {emphasis: {areaColor: '' }} },
+			{name: '金乡县', selected: true, value: 158, itemStyle: {emphasis: {areaColor: '' }} },
+			{name: '微山县', selected: true, value: 100, itemStyle: {emphasis: {areaColor: '' }} }
+		]
+	};
+	var option = {
+		tooltip: {
+			show: false
+		},
+		series: [{
+			type: 'map',
+			map: 'jining',
+			mapType: 'jining',
+			selectedMode: 'multiple',
+			itemStyle:{
+				normal:{	//未选中状态
+					label:{
+						show:true,
+						textStyle: {
+							color: '#fff'
+						}
+					}, //显示名称
+					//areaColor: ['#00AAE0','#026292','#0082D2'],
+					areaColor: 'rgba(15,36,115,0.5)',
+					borderColor: '#1281d7',
+					borderWidth: 2
+				},
+				emphasis:{  //选中状态
+					label:{
+						show:true,
+						textStyle: {
+							color: '#fff'
+						}
+					},
+					areaColor: '#2862a4'
+				}
+			},
+			data: allData.city
+		}]
+	};
+
+	var data = option.series[0].data;
+	var color = ['#0e6aed','#079aec','#1c37be'];
+	var tr = '';
+	for (var i = 0; i < data.length; i++) {
+		data[i].itemStyle.emphasis.areaColor = color[i];
+		tr += '<tr><td><i class="t_icon" style="background-color:'+color[i]+'"></i></td>'
+			+'<td><span class="t_text">'+data[i].name+'</span></td>'
+			+'<td><span>'+data[i].value+'</span>万元</td></tr>';
+	}
+	$(".chart_list").html('<table class="map_table">'+tr+'</table>');
+
+	// 使用刚指定的配置项和数据显示图表。
+	e.hideLoading();
+	e.setOption(option), $(window).resize(e.resize);
+};
+
+var refreshPieChart = function () {
+	var e = echarts.init(document.getElementById("pie_chart"));
+
+	var option = {
+		tooltip : {
+			trigger: 'item',
+			formatter: "{a} <br/>{b} : {c} ({d}%)"
+		},
+		legend: {
+			itemWidth: 16,
+			itemHeight: 16,
+			itemGap: 20,
+			x : 'center',
+			bottom: 10,
+			data:['本地融资信贷金额','异地融资信贷金额'],
+			textStyle: {
+				color: '#fff'
+			}
+		},
+		color: [
+			new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				offset: 0,
+				color: '#0e67ec'
+			}, {
+				offset: 1,
+				color: '#089aec'
+			}]),
+			new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+				offset: 0,
+				color: '#bc36fc'
+			}, {
+				offset: 1,
+				color: '#dd1aff'
+			}])
+		],
+		calculable : true,
+		series : [
+			{
+				name:'分布情况',
+				type:'pie',
+				radius : ['50%', '70%'],
+				itemStyle : {
+					normal : {
+						label : {
+							color: '#fff',
+							formatter : "{c}"
+						}
+					}
+				},
+				data:[
+					{value:100289000, name:'本地融资信贷金额'},
+					{value:210349000, name:'异地融资信贷金额'}
+				]
+			}
+		]
+	};
+
+	e.hideLoading();
+	e.setOption(option), $(window).resize(e.resize);
+};

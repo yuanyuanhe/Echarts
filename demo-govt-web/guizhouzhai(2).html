@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan -->
+<html class="bg">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>贵州省地方贷</title>
+    <!-- bootstrap.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./common/css/bootstrap-theme.min.css">
+    <!-- 字体样式font-awesome.css -->
+    <link rel="stylesheet" type="text/css" href="./common/css/font-awesome.css">
+    <!-- 开关switch.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/switch/lc_switch.css">
+    <!-- bootstrap-dialog.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/bootstrapDialog/bootstrap-dialog.css">
+    <!-- 日期插件 foundation-datepicker.css -->
+    <link rel="stylesheet" type="text/css" href="./common/plugins/datepicker/foundation-datepicker.css">
+    <link rel="stylesheet" href="./qiyexinxixuzhouzonglanfiles/swiper-3.4.2.min.css">
+    <link rel="stylesheet" type="text/css" href="./organizationAnalysis/css/analysis.css">
+    <link rel="stylesheet" href="./common/plugins/layer/mobile/need/layer.css" id="layuicss-skinlayercss">
+</head>
+<link rel="stylesheet" type="text/css" id="comm_template" href="./xiaoedaikuanfenxifiles/comm.css">
+<link rel="stylesheet" type="text/css" id="bootstrap_table_template" href="./xiaoedaikuanfenxifiles/bootstrap-table.css">
+
+<body class="bg">
+    <style>
+        .table>thead>tr>th {
+            vertical-align: bottom;
+            border-bottom: 0px;
+        }
+        
+        .swiper-container .table {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .table {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .table th {
+            color: #fff;
+        }
+        
+        .table thead {
+            background: rgba(255, 255, 255, 0.1)
+        }
+        
+        .table thead tr {
+            border: none;
+        }
+        
+        .table thead th {
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            border: 0px solid transparent
+        }
+        
+        .table>tbody>tr>td {
+            line-height: 15px;
+            height: 15px;
+            text-align: center;
+            font-weight: normal;
+            border-color: #555;
+            vertical-align: middle;
+        }
+        
+        .table tbody td {
+            font-size: 9px;
+            font-weight: normal;
+            color: #fff;
+            text-align: center;
+        }
+        .table tr{
+            height: 40px;
+        }
+        .liketable>thead>tr>th {
+            vertical-align: bottom;
+            border-bottom: 0px;
+        }
+        
+        .swiper-container .liketable {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .liketable {
+            background: rgba(0, 0, 0, 0.3)
+        }
+        
+        .liketable th {
+            color: #fff;
+        }
+        
+        .liketable thead {
+            background: rgba(255, 255, 255, 0.1)
+        }
+        
+        .liketable thead tr {
+            border: none;
+        }
+        
+        .liketable thead th {
+            font-size: 12px;
+            font-weight: normal;
+            text-align: center;
+            border: 0px solid transparent;
+            width:100px;
+        }
+        .liketable>tbody>tr>td {
+            line-height: 15px;
+            height: 15px;
+            text-align: center;
+            font-weight: normal;
+            border-color: #555;
+            width:100px;
+        }
+        
+        .liketable tbody td {
+            font-size: 9px;
+            font-weight: normal;
+            color: #fff;
+            text-align: center;
+            width:100px;
+        }
+        .tabchange {
+            display: none;
+        }
+        
+        .canShow {
+            display: block;
+        }
+        #map {
+            position: relative;
+            padding-top: 10%;
+        }
+    </style>
+    <!-- 头部 -->
+	
+	<div class="swiper-button-prev" style="height:50%;" onclick="location='guizhouzhai(1).html'"></div>
+    <header class="head bg">
+        <!-- logo -->
+        <div class="pull-left logo-bg">
+            <font>区域金融云平台</font>
+        </div>
+        <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoan/toSmallLoan#" class="sidebar" role="button"></a>
+        <div class="pull-left">
+            <ul class="navbar-menu">
+            
+                <li data-id="LDJSC" data-title="4">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>领导驾驶舱</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="LJRJGFX_QYZHXX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>企业综合信息展示</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                            <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                        <ul class="slide-mark">
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_GZ">
+                                            <a href="./guizhou.html">贵州</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_SH">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/toShanghaiAnalysis">上海</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_XZ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/XuzhouIndexController/xuzhouIndex">徐州</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="LJRJGFX_QYZHXX_FJ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/HuangpuIndexController/pingtanIndex">福建平潭</a>
+                                        </li>
+                                        </ul>
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="ZLFX" class="menu-mark">
+                                    <a href="./page1.html">
+                                        <i class="i-icon"></i>
+                                        <font>区域金融总览</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="SCFX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/marketAnalysis/toAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>金融服务统计</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DFZZL" class="menu-mark">
+                                    <a href="guizhouzhai(1).html">
+                                        <i class="i-icon"></i>
+                                        <font>地方债总览</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_XEDK" class="menu-mark">
+                                    <a href="./xiaoedaikuan.html">
+                                        <i class="i-icon"></i>
+                                        <font>小额贷款机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_MJRZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/privateFinancial/toFinancial">
+                                        <i class="i-icon"></i>
+                                        <font>民间融资机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_RZDB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guaranteeAnalysis/toGuarAnalysis">
+                                        <i class="i-icon"></i>
+                                        <font>融资担保机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_RZZL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>融资租赁机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>典当行业机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>股权交易市场</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>商业保理机构</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="FXYJ" data-title="50">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险预警</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="FXYJ_FXJC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/risk">
+                                        <i class="i-icon"></i>
+                                        <font>区域风险监测</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_FFJZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/fund">
+                                        <i class="i-icon"></i>
+                                        <font>非集热点追踪</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_YQJK" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/monitor">
+                                        <i class="i-icon"></i>
+                                        <font>区域舆情监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_SWJR" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toForeignFinancial">
+                                        <i class="i-icon"></i>
+                                        <font>涉外金融监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXYJ_XNHB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toVirtualCurrency">
+                                        <i class="i-icon"></i>
+                                        <font>虚拟货币监控</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="JYFX" data-title="5">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>经营分析</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="JYFX_XEDK" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/smallLoanWarn/toSmallLoanWarn">
+                                        <i class="i-icon"></i>
+                                        <font>小额贷款分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_MJRZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/warnNum/toPrivateFinance">
+                                        <i class="i-icon"></i>
+                                        <font>民间融资分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_RZDB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/guarPolicyNorms/toPolicyNorms">
+                                        <i class="i-icon"></i>
+                                        <font>融资担保分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_SRZZL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>融资租赁分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_DDH" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>典当行业分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_JYSC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>股权交易分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="LJRJGFX_SYB" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>商业保理分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="FXGL" data-title="70">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>风险管理</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="FXGL_YQGL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">
+                                        <i class="i-icon"></i>
+                                        <font>区域舆情管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                            <i class="pull-right menu glyphicon glyphicon-menu-right"></i>
+
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                        <ul class="slide-mark">
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_SJGL">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/dataManage/dataManagePage">数据管理</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_TJFX">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/analysisSentimentController/toAnalysis">统计分析</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_JKSZ">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/superviseSettings/toSuperviseSetting">监控设置</a>
+                                        </li>
+                                        
+                                    
+                                        
+                                        <!-- 二级是报告管理，并且当前登陆者是市级时，显示运营、监管报告 -->
+                                        
+
+
+                                        <li data-id="YQGL_BGGL">
+                                            <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/opinionReportManage/toOpinionReportPage">报告管理</a>
+                                        </li>
+                                        </ul>
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="FXGL_FFJZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoIllController/toPunishInfo">
+                                        <i class="i-icon"></i>
+                                        <font>区域非法集资</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="MJLLZS" data-title="6">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>产业基金</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="LLZS" class="menu-mark">
+                                    <a href="./chanyejijin.html">
+                                        <i class="i-icon"></i>
+                                        <font>产业基金</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="QYXX" data-title="13">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>企业信用管理</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="QYCX" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/companyIntegratController/comprehensiveIndex">
+                                        <i class="i-icon"></i>
+                                        <font>企业信息查询</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="JYFX_SYQY" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/administSanction/toPunishInfo">
+                                        <i class="i-icon"></i>
+                                        <font>企业运营分析</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="QYCX_XYDJ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoController/toAnaPromotion">
+                                        <i class="i-icon"></i>
+                                        <font>企业信用等级</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="QYXY_CTHC" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/DemoComController/toCompanyCheck">
+                                        <i class="i-icon"></i>
+                                        <font>企业穿透核查</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+                <li data-id="XTSZ" data-title="14">
+                    <a>
+                        <i class="i-icon"></i>
+                        <font>系统设置</font>
+                    </a>
+                    <div class="menu-area">
+                        
+                            <ul class="slide-menu">
+                            
+                            
+                                <li data-id="ZHSZ" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/userManager/toUser">
+                                        <i class="i-icon"></i>
+                                        <font>账号权限管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            
+                        
+                            
+                            
+                            
+                                <li data-id="YHGL" class="menu-mark">
+                                    <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/BankManageController/bankManage">
+                                        <i class="i-icon"></i>
+                                        <font>金融机构管理</font>
+                                        <!-- 尖角号是否显示 -->
+                                        
+                                    </a>
+
+                                    <!-- 循环三级菜单 -->
+                                    
+                                </li>
+                            
+                            </ul>
+                        
+                    </div>
+                </li>
+            
+        </ul>
+            <input type="hidden" id="h_index" value="4">
+        </div>
+        <!-- 用户信息 -->
+        <div class="pull-right user-box">
+            <div class="user-info">
+                <a id="user-info-click">
+                    <i class="glyphicon glyphicon-user"></i>
+                    <font>admin</font>
+                    <i class="glyphicon glyphicon-triangle-bottom"></i>
+                </a>
+                <div class="user-info-details" id="user-info-details-display">
+                    <div class="user-details-left">
+                        <div class="user-details-img">
+                            <img class="img-circle" src="./xiaoedaikuanfenxifiles/yea.jpg">
+                        </div>
+                        <div class="modify-pwd">
+                            <a id="editPassword">修改密码</a>
+                        </div>
+                    </div>
+                    <div class="user-details-right">
+                        <table class="table-info table-boundless font-color">
+                            <tbody>
+                                <tr>
+                                    <td>账号：admin</td>
+                                </tr>
+                                <tr>
+                                    <td>管理权限：admin</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">姓名：
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">机构：</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">最后登录：2018-07-18 12:37:02</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="login-out">
+                <a href="http://rfiis.rtkj.com.cn/rfiis-govt/service/LoginController/loginOut">
+                    <font>退出</font>
+                </a>
+            </div>
+            <!--./login-out-->
+            <div class="enter_fullscreen" style="display: inline-block;">
+                <img src="./xiaoedaikuanfenxifiles/full.png">
+            </div>
+        </div>
+        <!--./user-box-->
+    </header>
+    <!--./head-->
+
+
+    <!-- 编辑 -->
+    <div class="modal fade" id="editPwd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">| 修改密码</h4>
+                </div>
+                <form id="editPwds" novalidate="novalidate">
+                    <div class="modal-body">
+                        <div class="form-list">
+                            <ul>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>原密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入原密码" name="oldPassword"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>新的密码：</font>
+                                        </div>
+                                        <div class="in-text"><input type="password" class="input-form" placeholder="请输入新的密码" name="password" id="password"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                                <li>
+                                    <div class="form-list-group">
+                                        <div class="in-title">
+                                            <font><b>*</b>再次输入密码：</font>
+                                        </div>
+                                        <div class="in-text"><input id="password_id" type="password" name="rePassword" class="input-form" placeholder="请再次输入密码"></div>
+                                    </div>
+                                    <div class="error"></div>
+                                </li>
+                            </ul>
+                            <input type="hidden" value="" id="userId">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-orange"> 确 认</button>
+                        <button type="reset" class="btn btn-orange" data-dismiss="modal" id="cancle"> 取 消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 皮肤切换 -->
+    <div class="skin-admin-right" id="skin_admin_right">
+        <div class="skin-black" id="skin_black"></div>
+        <div class="skin-blue" id="skin_blue"></div>
+    </div>
+    <!-- 右边 -->
+    <div class="right">
+        <!-- 右边框架 -->
+        <div class="right-wrapper bg">
+            <section class="right-title">
+                <div class="right_name">贵州省地方债</div>
+                <div class="quit_fullscreen">
+                    <img src="./xiaoedaikuanfenxifiles/out.png">
+                </div>
+            </section>
+            <section class="right-body" style="min-height:600px;">
+                <!-- module1 -->
+                <div class="row mt10" id="module1">
+                    <div class="row">
+                        <!-- 贵州地图 -->
+                        <div class="col-sm-5">
+                            <div id="map" style="height: 500px; -webkit-tap-highlight-color: transparent; user-select: none; position: relative; background: transparent;top:65px;left:2%;font-size:10px;" _echarts_instance_="ec_1546507883796">
+                                <div style="position: relative; overflow: hidden; width: 429px; height: 179px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"><canvas width="429" height="179" data-zr-dom-id="zr_0" style="position: absolute; left: 0px; top: 0px; width: 429px; height: 179px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); padding: 0px; margin: 0px; border-width: 0px;"></canvas></div>
+                            </div>
+                        </div>
+                        <!-- 贵州地图 -->
+                        <!-- 侧边内容 -->
+                        <div class="col-sm-7" style="position:relative;top:-15%;">
+                            <div class="ibox" style="margin:0px;">
+                                <div class="ibox-title" style="margin-bottom:15px;float: left;">
+                                    <span>城投平台权重排名</span>
+                                </div>
+                                <div class="rightTitle zhibiao" style="float: right;color:#6dd5ff;margin-right: 15px;top:5px;position: relative;cursor: pointer;">
+                                    <span style="font-size: 15px;display:block;padding:5px 10px;background:rgba(255, 255, 255, 0.1)">指标与权重</span>
+                                </div>
+                                <div style="clear:both;"></div>
+                                <!-- height: 300px;overflow-y:scroll -->
+                                <!-- pre-scrollable -->
+                                <div class="col-sm-12 tab1 " style="padding: 0">
+                                           
+                                                <div class="oneChange" style="height:300px;overflow-y: scroll">
+                                                    <table class="table liketable" style="">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>排名</th>
+                                                                <th>企业名称</th>
+                                                                <th>地方城投情况</th>
+                                                                <th>资金来源</th>
+                                                                <th>资金去向</th>
+                                                                <th>经营情况</th>
+                                                                <th>企业信用</th>
+                                                                <th>总分</th>
+                                                            </tr>
+                                                        </thead>
+                                                    
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>贵阳经济技术开发区国有资产投资经营有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>65.00</td>
+                                                            <td>100.00</td>
+                                                            <td>60.00</td>
+                                                            <td>62.50</td>
+                                                            <td>74.75</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>2</td>
+                                                            <td>安顺市国有资产管理有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>75.00</td>
+                                                            <td>72.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3</td>
+                                                            <td>贵州省梵净山投资控股集团有限公司</td>
+                                                            <td>54.00</td>
+                                                            <td>75.00</td>
+                                                            <td>100.00</td>
+                                                            <td>47.50</td>
+                                                            <td>68.75</td>
+                                                            <td>72.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>4</td>
+                                                            <td>遵义市红花岗区国有资产投资经营有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>72.50</td>
+                                                            <td>93.75</td>
+                                                            <td>71.30</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>5</td>
+                                                            <td>贵阳市城市轨道交通有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>55.00</td>
+                                                            <td>100.00</td>
+                                                            <td>50.00</td>
+                                                            <td>62.50</td>
+                                                            <td>70.25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>6</td>
+                                                            <td>贵阳高科控股集团有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>55.00</td>
+                                                            <td>75.00</td>
+                                                            <td>85.00</td>
+                                                            <td>68.75</td>
+                                                            <td>69.88</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>7</td>
+                                                            <td>贵阳金阳建设投资(集团)有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>50.00</td>
+                                                            <td>56.25</td>
+                                                            <td>69.38</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>8</td>
+                                                            <td>贵阳铁路建设投资有限公司</td>
+                                                            <td>75.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>60.00</td>
+                                                            <td>62.50</td>
+                                                            <td>68.50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>9</td>
+                                                            <td>遵义市新区开发投资有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>45.00</td>
+                                                            <td>100.00</td>
+                                                            <td>72.50</td>
+                                                            <td>56.25</td>
+                                                            <td>67.80</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>10</td>
+                                                            <td>贵州铁路投资有限责任公司</td>
+                                                            <td>75.00</td>
+                                                            <td>75.00</td>
+                                                            <td>25.00</td>
+                                                            <td>100.00</td>
+                                                            <td>87.50</td>
+                                                            <td>67.50</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>11</td>
+                                                            <td>黔西南州工业投资(集团)有限公司</td>
+                                                            <td>60.00</td>
+                                                            <td>45.00</td>
+                                                            <td>1100.00</td>
+                                                            <td>47.50</td>
+                                                            <td>93.75</td>
+                                                            <td>67.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>12</td>
+                                                            <td>都匀市国有资本营运有限责任公司</td>
+                                                            <td>60.00</td>
+                                                            <td>65.00</td>
+                                                            <td>75.00</td>
+                                                            <td>60.00</td>
+                                                            <td>75.00</td>
+                                                            <td>66.75</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>13</td>
+                                                            <td>遵义市投资(集团)有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>35.00</td>
+                                                            <td>100.00</td>
+                                                            <td>75.00</td>
+                                                            <td>68.75</td>
+                                                            <td>66.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>14</td>
+                                                            <td>六盘水市开发投资有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>55.00</td>
+                                                            <td>75.00</td>
+                                                            <td>35.00</td>
+                                                            <td>93.75</td>
+                                                            <td>62.68</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>15</td>
+                                                            <td>普定县夜郎国有资产投资营运有限责任公司</td>
+                                                            <td>60.00 </td>
+                                                            <td>45.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>37.50 </td>
+                                                            <td>93.75 </td>
+                                                            <td>59.25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>16</td>
+                                                            <td>安顺市交通建设投资有限责任公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>35.00</td>
+                                                            <td>75.00</td>
+                                                            <td>60.00 </td>
+                                                            <td>81.25 </td>
+                                                            <td>59.18</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>17</td>
+                                                            <td>毕节市德溪建设开发投资有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>35.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>47.50 </td>
+                                                            <td>87.50 </td>
+                                                            <td>57.93</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>18</td>
+                                                            <td>遵义湘江投资建设有限责任公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>72.50 </td>
+                                                            <td>56.25 </td>
+                                                            <td>55.55</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>19</td>
+                                                            <td>金沙县建设投资集团有限公司</td>
+                                                            <td>60.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>72.50 </td>
+                                                            <td>87.50 </td>
+                                                            <td>54.63 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20</td>
+                                                            <td>黔东南州交通旅游建设投资集团有限公司</td>
+                                                            <td>35.00</td>
+                                                            <td>45.00</td>
+                                                            <td>50.00</td>
+                                                            <td>85.00</td>
+                                                            <td>87.50</td>
+                                                            <td>54.50</td>
+                                                        </tr>
+                                                         <tr>
+                                                            <td>21</td>
+                                                            <td>贵阳白云工业发展投资有限公司</td>
+                                                            <td>75.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>60.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>54.50</td>
+                                                        </tr>
+
+                                                        <tr>
+
+                                                            <td>22</td>
+                                                            <td>遵义市国有资产投融资经营管理有限责任公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>54.30 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>23</td>
+                                                            <td>黔西南州兴安开发投资有限公司</td>
+                                                            <td>60.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>72.50 </td>
+                                                            <td>100.00 </td>
+                                                            <td>52.88</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>24</td>
+                                                            <td>贵阳市工业投资(集团)有限公司</td>
+                                                            <td>75.00 </td>
+                                                            <td>65.00 </td>
+                                                            <td>0.00 </td>
+                                                            <td>85.00 </td>
+                                                            <td>56.25 </td>
+                                                            <td>52.8</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>25</td>
+                                                            <td>毕节市建设投资有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>55.00</td>
+                                                            <td>25.00 </td>
+                                                            <td>47.50 </td>
+                                                            <td>100.00</td>
+                                                            <td>52.68</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>26</td>
+                                                            <td>遵义市红花岗城市建设投资经营有限公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>45.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>85.00 </td>
+                                                            <td>68.75 </td>
+                                                            <td>52.18</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>27</td>
+                                                            <td>贵州省红果经济开发区开发有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>55.00</td>
+                                                            <td>25.00</td>
+                                                            <td>47.50</td>
+                                                            <td>87.50</td>
+                                                            <td>51.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>28</td>
+                                                            <td>六盘水市交通投资开发有限责任公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>47.50 </td>
+                                                            <td>81.25 </td>
+                                                            <td>51.05</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>29</td>
+                                                            <td>贵州凯里开元城市投资开发有限责任公司</td>
+                                                            <td>35.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>85.00 </td>
+                                                            <td>81.25 </td>
+                                                            <td>50.88 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>30</td>
+                                                            <td>黔东南州凯宏资产运营有限责任公司</td>
+                                                            <td>60.00 </td>
+                                                            <td>35.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>72.50 </td>
+                                                            <td>87.50 </td>
+                                                            <td>54.63 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>31</td>
+                                                            <td>黔西南州宏升资本营运有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>35.00</td>
+                                                            <td>50.00</td>
+                                                            <td>35.00</td>
+                                                            <td>93.75</td>
+                                                            <td>50.43</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>32</td>
+                                                            <td>遵义市汇川区城市建设投资经营有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>55.00</td>
+                                                            <td>25.00</td>
+                                                            <td>60.00</td>
+                                                            <td>56.25</td>
+                                                            <td>50.18</td>
+                                                        </tr>
+
+                                                        <tr>
+
+                                                            <td>33</td>
+                                                            <td>大方县建设投资有限公司</td>
+                                                            <td>60.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>75.00 </td>
+                                                            <td>62.50 </td>
+                                                            <td>49.50 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>34</td>
+                                                            <td>黔南州国有资本营运有限责任公司</td>
+                                                            <td>64.00 </td>
+                                                            <td>25.00 </td>
+                                                            <td>50.00 </td>
+                                                            <td>60.00 </td>
+                                                            <td>5.00 </td>
+                                                            <td>49.30</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>35</td>
+                                                            <td>安顺市城市建设投资有限责任公司</td>
+                                                            <td>64.00</td>
+                                                            <td>35.00</td>
+                                                            <td>25.00</td>
+                                                            <td>72.50</td>
+                                                            <td>81.25</td>
+                                                            <td>48.55</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>36</td>
+                                                            <td>毕节市天河城建开发投资有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>25.00</td>
+                                                            <td>50.00</td>
+                                                            <td>60.00</td>
+                                                            <td>56.25</td>
+                                                            <td>47.43</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>37</td>
+                                                            <td>兴义市信恒城市建设投资有限公司</td>
+                                                            <td>60.00</td>
+                                                            <td>55.00</td>
+                                                            <td>0.00</td>
+                                                            <td>72.50</td>
+                                                            <td>68.75</td>
+                                                            <td>46.25 </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>38</td>
+                                                            <td>贵州省凯里城镇建设投资有限公司</td>
+                                                            <td>35.00</td>
+                                                            <td>55.00</td>
+                                                            <td>25.00</td>
+                                                            <td>47.50</td>
+                                                            <td>75.00</td>
+                                                            <td>44.38</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>39</td>
+                                                            <td>仁怀市城市开发建设投资经营有限责任公司</td>
+                                                            <td>60.00</td>
+                                                            <td>45.00</td>
+                                                            <td>50.00</td>
+                                                            <td>60.00</td>
+                                                            <td>56.25</td>
+                                                            <td>40.13</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>40</td>
+                                                            <td>贵州独山经济开发区投资开发有限公司</td>
+                                                            <td>64.00</td>
+                                                            <td>25.00</td>
+                                                            <td>0.00</td>
+                                                            <td>25.00</td>
+                                                            <td>93.75</td>
+                                                            <td>33.43</td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                                </div>
+                                </div>
+                            </div>
+                            <div class="ibox tab2">
+                                <div class="ibox-title" style="margin-bottom:15px;float: left;">
+                                    <span>存量债券明细</span>
+                                </div>
+                                <div class="bigWrapper" style="">
+                                    <div class="oneChange" style="">
+                                        <table class="table liketable" style="margin:0px;">
+                                            
+                                        </table>
+                                    </div>
+                                    <div class="oneChange" style="height:300px;overflow-y: scroll">
+                                        <table class="table liketable" style="">
+                                            <thead>
+                                                <tr><th>代码</th><th>名称</th><th>剩余期限(年)</th><th>债券余额(亿)</th><th>发行起始日</th><th>发行总额(亿)</th><th>发行期限(年)</th><th>票面利率(%)</th><th>付息利率类型</th><th>主体评级机构</th><th>主体评级日期</th><th>债券类型</th></tr>
+                                            </thead>
+                                            <tbody style="">
+                                                <tr><td>143477.SH</td><td>18贵安01</td><td>6.33</td><td>72</td><td>2018/12/17</td><td>72</td><td>7</td><td>7.6</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/17</td><td>一般公司债</td></tr>
+                                                <tr><td>135719.SH</td><td>16贵安03</td><td>2.61</td><td>50</td><td>2018/12/12</td><td>50</td><td>5</td><td>4.48</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/17</td><td>私募债</td></tr>
+                                                <tr><td>135309.SH</td><td>16贵安01</td><td>2.22</td><td>50</td><td>2018/12/11</td><td>50</td><td>5</td><td>4.7</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/17</td><td>私募债</td></tr>
+                                                <tr><td>125605.SH</td><td>15贵安债</td><td>2.01</td><td>50</td><td>2018/12/7</td><td>50</td><td>5</td><td>5.5</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/17</td><td>私募债</td></tr>
+                                                <tr><td>101651031.IB</td><td>16贵州高速MTN001</td><td>2.44</td><td>40</td><td>2018/12/6</td><td>40</td><td>5</td><td>4.6</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/17</td><td>一般中期票据</td></tr>
+                                                <tr><td>101456082.IB</td><td>14贵州高速MTN001(5+2年期)</td><td>2.93</td><td>40</td><td>2018/11/30</td><td>40</td><td>7</td><td>5.98</td><td>累进利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/17</td><td>一般中期票据</td></tr>
+                                                <tr><td>1680454.IB</td><td>16贵阳停车场债02</td><td>7.88</td><td>30</td><td>2018/12/11</td><td>30</td><td>10</td><td>4</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>135551.SH</td><td>16贵安02</td><td>2.48</td><td>30</td><td>2018/12/11</td><td>30</td><td>5</td><td>5.2</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>私募债</td></tr></tr>
+                                                <tr><td>1680143.IB</td><td>16贵阳停车场债01</td><td>7.24</td><td>30</td><td>2018/12/11</td><td>30</td><td>10</td><td>4.37</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031575006.IB</td><td>15遵义国资PPN001</td><td>1.57</td><td>30</td><td>2018/12/11</td><td>30</td><td>5</td><td>6.55</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>143441.SH</td><td>17贵安01</td><td>5.98</td><td>28</td><td>2018/12/11</td><td>28</td><td>7</td><td>6.8</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>一般公司债</td></tr>
+                                                <tr><td>114242.SZ</td><td>17贵安债</td><td>3.9</td><td>28</td><td>2018/12/11</td><td>28</td><td>5</td><td>6.8</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135841.SH</td><td>16筑投01</td><td>4.71</td><td>28</td><td>2018/12/11</td><td>28</td><td>7</td><td>4</td><td>累进利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>101678003.IB</td><td>16贵州交通MTN002</td><td>0.56</td><td>25</td><td>2018/12/11</td><td>25</td><td>3</td><td>4.2</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>125693.SH</td><td>15遵桥梁</td><td>1.96</td><td>23</td><td>42352</td><td>23</td><td>5</td><td>6.5</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680026.IB</td><td>16六盘水住投债</td><td>4.09</td><td>22</td><td>2018/12/11</td><td>22</td><td>7</td><td>5.08</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101800960.IB</td><td>18贵州高速MTN001</td><td>2.67</td><td>20</td><td>2018/12/11</td><td>20</td><td>3</td><td>4.89</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1680460.IB</td><td>16金阳专项债01</td><td>7.89</td><td>20</td><td>2018/12/11</td><td>20</td><td>10</td><td>4.46</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>135835.SH</td><td>16贵安04</td><td>2.71</td><td>20</td><td>42625</td><td>20</td><td>5</td><td>4.39</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>136634.SH</td><td>16黔高速</td><td>4.63</td><td>20</td><td>2018/12/11</td><td>20</td><td>7</td><td>3.46</td><td>累进利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般公司债</td></tr>
+                                                <tr><td>118587.SZ</td><td>16道桥01</td><td>2.25</td><td>20</td><td>2018/12/11</td><td>20</td><td>5</td><td>5.12</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135270.SH</td><td>16黔高01</td><td>2.19</td><td>20</td><td>2018/12/11</td><td>20</td><td>5</td><td>4.18</td><td>累进利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680024.IB</td><td>16六盘水开投债</td><td>4.06</td><td>20</td><td>2018/12/11</td><td>20</td><td>7</td><td>3.74</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580264.IB</td><td>15贵阳轨道可续期债</td><td>1.89</td><td>20</td><td>2018/12/11</td><td>20</td><td>5</td><td>6.3</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101580005.IB</td><td>15黔交建MTN001</td><td>3.4</td><td>20</td><td>2018/12/11</td><td>20</td><td>7</td><td>5.49</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>031490578.IB</td><td>14贵阳公宅PPN001</td><td>0.49</td><td>20</td><td>2018/12/11</td><td>20</td><td>5</td><td>8</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1680357.IB</td><td>16金沙债</td><td>4.69</td><td>16.5</td><td>42615</td><td>16.5</td><td>7</td><td>6.01</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780374.IB</td><td>17钟停债01</td><td>8.9</td><td>16</td><td>2018/12/11</td><td>16</td><td>10</td><td>6.46</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780110.IB</td><td>17观山湖债</td><td>5.48</td><td>16</td><td>2018/12/11</td><td>16</td><td>7</td><td>6.49</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580311.IB</td><td>15黔畅达专项债</td><td>3.98</td><td>16</td><td>2018/12/11</td><td>20</td><td>7</td><td>5.79</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1280084.IB</td><td>12黔铁投债</td><td>3.24</td><td>16</td><td>2018/12/11</td><td>20</td><td>10</td><td>7.2</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880235.IB</td><td>18水城水务债</td><td>6.92</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780368.IB</td><td>17云岩债</td><td>5.89</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>6.8</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780349.IB</td><td>17毕节信泰债</td><td>5.85</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>7.8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101756035.IB</td><td>17贵州高速MTN001</td><td>1.75</td><td>15</td><td>2018/12/11</td><td>15</td><td>3</td><td>4.8</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1780271.IB</td><td>17安顺专项债</td><td>5.72</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>7.3</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680473.IB</td><td>16西秀债</td><td>4.9</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>4.7</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <td>145010.SH</td><td>16仁怀01</td><td>2.75</td><td>15</td><td>2018/12/11</td><td>15</td><td>5</td><td>4.64</td><td>累进利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135798.SH</td><td>16铜旅01</td><td>2.68</td><td>15</td><td>2018/12/11</td><td>15</td><td>5</td><td>5.7</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1624010.IB</td><td>16盘县棚改项目债</td><td>4.44</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>6</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680046.IB</td><td>16观山湖债01</td><td>4.08</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>4.87</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101580008.IB</td><td>15黔交建MTN002(7年期)</td><td>3.72</td><td>15</td><td>2018/12/11</td><td>15</td><td>7</td><td>5</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>101580009.IB</td><td>15黔交建MTN002(10年期)</td><td>6.72</td><td>15</td><td>2018/12/11</td><td>15</td><td>10</td><td>5.33</td><td>累进利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>031561037.IB</td><td>15金阳PPN001</td><td>1.62</td><td>15</td><td>2018/12/11</td><td>15</td><td>5</td><td>5.8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1580041.IB</td><td>15黔南投资债</td><td>3.19</td><td>14.4</td><td>2018/12/11</td><td>18</td><td>7</td><td>6.43</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780347.IB</td><td>17安顺交投债</td><td>5.84</td><td>14</td><td>2018/12/11</td><td>14</td><td>7</td><td>7.5</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780087.IB</td><td>17六盘水交投债</td><td>5.35</td><td>14</td><td>2018/12/11</td><td>14</td><td>7</td><td>5.98</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680423.IB</td><td>16安顺棚改项目债NPB</td><td>2.87</td><td>14</td><td>2018/12/11</td><td>14</td><td>5</td><td>5.48</td><td>固定利率<td>            <td>一般企业债</td></tr>
+                                                <tr><td>1680204.IB</td><td>16凯宏专项债</td><td>7.74</td><td>14</td><td>2018/12/11</td><td>14</td><td>10</td><td>5.3</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680157.IB</td><td>16仁怀城投债</td><td>4.29</td><td>14</td><td>2018/12/11</td><td>14</td><td>7</td><td>5.12</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680156.IB</td><td>16遵停车债</td><td>7.28</td><td>14</td><td>2018/12/11</td><td>14</td><td>10</td><td>5.99</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101560042.IB</td><td>15黔铁投MTN001</td><td>1.6</td><td>14</td><td>2018/12/11</td><td>14</td><td>5</td><td>4.8</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>43276</td><td>一般中期票据</td></tr>
+                                                <tr><td>1680266.IB</td><td>16兴安债</td><td>4.48</td><td>13.9</td><td>42542</td><td>13.9</td><td>7</td><td>5.9</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1480251.IB</td><td>14黔铁投债</td><td>5.32</td><td>13.6</td><td>2018/12/11</td><td>17</td><td>10</td><td>7.5</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150936.SH</td><td>18西秀01</td><td>4.94</td><td>13.4</td><td>2018/12/11</td><td>13.4</td><td>5</td><td>7.8</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1880130.IB</td><td>18新宇建投债01</td><td>6.64</td><td>13</td><td>2018/12/11</td><td>13</td><td>7</td><td>8.05</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580005.IB</td><td>15毕节建投债</td><td>3.08</td><td>12.8</td><td>2018/12/11</td><td>16</td><td>7</td><td>6.5</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780131.IB</td><td>17毕节管廊01</td><td>5.52</td><td>12.3</td><td>2018/12/11</td><td>12.3</td><td>7</td><td>5.78</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880126.IB</td><td>18东湖管廊债</td><td>6.95</td><td>12</td><td>2018/12/11</td><td>12</td><td>7</td><td>8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680372.IB</td><td>16白云专项债</td><td>7.71</td><td>12</td><td>2018/12/11</td><td>12</td><td>10</td><td>4.75</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101680002.IB</td><td>16贵州交通MTN001</td><td>7.31</td><td>12</td><td>2018/12/11</td><td>12</td><td>10</td><td>5.45</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1680014.IB</td><td>16红果小微债</td><td>1.04</td><td>12</td><td>2018/12/11</td><td>12</td><td>4</td><td>6.05</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580243.IB</td><td>15贵阳路桥债</td><td>3.83</td><td>12</td><td>2018/12/11</td><td>15</td><td>7</td><td>4.17</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580015.IB</td><td>15梵投债</td><td>3.08</td><td>12</td><td>2018/12/11</td><td>15</td><td>7</td><td>6.95</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>143413.SH</td><td>17贵产01</td><td>3.92</td><td>11.3</td><td>2018/12/11</td><td>11.3</td><td>5</td><td>6.2</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般公司债</td></tr>
+                                                <tr><td>1580304.IB</td><td>15凯里城投债</td><td>3.97</td><td>11.2</td><td>2018/12/11</td><td>14</td><td>7</td><td>5.29</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780306.IB</td><td>17遵义湘江债</td><td>5.75</td><td>11</td><td>2018/12/11</td><td>11</td><td>7</td><td>6.99</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680395.IB</td><td>16凯里城投专项债</td><td>4.79</td><td>11</td><td>2018/12/11</td><td>11</td><td>7</td><td>4.2</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680290.IB</td><td>16安顺国资债</td><td>4.55</td><td>11</td><td>2018/12/11</td><td>11</td><td>7</td><td>4.48</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680238.IB</td><td>16遵红城投债</td><td>4.5</td><td>11</td><td>2018/12/11</td><td>11</td><td>7</td><td>5.05</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680463.IB</td><td>16水城城投债</td><td>4.9</td><td>10.6</td><td>2018/12/11</td><td>10.6</td><td>7</td><td>4.98</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1524007.IB</td><td>15匀棚改项目债</td><td>4</td><td>10.4</td><td>2018/12/11</td><td>13</td><td>7</td><td>6.6</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101801488.IB</td><td>18贵州高速MTN002</td><td>2.96</td><td>10</td><td>2018/12/11</td><td>10</td><td>3</td><td>4.3</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1880259.IB</td><td>18铜仁管廊债</td><td>9.93</td><td>10</td><td>2018/12/11</td><td>10</td><td>10</td><td>8</td><td>固定利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880216.IB</td><td>18水城高科债</td><td>6.83</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>7.5</td><td>固定利率</td><td>中诚信证券评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101756045.IB</td><td>17贵州高速MTN002</td><td>1.9</td><td>10</td><td>2018/12/11</td><td>10</td><td>3</td><td>5.4</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1780336.IB</td><td>17普定债01</td><td>5.88</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>7.79</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101756024.IB</td><td>17贵产投MTN001</td><td>3.56</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>6.13</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1780108.IB</td><td>17黔南债02</td><td>5.52</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>6.98</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780044.IB</td><td>17黔南债01</td><td>5.31</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>6.99</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031767005.IB</td><td>17贵州凯里PPN001</td><td>1.17</td><td>10</td><td>2018/12/11</td><td>10</td><td>3</td><td>6.2</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>145291.SH</td><td>17仁怀01</td><td>3.04</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>5.94</td><td>累进利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>118817.SZ</td><td>16贵高01</td><td>2.65</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>4.5</td><td>累进利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>118790.SZ</td><td>16筑铁01</td><td>4.61</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>4.5</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135674.SH</td><td>16虹阳01</td><td>2.58</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>6.49</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135676.SH</td><td>16贵建设</td><td>0.58</td><td>10</td><td>2018/12/11</td><td>10</td><td>3</td><td>5</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>101658032.IB</td><td>16贵州高投MTN001</td><td>2.56</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>4.4</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>1680081.IB</td><td>16观山湖债02</td><td>4.19</td><td>10</td><td>2018/12/11</td><td>10</td><td>7</td><td>4.48</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>135098.SH</td><td>16黔南01</td><td>2.08</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>7.5</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135041.SH</td><td>15黔南01</td><td>2.01</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>7.8</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>031490112.IB</td><td>14贵阳高科PPN001</td><td>0.2</td><td>10</td><td>2018/12/11</td><td>10</td><td>5</td><td>8.5</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1724020.IB</td><td>17遵经开项目债</td><td>5.64</td><td>9.7</td><td>2018/12/11</td><td>9.7</td><td>7</td><td>7.48</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780300.IB</td><td>17贵阳经开债01</td><td>5.73</td><td>9</td><td>2018/12/11</td><td>9</td><td>7</td><td>6.35</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101786001.IB</td><td>17六盘水交MTN001</td><td>3.5</td><td>9</td><td>2018/12/11</td><td>9</td><td>5</td><td>5.7</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>135514.SH</td><td>16黔投02</td><td>2.42</td><td>9</td><td>2018/12/11</td><td>9</td><td>5</td><td>6.99</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680099.IB</td><td>16宏升小微债</td><td>1.21</td><td>9</td><td>2018/12/11</td><td>9</td><td>4</td><td>5.5</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>143625.SH</td><td>18贵产01</td><td>4.35</td><td>8.7</td><td>2018/12/11</td><td>8.7</td><td>5</td><td>6.6</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般公司债</td></tr>
+                                                <tr><td>1880265.IB</td><td>18毕节停车场债</td><td>6.93</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>8.05</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880246.IB</td><td>18兴义信恒债02</td><td>6.9</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>8</td><td>固定利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880011.IB</td><td>18兴义信恒债01</td><td>6.1</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>7.9</td><td>固定利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780240.IB</td><td>17黔新东观债</td><td>5.69</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>7.7</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780168.IB</td><td>17攀投专项债</td><td>5.57</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>7.3</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780133.IB</td><td>17遵义播投债01</td><td>5.52</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>6.6</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680308.IB</td><td>16毕节开源小微债</td><td>1.58</td><td>8</td><td>2018/12/11</td><td>8</td><td>4</td><td>5.48</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031661010.IB</td><td>16贵州高速PPN001</td><td>2.22</td><td>8</td><td>2018/12/11</td><td>8</td><td>5</td><td>4.35</td><td>累进利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1580327.IB</td><td>15黔东湖建投债</td><td>4.02</td><td>8</td><td>2018/12/11</td><td>8</td><td>7</td><td>5.18</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580300.IB</td><td>15兴义信恒债</td><td>3.97</td><td>8</td><td>2018/12/11</td><td>10</td><td>7</td><td>5.4</td><td>固定利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580083.IB</td><td>15白云工投债</td><td>3.24</td><td>8</td><td>2018/12/11</td><td>10</td><td>7</td><td>7.3</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1280491.IB</td><td>12盘江债</td><td>1</td><td>8</td><td>41271</td><td>8</td><td>7</td><td>5.63</td><td>累进利率</td><td>大公国际资信评估有限公司</td><td>43274</td><td>一般企业债</td></tr>
+                                                <tr><td>114349.SZ</td><td>18贵安债</td><td>4.5</td><td>7.9</td><td>2018/12/11</td><td>7.9</td><td>5</td><td>8.2</td><td>累进利率</td><td>联合信用评级有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680364.IB</td><td>16黔开投</td><td>4.7</td><td>7.9</td><td>2018/12/11</td><td>7.9</td><td>7</td><td>4.42</td><td>累进利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150728.SH</td><td>18安顺01</td><td>4.75</td><td>7.8</td><td>2018/12/11</td><td>7.8</td><td>5</td><td>8</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1480060.IB</td><td>14毕节开源债</td><td>2.16</td><td>7.8</td><td>2018/12/11</td><td>13</td><td>7</td><td>7.78</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1580130.IB</td><td>15遵义道桥债</td><td>4.33</td><td>7.65</td><td>2018/12/11</td><td>9</td><td>8</td><td>6.1</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880220.IB</td><td>18贵阳经开债01</td><td>6.84</td><td>7.5</td><td>2018/12/11</td><td>7.5</td><td>7</td><td>7.9</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150480.SH</td><td>18汇川01</td><td>4.46</td><td>7.5</td><td>2018/12/11</td><td>7.5</td><td>5</td><td>8</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>145106.SH</td><td>16汇川债</td><td>0.83</td><td>7.5</td><td>2018/12/11</td><td>20</td><td>3</td><td>5.03</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>101676007.IB</td><td>16贵阳高科MTN001</td><td>2.81</td><td>7.5</td><td>2018/12/11</td><td>10</td><td>5</td><td>3.65</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>118673.SZ</td><td>16遵汇02</td><td>2.39</td><td>7.5</td><td>2018/12/11</td><td>7.5</td><td>5</td><td>6.47</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>118658.SZ</td><td>16遵汇01</td><td>2.35</td><td>7.5</td><td>2018/12/11</td><td>7.5</td><td>5</td><td>6.6</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1780307.IB</td><td>17白云债02</td><td>5.75</td><td>7.4</td><td>2018/12/11</td><td>7.4</td><td>7</td><td>7.28</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>118373.SZ</td><td>15安城债</td><td>1.8</td><td>7.1</td><td>2018/12/11</td><td>20</td><td>5</td><td>7.18</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1880237.IB</td><td>18西工投01</td><td>6.88</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.9</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780090.IB</td><td>17六枝债01</td><td>5.89</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780338.IB</td><td>17遵义播投债02</td><td>5.82</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.85</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780274.IB</td><td>17新宇建投债01</td><td>5.7</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.6</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780235.IB</td><td>17开元专项债02</td><td>5.67</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.28</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780161.IB</td><td>17黔南停车场债01</td><td>5.58</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>6.77</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780097.IB</td><td>17开元专项债01</td><td>5.41</td><td>7</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.3</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680207.IB</td><td>16遵义投资小微债</td><td>1.32</td><td>7</td><td>2018/12/11</td><td>7</td><td>4</td><td>5.68</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>135062.SH</td><td>16遵桥01</td><td>2.04</td><td>7</td><td>2018/12/11</td><td>7</td><td>5</td><td>6.5</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1780173.IB</td><td>17红花岗停车场债01</td><td>5.58</td><td>6.9</td><td>2018/12/11</td><td>6.9</td><td>7</td><td>6.98</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880039.IB</td><td>18白云工投债01</td><td>6.23</td><td>6</td><td>2018/12/11</td><td>6</td><td>7</td><td>8.3</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>145266.SH</td><td>16西秀01</td><td>2.98</td><td>6</td><td>42724</td><td>6</td><td>5</td><td>6.45</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>43279</td><td>私募债</td></tr>
+                                                <tr><td>135451.SH</td><td>16黔投01</td><td>2.33</td><td>6</td><td>2018/12/11</td><td>6</td><td>5</td><td>7</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680036.IB</td><td>16遵经开债</td><td>4.07</td><td>6</td><td>2018/12/11</td><td>6</td><td>7</td><td>4.87</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150931.SH</td><td>18高科债</td><td>2.97</td><td>5.5</td><td>2018/12/11</td><td>5.5</td><td>3</td><td>8.1</td><td>累进利率</td><td>中诚信证券评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>101801202.IB</td><td>18六盘水交MTN001</td><td>4.82</td><td>5.5</td><td>43396</td><td>5.5</td><td>5</td><td>8</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>145296.SH</td><td>17西秀01</td><td>1.21</td><td>5.5</td><td>2018/12/11</td><td>5.5</td><td>3</td><td>6.5</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680459.IB</td><td>16德溪专项01</td><td>4.89</td><td>5.5</td><td>2018/12/11</td><td>5.5</td><td>7</td><td>4.6</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1680386.IB</td><td>16大方专项债</td><td>4.75</td><td>5.5</td><td>2018/12/11</td><td>5.5</td><td>7</td><td>6</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150909.SH</td><td>18六住01</td><td>4.92</td><td>5</td><td>2018/12/11</td><td>5</td><td>5</td><td>7.8</td><td>累进利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1880023.IB</td><td>18仁怀水投债01</td><td>6.16</td><td>5</td><td>4312018/12/1154</td><td>5</td><td>7</td><td>7.98</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780376.IB</td><td>17红果专项债01</td><td>5.91</td><td>5</td><td>2018/12/11</td><td>5</td><td>7</td><td>7.8</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780311.IB</td><td>17遵义旅投债01</td><td>8.75</td><td>5</td><td>2018/12/11</td><td>5</td><td>10</td><td>7.7</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1780190.IB</td><td>17毕节管廊02</td><td>5.6</td><td>5</td><td>2018/12/11</td><td>5</td><td>7</td><td>5.55</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031767018.IB</td><td>17贵州凯里PPN002</td><td>1.57</td><td>5</td><td>2018/12/11</td><td>5</td><td>3</td><td>6.8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1724006.IB</td><td>17贵州物流园项目债</td><td>3.33</td><td>5</td><td>2018/12/11</td><td>5</td><td>5</td><td>7.8</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>101760013.IB</td><td>17贵州高投MTN001</td><td>3.21</td><td>5</td><td>2018/12/11</td><td>5</td><td>5</td><td>5.39</td><td>固定利率</td><td>上海新世纪资信评估投资服务有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>145263.SH</td><td>16西工投</td><td>3</td><td>5</td><td>2018/12/11</td><td>5</td><td>5</td><td>6.4</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1680480.IB</td><td>16德溪专项02</td><td>4.94</td><td>5</td><td>2018/12/11</td><td>5</td><td>7</td><td>5.1</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>114040.SZ</td><td>16水城01</td><td>2.81</td><td>5</td><td>2018/12/11</td><td>5</td><td>5</td><td>6.4</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>135091.SH</td><td>16安顺债</td><td>0.07</td><td>5</td><td>2018/12/11</td><td>5</td><td>3</td><td>7.8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1780125.IB</td><td>17白云债01</td><td>5.55</td><td>4.6</td><td>2018/12/11</td><td>4.6</td><td>7</td><td>6.48</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031777005.IB</td><td>17遵义经开PPN001</td><td>1.92</td><td>4.28</td><td>2018/12/11</td><td>4.28</td><td>3</td><td>7.8</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1880028.IB</td><td>18普定债01</td><td>6.21</td><td>4</td><td>2018/12/11</td><td>4</td><td>7</td><td>8</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1724036.IB</td><td>17贵阳观城项目NPB01</td><td>3.99</td><td>4</td><td>2018/12/11</td><td>4</td><td>5</td><td>7.5</td><td>固定利率<td>          <td>一般企业债</td></tr>
+                                                <tr><td>1880017.IB</td><td>18红果专项债</td><td>6.12</td><td>3.5</td><td>2018/12/11</td><td>3.5</td><td>7</td><td>7.8</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031660039.IB</td><td>16贵州公路PPN001</td><td>0.54</td><td>3.5</td><td>2018/12/11</td><td>3.5</td><td>3</td><td>4.6</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1380008.IB</td><td>13安顺国资债</td><td>1.03</td><td>3.2</td><td>2018/12/11</td><td>8</td><td>7</td><td>6.98</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031800747.IB</td><td>18铜仁旅游PPN002</td><td>4.96</td><td>3</td><td>2018/12/11</td><td>3</td><td>5</td><td>7.8</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>011800880.IB</td><td>18黔铁投SCP001</td><td>0.07</td><td>3</td><td>2018/12/11</td><td>3</td><td>0.74</td><td>4.9</td><td>固定利率</td><td>中诚信国际信用评级有限责任公司</td><td>2018/12/11</td><td>超短期融资债券</td></tr>
+                                                <tr><td>145690.SH</td><td>17铜旅01</td><td>3.6</td><td>3</td><td>2018/12/11</td><td>3</td><td>5</td><td>7.48</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>118582.SZ</td><td>16铜仁02</td><td>0.22</td><td>3</td><td>2018/12/11</td><td>13.8</td><td>3</td><td>6.5</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>118518.SZ</td><td>16遵经投</td><td>0.18</td><td>3</td><td>2018/12/11</td><td>5</td><td>3</td><td>6.45</td><td>累进利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>1580213.IB</td><td>15开元城投小微债</td><td>0.7</td><td>3</td><td>2018/12/11</td><td>7</td><td>4</td><td>5.95</td><td>累进利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1280408.IB</td><td>12黔宏升债</td><td>0.9</td><td>2.8</td><td>2018/12/11</td><td>14</td><td>7</td><td>6.99</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1880133.IB</td><td>18仁怀水投债02</td><td>6.58</td><td>2.5</td><td>2018/12/11</td><td>2.5</td><td>7</td><td>7.98</td><td>固定利率</td><td>联合资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>1280136.IB</td><td>12黔开投债</td><td>0.33</td><td>2.4</td><td>2018/12/11</td><td>12</td><td>7</td><td>8.8</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>150643.SH</td><td>18江投01</td><td>4.65</td><td>2</td><td>2018/12/11</td><td>2</td><td>5</td><td>8.1</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                                <tr><td>101775003.IB</td><td>17六盘水开MTN001</td><td>3.53</td><td>2</td><td>2018/12/11</td><td>2</td><td>5</td><td>5.48</td><td>累进利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>一般中期票据</td></tr>
+                                                <tr><td>031654029.IB</td><td>16七冶建设PPN001</td><td>0.71</td><td>2</td><td>2018/12/11</td><td>2</td><td>3</td><td>6.2</td><td>固定利率</td><td>东方金诚国际信用评估有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>1280368.IB</td><td>12黔东南债</td><td>0.84</td><td>1.4</td><td>2018/12/11</td><td>7</td><td>7</td><td>7.8</td><td>固定利率</td><td>大公国际资信评估有限公司</td><td>2018/12/11</td><td>一般企业债</td></tr>
+                                                <tr><td>031782012.IB</td><td>17南州工投PPN001</td><td>3.96</td><td>1</td><td>2018/12/11</td><td>1</td><td>5</td><td>7.5</td><td>固定利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>031800104.IB</td><td>18铜仁旅游PPN001</td><td>4.13</td><td>0.3</td><td>2018/12/11</td><td>0.3</td><td>5</td><td>7.8</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>定向工具</td></tr>
+                                                <tr><td>118487.SZ</td><td>16铜仁01</td><td>0.1</td><td>0.2</td><td>2018/12/11</td><td>5.2</td><td>3</td><td>6.5</td><td>累进利率</td><td>中证鹏元资信评估股份有限公司</td><td>2018/12/11</td><td>私募债</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>  
+                                </div>     
+                            </div>
+
+                            <style>
+                                .fild{
+                                    position: fixed;
+                                    top: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    left: 0;
+                                    background: rgba(0,0,0,.8);
+                                    display: none;
+                                    overflow-y: scroll;
+                                    /* font-size:14px; */
+                                }
+                                .weights{
+                                    position: fixed;
+                                    top: 10%;
+                                    left: 20%;
+                                    right: 20%;
+                                    background: #000;
+
+                                }
+                            </style>
+
+                            <div class="fild">
+                                
+                            </div>
+
+
+                            <div class="weights" style="display:none;">
+                                <div class="col-sm-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>分类</th>
+                                                <th>指标</th>
+                                                <th>权重</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody >
+                                            <tr style="height: 36px;">
+                                                <td rowspan="5" style="border-right:1px solid #555;vertical-align:middle;">地方城投情况（20%）</td>
+                                                <td>地方政府GDP增长率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>地方政府税收占比</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>地方政府债务率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>地方政府财政自给率</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>城投公司行政级别</td>
+                                                <td>20%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td rowspan="2" style="border-right:1px solid #555;vertical-align:middle;">资金来源（30%）</td>
+                                                <td>第一大股东性质</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>注册资本规模</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td rowspan="3" style="border-right:1px solid #555;vertical-align:middle;">资金去向（25%）</td>
+                                                <td>债务负担率</td>
+                                                <td>100%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td style="color:yellow">在建项目尚需投资/净资产</td>
+                                                <td style="color:yellow">0%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td style="color:yellow">存量债务/有息债务</td>
+                                                <td style="color:yellow">0%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td rowspan="2" style="border-right:1px solid #555;vertical-align:middle;">经营情况（15%）</td>
+                                                <td>盈利能力</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>运营效率</td>
+                                                <td>50%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td rowspan="4" style="border-right:1px solid #555;vertical-align:middle;">企业信用（10%）</td>
+                                                <td>诉讼情况</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>行政处罚</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>经营异常</td>
+                                                <td>25%</td>
+                                            </tr>
+                                            <tr  style="height: 36px;">
+                                                <td>风险舆情信息</td>
+                                                <td>25%</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 侧边内容 -->
+                    </div>
+
+                </div>
+        </div>
+        </section>
+        <input type="hidden" id="path" value="http://rfiis.rtkj.com.cn:80/rfiis-govt/">
+    </div>
+    <!--./right-wrapper-->
+    </div>
+    <!--./right-->
+
+
+
+    <!-- jquery-2.1.1.min.js -->
+    <script src="./common/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/jquery.ba-resize.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- bootstrap.min.js -->
+    <script src="./common/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table.js -->
+    <script src="./common/plugins/bootstrapTable/bootstrap-table.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-table-zh-CN.js -->
+    <script src="./common/plugins/bootstrapTable/locale/bootstrap-table-zh-CN.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/js/animation/comm.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共控制comm.js -->
+    <script src="./common/plugins/switch/lc_switch.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js extend.js -->
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js region.js -->
+    <script src="./common/js/util/region.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 自定义公共js busic.js -->
+    <script src="./common/js/util/busic.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./common/js/util/extendUtil.js" type="text/javascript" charset="utf-8"></script>
+    <!-- bootstrap-dialog.js -->
+    <script src="./common/plugins/bootstrapDialog/bootstrap-dialog.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- layer.js -->
+    <script src="./common/plugins/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 日期格式化js -->
+    <script src="./common/js/util/date.js"></script>
+    <!-- 日期插件 foundation-datepicker.js -->
+    <script src="./common/plugins/datepicker/foundation-datepicker.js"></script>
+
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/jquery.validate.min.js"></script>
+    <!-- 输入验证js-->
+    <script src="./common/plugins/validate/messages_zh.min.js"></script>
+    <!-- echarts js-->
+    <script src="./common/plugins/echarts/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./include/js/logic/head.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="./common/js/numeral/numeral.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./qiyexinxixuzhouzonglanfiles/swiper-3.4.2.jquery.min.js"></script>
+    <!-- <script src="./organizationAnalysis/organizationAnalysis/js/logic/petty_loan.js"></script> -->
+    <script src="./common/js/guizhou/guizhou.js"></script>
+    <script src="./guizhou/analysis1.js"></script>
+    <!-- <script src="./guizhouzhai.js"></script> -->
+     <script src="./organizationAnalysis/js/logic/financing_assurance.js"></script>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        slidesPerView: 'auto',
+		navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+		}
+    })
+
+
+    //指标与权重的点击事件
+    $(document).on('click', '.zhibiao', function() {
+        $(".fild").fadeIn();
+        $('.weights').fadeIn();
+
+    })
+    $(document).on('click', '.fild', function() {
+        $(".fild").fadeOut();
+        $('.weights').fadeOut();
+
+
+    })
+</script>
+
+</html>

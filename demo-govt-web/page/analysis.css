@@ -1,0 +1,200 @@
+/**
+ * 统计分析页面独立使用CSS
+ * 独立使用的CSS不要引入其他页面
+ * 需要写CSS请在下面按照common/comm.css格式书写
+ */
+.loan {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 15px 0;
+    min-height: 115px;
+    color: #fff;
+}
+.loan .loan_left {
+    float: left;
+    display: inline-block;
+}
+.loan p {
+    font-size: 16px;
+}
+.loan p.name {
+    color: #99efff;
+}
+.loan p.number {
+    text-align: center;
+    margin: 0;
+}
+.loan p.number em {
+    font-style: normal;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: Arial;
+}
+.loan p.sub {
+    font-size: 12px;
+}
+.echarts {
+    height: 300px;
+}
+
+.head-search {
+    float: right;
+    padding-top: 12px;
+    padding-right: 10%;
+}
+.head-search .spec {
+    float: left;
+    color: #fff;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 15px;
+    background: url("../../common/img/leadcockpit/select_bg2.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+.head-search .spec.active {
+    background: url("../../common/img/leadcockpit/select_bg1.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.ibox hr.line {
+    margin: 15px;
+    border-top: 1px solid rgba(1, 115, 187, .6);
+}
+
+.title_name {
+    font-size: 15px;
+    color: #fff;
+    margin: 15px;
+}
+
+.assurance_cont {
+    width: 220px;
+    margin: 0px 0px 20px 15px;
+    padding: 10px 25px 10px 15px;
+}
+.assurance_cont.bg1 {
+    background-color: rgba(255,107,107,.6);
+}
+.assurance_cont.bg2 {
+    background-color: rgba(87,252,254,.6);
+}
+.assurance_cont.bg3 {
+    background-color: rgba(238,158,109,.6);
+}
+.assurance_cont.bg4 {
+    background-color: rgba(200,156,255,.6);
+}
+.assurance_cont p {
+    color: #fff;
+    margin: 0;
+}
+
+/*新样式*/
+.data_module {
+    width: 80%;
+    margin: 0 auto;
+    background: rgba(33,36,60,.6);
+    color: #fff;
+}
+.data_list {
+    padding: 15px 20% 15px 10%;
+    overflow: hidden;
+}
+.data_module .number {
+    font-size: 12px;
+    margin: 0;
+}
+.data_module .number em {
+    font-size: 22px;
+    font-family: Arial;
+}
+.data_module .name {
+    font-size: 12px;
+    margin: 0;
+}
+.data_list.cor1 {
+    border-left: 10px solid #59c6ff;
+}
+.data_list.cor1 .name {
+    color: #59c6ff;
+}
+.data_list.cor2 {
+    border-left: 10px solid #ff4545;
+}
+.data_list.cor2 .name {
+    color: #ff4545;
+}
+.data_list.cor3 {
+    border-left: 10px solid #18e2df;
+}
+.data_list.cor3 .name {
+    color: #18e2df;
+}
+.data_module.data_loan {
+    width: 95%;
+}
+.data_module.data_loan .data_list {
+    padding: 15px 20% 15px 20%;
+    overflow: hidden;
+}
+.data_module.data_loan .name {
+    font-size: 14px;
+}
+
+.ibox.bg {
+    background: url("../../common/img/leadcockpit/ibox_bg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.ibox.cor {
+    background: rgba(1,1,1,.4);
+    padding: 15px;
+}
+.ibox-head {
+    text-align: center;
+    color: #fff;
+    line-height: 48px;
+    background: url("../../common/img/leadcockpit/ibox_head.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*融资担保*/
+.data_assurance {
+    margin-left: 15px;
+    margin-bottom: 30px;
+    width: 90%;
+    background: rgba(0,0,0,.2);
+    color: #fff;
+}
+.data_assurance .ass_name {
+    font-size: 16px;
+    margin: 0;
+}
+.data_assurance .ass_amount {
+    font-size: 30px;
+    margin: 0;
+}
+.data_assurance.bg1 .data_list {
+    border-left: 10px solid #59c6ff;
+}
+.data_assurance.bg1 .ass_amount {
+    color: #59c6ff;
+}
+.data_assurance.bg2 .data_list {
+    border-left: 10px solid #fdae7e;
+}
+.data_assurance.bg2 .ass_amount {
+    color: #fdae7e;
+}
+.data_assurance.bg3 .data_list {
+    border-left: 10px solid #f16363;
+}
+.data_assurance.bg3 .ass_amount {
+    color: #f16363;
+}
+.data_assurance.bg4 .data_list {
+    border-left: 10px solid #18e2df;
+}
+.data_assurance.bg4 .ass_amount {
+    color: #18e2df;
+}

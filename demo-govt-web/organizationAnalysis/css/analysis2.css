@@ -1,0 +1,87 @@
+html.bg, body.bg {
+    background: url(../../common/img/big_html.jpg);
+}
+
+.loan_data1 .data_module,.loan_data2 .data_module,.loan_data3 .data_module {
+    margin: 25px auto;
+    display: inline-block;
+}
+.data_module.data_loan .data_list {
+    padding: 15% 20%;
+    height: 100%;
+}
+.private_data1 .data_module,.private_data2 .data_module {
+    margin: 50px auto;
+    display: inline-block;
+}
+.private_data1 .data_module .data_list,.private_data2 .data_module .data_list {
+    padding: 13% 20% 13% 10%;
+    height: 100%;
+}
+.private_data1 .data_module .number em, .private_data2 .data_module .number em {
+    font-size: 26px;
+}
+
+.loan_data1 {
+    margin-top: 20px;
+    width: 15%;
+    margin-right: 4%;
+    margin-left: 4%;
+    padding: 0;
+}
+.loan_data2 {
+    margin-top: 30px;
+    width: 20%;
+    margin-right: 4%;
+    padding: 0;
+}
+.loan_data3 {
+    margin-top: 30px;
+    width: 25%;
+    margin-right: 4%;
+    padding: 0;
+}
+
+.private_data1 {
+    margin-top: 20px;
+    width: 25%;
+    margin-left: 5%;
+}
+.private_data2 {
+    margin-top: 20px;
+    width: 30%;
+    margin-right: 5%;
+}
+
+.assurance_data1 {
+    width: 20%;
+}
+.assurance_data2 {
+    width: 15%;
+}
+.assurance_data3 {
+    width: 450px;
+}
+.data_assurance .data_list {
+    padding: 18px 20% 18px 10%;
+}
+.e_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.e_box .e_title {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.e_box.chart1 {
+    background: url("../img/charts_bg1.png") no-repeat center;
+}
+.e_box.chart2 {
+    background: url("../img/charts_bg2.png") no-repeat center;
+}
